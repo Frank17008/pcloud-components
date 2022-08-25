@@ -2,6 +2,15 @@
   "private": true,
   "name": "pui-components",
   "version": "1.0.0",
+  "description": "pointcloud react 组件库",
+  "author": "Frank",
+  "license": "MIT",
+  "keywords": ["pointcloud","react","components"],
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": "git+http://106.12.253.134:10001/pointcloud_frontweb/pui-components.git#gh-pages"
+  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -33,6 +42,7 @@
     ]
   },
   "dependencies": {
+    "antd": "^4.22.7",
     "babel-plugin-import": "^1.13.5",
     "react": "^18.0.0"
   },
