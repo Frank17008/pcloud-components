@@ -8,6 +8,6 @@ services:
     ports:
       - '8899:80'
     volumes:
-      - /app/nginx/:/etc/nginx/nginx.conf
+      - /app/nginx/pui-nginx.conf:/etc/nginx/nginx.conf
     privileged: true
     restart: always
