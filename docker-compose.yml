@@ -1,0 +1,13 @@
+version: '3'
+services:
+  puiapp:
+    image: tianhu.pcgi.com.cn:9888/base-project/pui-components
+    container_name: 'pui-components'
+    environment:
+      - TZ=Asia/Shanghai
+    ports:
+      - '8899:80'
+    volumes:
+      - /app/nginx/:/etc/nginx/nginx.conf
+    privileged: true
+    restart: always
