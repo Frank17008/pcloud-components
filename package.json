@@ -11,7 +11,10 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "docker:build": "docker build -t pui-components .",
+    "docker:tag": "docker tag pui-components tianhu.pcgi.com.cn:9888/base-project/pui-components",
+    "docker:push": "npm run deploy && npm run docker:build && npm run docker:tag && docker push tianhu.pcgi.com.cn:9888/base-project/pui-components"
   },
   "files": [
     "dist"
