@@ -1,5 +1,5 @@
 {
-  "private": true,
+  "private": false,
   "name": "pui-components",
   "version": "1.0.0",
   "description": "pointcloud react 组件库",
