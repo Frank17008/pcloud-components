@@ -1,16 +1,12 @@
 {
   "private": false,
-  "name": "pui-components",
-  "version": "1.0.0",
+  "name": "@pointcloud/pui-components",
+  "version": "0.0.1",
   "description": "pointcloud react 组件库",
   "author": "Frank",
   "license": "MIT",
-  "keywords": ["pointcloud","react","components"],
-  "homepage": "",
-  "repository": {
-    "type": "git",
-    "url": "git+http://106.12.253.134:10001/pointcloud_frontweb/pui-components.git#gh-pages"
-  },
+  "keywords": ["pointcloud","react","components", "ui"],
+  "homepage": "",  
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
