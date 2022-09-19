@@ -1,5 +1,7 @@
 import { defineConfig } from 'dumi';
 
+const path = require('path');
+
 export default defineConfig({
   title: 'pui-components',
   favicon:
@@ -25,5 +27,9 @@ export default defineConfig({
       },
     ],
   ],
+  chainWebpack(memo) {
+    // 设置 alias
+    memo.resolve.alias.set('@pointcloud/pui-components', path.resolve(__dirname, 'src'));
+  },
   // more config: https://d.umijs.org/config
 });
