@@ -1,12 +1,17 @@
 {
   "private": false,
   "name": "@pointcloud/pui-components",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "pointcloud react 组件库",
   "author": "Frank",
   "license": "MIT",
-  "keywords": ["pointcloud","react","components", "ui"],
-  "homepage": "",  
+  "keywords": [
+    "pointcloud",
+    "react",
+    "components",
+    "ui"
+  ],
+  "homepage": "",
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
