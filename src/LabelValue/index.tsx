@@ -1,6 +1,6 @@
 import React from 'react';
 import { LabelValueProps } from './interface';
-import './styles/default.module.less';
+import './styles/index.less';
 
 function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: LabelValueProps) {
   return (
