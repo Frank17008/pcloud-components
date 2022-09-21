@@ -30,6 +30,13 @@ export default defineConfig({
   chainWebpack(memo) {
     // 设置 alias
     memo.resolve.alias.set('@pointcloud/pui-components', path.resolve(__dirname, 'src'));
+    // 支持es
+    memo.module
+      .rule('mjs')
+      .test(/\.mjs$/)
+      .set('include', '/node_modules/')
+      .set('type', 'javascript/auto');
+    console.info(memo.toString());
   },
   // more config: https://d.umijs.org/config
 });
