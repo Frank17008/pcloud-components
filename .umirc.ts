@@ -10,6 +10,14 @@ export default defineConfig({
   outputPath: 'docs-dist',
   mode: 'site',
   lessLoader: { javascriptEnabled: true },
+  // externals: {
+  //   react: 'window.React',
+  //   antd: 'window.antd',
+  // },
+  // scripts: [
+  //   'https://cdnjs.cloudflare.com/ajax/libs/react/18.0.0/umd/react.production.min.js',
+  //   'https://cdnjs.cloudflare.com/ajax/libs/antd/4.19.3/antd.min.js',
+  // ],
   navs: [
     {
       title: '组件',
