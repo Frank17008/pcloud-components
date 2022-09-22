@@ -49,15 +49,15 @@ export interface FilterProps {
    */
   placeholder?: string;
   /**
-   * @description input检索框值变更时触发
+   * @description 筛选项值变更时触发
    */
   onValuesChange?: (v: any) => void;
   /**
-   * @description 点击查询时触发
+   * @description 点击查询按钮时触发
    */
   onSearch?: (v: any) => void;
   /**
-   * @description 点击重置时触发
+   * @description 点击重置按钮时触发
    */
   onReset?: (v: any) => void;
   /**
@@ -65,7 +65,7 @@ export interface FilterProps {
    */
   formItemConfig: FormItem[];
   /**
-   * @description 表单引用ref
+   * @description 表单引用ref值
    */
   fRef?: any;
   /**

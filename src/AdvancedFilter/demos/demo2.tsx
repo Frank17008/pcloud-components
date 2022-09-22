@@ -24,14 +24,14 @@ export default () => {
     <AdvancedFilter
       formItemConfig={formItemConfig}
       icon={<CaretDownOutlined />}
-      left={<Button>按钮1</Button>}
+      left={<Button>左侧按钮</Button>}
       inputProps={{
         name: 'keyWords',
         inputSearch: (v: string) => {
           console.info(v);
         },
       }}
-      right={<Button>按钮2</Button>}
+      right={<Button>右侧按钮</Button>}
     />
   );
 };

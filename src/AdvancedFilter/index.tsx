@@ -10,7 +10,7 @@ const variants = {
   up: { transform: 'rotateZ(0deg)' },
 };
 
-export default (props: FilterProps) => {
+const AdvancedFilter: React.FC<FilterProps> = (props) => {
   const { left, right, inputProps, formItemConfig, fRef, icon, onValuesChange, onSearch, onReset } =
     props;
   const [panelVisible, setPanelVisible] = useState<boolean>(false);
@@ -95,3 +95,4 @@ export default (props: FilterProps) => {
     </Collapse>
   );
 };
+export default AdvancedFilter;
