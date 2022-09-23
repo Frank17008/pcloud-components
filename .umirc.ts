@@ -46,7 +46,6 @@ export default defineConfig({
       .test(/\.mjs$/)
       .set('include', '/node_modules/')
       .set('type', 'javascript/auto');
-    console.info(memo.toString());
   },
   // more config: https://d.umijs.org/config
 });
