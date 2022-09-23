@@ -46,8 +46,7 @@
     "@ant-design/icons": "^4.7.0",
     "antd": "^4.19.3",
     "babel-plugin-import": "^1.13.5",
-    "framer-motion": "6.2.8",
-    "react": "^18.0.0"
+    "framer-motion": "6.2.8"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "^5.15.1",
@@ -62,5 +61,9 @@
     "path": "^0.12.7",
     "prettier": "^2.2.1",
     "yorkie": "^2.0.0"
+  },
+  "peerDependencies": {
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
   }
 }
