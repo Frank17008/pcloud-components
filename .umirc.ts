@@ -18,6 +18,8 @@ export default defineConfig({
   //   'https://cdnjs.cloudflare.com/ajax/libs/react/18.0.0/umd/react.production.min.js',
   //   'https://cdnjs.cloudflare.com/ajax/libs/antd/4.19.3/antd.min.js',
   // ],
+  // 文件包含hash后缀
+  hash: true,
   navs: [
     {
       title: '组件',
