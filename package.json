@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@pointcloud/pui-components",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "pointcloud react 组件库",
   "author": "Frank",
   "license": "MIT",
