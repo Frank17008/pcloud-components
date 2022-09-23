@@ -11,6 +11,9 @@
     "components",
     "ui"
   ],
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
   "homepage": "",
   "scripts": {
     "start": "dumi dev",
