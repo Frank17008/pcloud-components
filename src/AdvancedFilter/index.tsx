@@ -2,7 +2,7 @@ import React, { useState, useRef, useImperativeHandle } from 'react';
 import { Input, Button, Collapse } from 'antd';
 import { motion } from 'framer-motion';
 import FormFilter from './FormFilter';
-import { FilterProps } from './index.d';
+import { FilterProps } from './interface';
 import './styles/index.less';
 
 const variants = {

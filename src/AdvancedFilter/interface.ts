@@ -1,15 +1,10 @@
 import React from 'react';
 
-export interface FProps {
+export interface FormProps {
   /**
    * @description 筛选项配置
    */
   formItemConfig: FormItem[];
-  /**
-   * @description 显示查询/重置按钮
-   * @default true
-   */
-  showButton?: boolean;
   /**
    * @description 筛选项值变更时触发
    */
@@ -22,12 +17,20 @@ export interface FProps {
    * @description 点击重置按钮时触发
    */
   onReset?: Function;
+}
+
+export interface FProps extends FormProps {
+  /**
+   * @description 显示查询/重置按钮
+   * @default true
+   */
+  showButton?: boolean;
   /**
    * @description 筛选项表单的Ref
    */
   formRef?: any;
 }
-export interface FilterProps {
+export interface FilterProps extends FormProps {
   /**
    * @description 左侧渲染区
    */
@@ -44,26 +47,6 @@ export interface FilterProps {
    * @description children
    */
   children?: React.ReactNode;
-  /**
-   * @description input检索框的placeholder
-   */
-  placeholder?: string;
-  /**
-   * @description 筛选项值变更时触发
-   */
-  onValuesChange?: (v: any) => void;
-  /**
-   * @description 点击查询按钮时触发
-   */
-  onSearch?: (v: any) => void;
-  /**
-   * @description 点击重置按钮时触发
-   */
-  onReset?: (v: any) => void;
-  /**
-   * @description 表单项配置
-   */
-  formItemConfig: FormItem[];
   /**
    * @description 表单引用ref值
    */
