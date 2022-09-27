@@ -13,7 +13,7 @@ import {
   Checkbox,
 } from 'antd';
 import React, { useImperativeHandle } from 'react';
-import { FProps, FormItem } from './index.d';
+import { FProps, FormItem } from './interface';
 import './styles/index.less';
 
 const grid = { xxl: { span: 6 }, xl: { span: 6 }, lg: { span: 8 } };

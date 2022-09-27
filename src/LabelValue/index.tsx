@@ -5,10 +5,15 @@ import { ConfigContext, defaultPrefixCls } from '../ConfigProvider';
 import './styles/index.less';
 
 function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: LabelValueProps) {
-  const { getPrefixCls }: any = useContext(ConfigContext);
-  const prefixCls = getPrefixCls('label-value');
+  const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
+  const classname = getPrefixCls('label-value');
+  const wrapperClass = classNames(
+    { [`${prefixCls}-label-value`]: !!prefixCls },
+    classname,
+    className,
+  );
   return (
-    <div className={classNames(prefixCls, className)}>
+    <div className={wrapperClass}>
       <span className={`${defaultPrefixCls}-label`}>
         {label}
         {noColon ? '' : ':'}

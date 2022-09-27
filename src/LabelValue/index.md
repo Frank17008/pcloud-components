@@ -4,7 +4,7 @@ nav:
   title: Components
   path: /components
 group:
-  title: LabelValue
+  title: 业务组件
 ---
 
 ## 基础使用

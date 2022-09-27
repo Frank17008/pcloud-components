@@ -1,8 +1,10 @@
-import React, { useState, useRef, useImperativeHandle } from 'react';
+import React, { useState, useRef, useImperativeHandle, useContext } from 'react';
 import { Input, Button, Collapse } from 'antd';
+import classNames from 'classnames';
 import { motion } from 'framer-motion';
 import FormFilter from './FormFilter';
 import { FilterProps } from './interface';
+import { ConfigContext } from '../ConfigProvider';
 import './styles/index.less';
 
 const variants = {
@@ -13,6 +15,11 @@ const variants = {
 const AdvancedFilter: React.FC<FilterProps> = (props) => {
   const { left, right, inputProps, formItemConfig, fRef, icon, onValuesChange, onSearch, onReset } =
     props;
+
+  const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
+  const classname = getPrefixCls('search-filter');
+  const wrapperClass = classNames({ [`${prefixCls}-search-filter`]: !!prefixCls }, classname);
+
   const [panelVisible, setPanelVisible] = useState<boolean>(false);
   const [inputValue, setInputValue] = useState<string>('');
   const inputRef = useRef<any>(null);
@@ -33,7 +40,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
   };
   return (
     <Collapse
-      className="search-filter"
+      className={wrapperClass}
       activeKey={panelVisible ? '1' : 'none'}
       collapsible="header"
       ghost
