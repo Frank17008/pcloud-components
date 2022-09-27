@@ -1,5 +1,4 @@
 import { defineConfig } from 'dumi';
-
 const path = require('path');
 
 export default defineConfig({
