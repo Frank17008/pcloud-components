@@ -18,6 +18,7 @@ export default defineConfig({
   // ],
   // 文件包含hash后缀
   hash: true,
+  mfsu: {},
   navs: [
     {
       title: '组件',
