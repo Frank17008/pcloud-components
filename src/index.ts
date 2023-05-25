@@ -5,3 +5,6 @@ export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as ConfigProvider } from './ConfigProvider';
 export { default as Loading } from './Loading';
 export { default as NoData } from './NoData';
+
+export type { DInputProps } from './DInput';
+export { default as DInput } from './DInput';
