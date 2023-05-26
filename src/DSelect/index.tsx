@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-17 08:41:25
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 09:15:22
+ * @LastEditTime : 2023-05-26 09:51:19
  * @Description  : 基于antd的Select组件
  */
 import React, { forwardRef, useEffect, useRef, useState, useMemo, useContext } from 'react';
@@ -16,7 +16,7 @@ import { ConfigContext } from '@/ConfigProvider';
 export type DSelectProps = Omit<SelectProps, 'options' | 'onSearch' | 'loading'> & {
   /** antd的onSearch属性，onSearch有效时showSearch自动为true */
   onSearch?: (params?: any) => Promise<DefaultOptionType[] | any[]>;
-  /** 等同antd的options属性，可以是一个options数组，或一个返回等价options数组的promise */
+  /** antd的options属性，可以是一个options数组，或一个返回等价options数组的promise */
   options?: DefaultOptionType[] | DSelectProps['onSearch'];
   /** antd的loading属性，是否显示加载中： true表示600毫秒，false或0表示不开启 */
   loading?: boolean | number;

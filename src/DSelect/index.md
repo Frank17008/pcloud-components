@@ -9,7 +9,11 @@ group:
 
 <span style="font-size:24px;color:#454d64;font-weight:500">DSelect 选择器</span>
 
-基于 antd@4.24.8 `Select` 的二次封装组件，options、onSearch 均支持传入异步函数，在 From 表单组件中使用更方便，同时支持远程搜索、支持搜索时防抖功能
+基于 antd 4.24.8 `Select` 的二次封装组件
+
+- options、onSearch 均支持传入异步函数，在 From 表单组件中使用更方便
+- 支持远程搜索，支持搜索时防抖功能
+- 加载选项列表或搜索时可以显示加载中效果
 
 ---
 
@@ -33,9 +37,9 @@ group:
 
 | 参数 | 说明 | 类型 | 默认值 | 版本 |
 | --- | --- | --- | --- | --- |
-| options | 等同 antd 的 options 属性，可以是一个 options 数组，或一个返回等价 options 数组的 promise | `onChange: (value, e) => void` | - |  |
+| options | antd 的 options 属性，可以是一个 options 数组，或一个返回等价 options 数组的 promise | `(params?) => Promise<option[]>` | - |  |
 | onSearch | antd 的 onSearch 属性，onSearch 有效时 showSearch 自动为 true | `(params?) => Promise<option[]>` | - |  |
-| loading | 是否显示加载中（true 表示 600 毫秒，false 或 0 表示不开启） | `boolean \| number` | true |  |
+| loading | antd 的 loading 属性，是否显示加载中（true 表示 600 毫秒，false 或 0 表示不开启） | `boolean \| number` | true |  |
 | debounce | 是否开启防抖（true 表示 800 毫秒，false 或 0 表示不开启） | `boolean \| number` | false |  |
 
 其他属性同 antd Input 组件，详见：https://4x-ant-design.antgroup.com/components/select-cn/#API

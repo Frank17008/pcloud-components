@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-16 10:08:26
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 09:15:31
+ * @LastEditTime : 2023-05-26 09:44:03
  * @Description  : 基于antd的Input组件
  */
 import React, { ChangeEvent, useRef, forwardRef, useState, useContext } from 'react';
@@ -16,7 +16,7 @@ export type DInputProps = Omit<InputProps, 'onChange'> & {
   onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
   /** 是否启用合成输入 */
   enableCompose?: boolean;
-  /** 是否开启防抖： true表示800毫秒，true表示默认值，false或0表示不开启 */
+  /** 是否开启防抖： true表示800毫秒，false或0表示不开启 */
   debounce?: boolean | number;
 };
 

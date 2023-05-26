@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "types": ["jest"],
     "strict": true,
