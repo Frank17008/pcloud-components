@@ -1,0 +1,2970 @@
+[
+  {
+    "code": "110000",
+    "name": "北京市",
+    "provinceCode": "110000",
+    "provinceName": "北京市",
+    "type": "直辖市",
+    "level": "city"
+  },
+  {
+    "code": "120000",
+    "name": "天津市",
+    "provinceCode": "120000",
+    "provinceName": "天津市",
+    "type": "直辖市",
+    "level": "city"
+  },
+  {
+    "code": "130100",
+    "name": "石家庄市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130200",
+    "name": "唐山市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130300",
+    "name": "秦皇岛市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130400",
+    "name": "邯郸市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130500",
+    "name": "邢台市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130600",
+    "name": "保定市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130700",
+    "name": "张家口市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130800",
+    "name": "承德市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "130900",
+    "name": "沧州市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "131000",
+    "name": "廊坊市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "131100",
+    "name": "衡水市",
+    "provinceCode": "130000",
+    "provinceName": "河北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140100",
+    "name": "太原市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140200",
+    "name": "大同市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140300",
+    "name": "阳泉市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140400",
+    "name": "长治市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140500",
+    "name": "晋城市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140600",
+    "name": "朔州市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140700",
+    "name": "晋中市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140800",
+    "name": "运城市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "140900",
+    "name": "忻州市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "141000",
+    "name": "临汾市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "141100",
+    "name": "吕梁市",
+    "provinceCode": "140000",
+    "provinceName": "山西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150100",
+    "name": "呼和浩特市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150200",
+    "name": "包头市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150300",
+    "name": "乌海市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150400",
+    "name": "赤峰市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150500",
+    "name": "通辽市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150600",
+    "name": "鄂尔多斯市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150700",
+    "name": "呼伦贝尔市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150800",
+    "name": "巴彦淖尔市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "150900",
+    "name": "乌兰察布市",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "152200",
+    "name": "兴安盟",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "盟",
+    "level": "city"
+  },
+  {
+    "code": "152500",
+    "name": "锡林郭勒盟",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "盟",
+    "level": "city"
+  },
+  {
+    "code": "152900",
+    "name": "阿拉善盟",
+    "provinceCode": "150000",
+    "provinceName": "内蒙古自治区",
+    "type": "盟",
+    "level": "city"
+  },
+  {
+    "code": "156400",
+    "name": "中朝共有",
+    "provinceCode": "150000",
+    "provinceName": "中朝共有",
+    "type": "不统计",
+    "level": "city"
+  },
+  {
+    "code": "210100",
+    "name": "沈阳市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "210200",
+    "name": "大连市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "210300",
+    "name": "鞍山市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210400",
+    "name": "抚顺市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210500",
+    "name": "本溪市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210600",
+    "name": "丹东市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210700",
+    "name": "锦州市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210800",
+    "name": "营口市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "210900",
+    "name": "阜新市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "211000",
+    "name": "辽阳市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "211100",
+    "name": "盘锦市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "211200",
+    "name": "铁岭市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "211300",
+    "name": "朝阳市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "211400",
+    "name": "葫芦岛市",
+    "provinceCode": "210000",
+    "provinceName": "辽宁省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220100",
+    "name": "长春市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "220200",
+    "name": "吉林市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220300",
+    "name": "四平市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220400",
+    "name": "辽源市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220500",
+    "name": "通化市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220600",
+    "name": "白山市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220700",
+    "name": "松原市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "220800",
+    "name": "白城市",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "222400",
+    "name": "延边朝鲜族自治州",
+    "provinceCode": "220000",
+    "provinceName": "吉林省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "230100",
+    "name": "哈尔滨市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "230200",
+    "name": "齐齐哈尔市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230300",
+    "name": "鸡西市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230400",
+    "name": "鹤岗市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230500",
+    "name": "双鸭山市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230600",
+    "name": "大庆市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230700",
+    "name": "伊春市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230800",
+    "name": "佳木斯市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "230900",
+    "name": "七台河市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "231000",
+    "name": "牡丹江市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "231100",
+    "name": "黑河市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "231200",
+    "name": "绥化市",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "232700",
+    "name": "大兴安岭地区",
+    "provinceCode": "230000",
+    "provinceName": "黑龙江省",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "310000",
+    "name": "上海市",
+    "provinceCode": "310000",
+    "provinceName": "上海市",
+    "type": "直辖市",
+    "level": "city"
+  },
+  {
+    "code": "320100",
+    "name": "南京市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "320200",
+    "name": "无锡市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320300",
+    "name": "徐州市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320400",
+    "name": "常州市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320500",
+    "name": "苏州市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320600",
+    "name": "南通市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320700",
+    "name": "连云港市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320800",
+    "name": "淮安市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "320900",
+    "name": "盐城市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "321000",
+    "name": "扬州市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "321100",
+    "name": "镇江市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "321200",
+    "name": "泰州市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "321300",
+    "name": "宿迁市",
+    "provinceCode": "320000",
+    "provinceName": "江苏省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330100",
+    "name": "杭州市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "330200",
+    "name": "宁波市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "330300",
+    "name": "温州市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330400",
+    "name": "嘉兴市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330500",
+    "name": "湖州市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330600",
+    "name": "绍兴市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330700",
+    "name": "金华市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330800",
+    "name": "衢州市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "330900",
+    "name": "舟山市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "331000",
+    "name": "台州市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "331100",
+    "name": "丽水市",
+    "provinceCode": "330000",
+    "provinceName": "浙江省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340100",
+    "name": "合肥市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340200",
+    "name": "芜湖市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340300",
+    "name": "蚌埠市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340400",
+    "name": "淮南市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340500",
+    "name": "马鞍山市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340600",
+    "name": "淮北市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340700",
+    "name": "铜陵市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "340800",
+    "name": "安庆市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341000",
+    "name": "黄山市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341100",
+    "name": "滁州市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341200",
+    "name": "阜阳市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341300",
+    "name": "宿州市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341500",
+    "name": "六安市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341600",
+    "name": "亳州市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341700",
+    "name": "池州市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "341800",
+    "name": "宣城市",
+    "provinceCode": "340000",
+    "provinceName": "安徽省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350100",
+    "name": "福州市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350200",
+    "name": "厦门市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "350300",
+    "name": "莆田市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350400",
+    "name": "三明市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350500",
+    "name": "泉州市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350600",
+    "name": "漳州市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350700",
+    "name": "南平市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350800",
+    "name": "龙岩市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "350900",
+    "name": "宁德市",
+    "provinceCode": "350000",
+    "provinceName": "福建省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360100",
+    "name": "南昌市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360200",
+    "name": "景德镇市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360300",
+    "name": "萍乡市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360400",
+    "name": "九江市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360500",
+    "name": "新余市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360600",
+    "name": "鹰潭市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360700",
+    "name": "赣州市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360800",
+    "name": "吉安市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "360900",
+    "name": "宜春市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "361000",
+    "name": "抚州市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "361100",
+    "name": "上饶市",
+    "provinceCode": "360000",
+    "provinceName": "江西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370100",
+    "name": "济南市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "370200",
+    "name": "青岛市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "370300",
+    "name": "淄博市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370400",
+    "name": "枣庄市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370500",
+    "name": "东营市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370600",
+    "name": "烟台市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370700",
+    "name": "潍坊市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370800",
+    "name": "济宁市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "370900",
+    "name": "泰安市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371000",
+    "name": "威海市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371100",
+    "name": "日照市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371300",
+    "name": "临沂市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371400",
+    "name": "德州市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371500",
+    "name": "聊城市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371600",
+    "name": "滨州市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "371700",
+    "name": "菏泽市",
+    "provinceCode": "370000",
+    "provinceName": "山东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410100",
+    "name": "郑州市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410200",
+    "name": "开封市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410300",
+    "name": "洛阳市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410400",
+    "name": "平顶山市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410500",
+    "name": "安阳市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410600",
+    "name": "鹤壁市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410700",
+    "name": "新乡市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410800",
+    "name": "焦作市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "410900",
+    "name": "濮阳市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411000",
+    "name": "许昌市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411100",
+    "name": "漯河市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411200",
+    "name": "三门峡市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411300",
+    "name": "南阳市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411400",
+    "name": "商丘市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411500",
+    "name": "信阳市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411600",
+    "name": "周口市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "411700",
+    "name": "驻马店市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "419001",
+    "name": "济源市",
+    "provinceCode": "410000",
+    "provinceName": "河南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "420100",
+    "name": "武汉市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "420200",
+    "name": "黄石市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420300",
+    "name": "十堰市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420500",
+    "name": "宜昌市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420600",
+    "name": "襄阳市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420700",
+    "name": "鄂州市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420800",
+    "name": "荆门市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "420900",
+    "name": "孝感市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "421000",
+    "name": "荆州市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "421100",
+    "name": "黄冈市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "421200",
+    "name": "咸宁市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "421300",
+    "name": "随州市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "422800",
+    "name": "恩施土家族苗族自治州",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "429004",
+    "name": "仙桃市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "429005",
+    "name": "潜江市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "429006",
+    "name": "天门市",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "429021",
+    "name": "神农架林区",
+    "provinceCode": "420000",
+    "provinceName": "湖北省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "430100",
+    "name": "长沙市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430200",
+    "name": "株洲市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430300",
+    "name": "湘潭市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430400",
+    "name": "衡阳市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430500",
+    "name": "邵阳市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430600",
+    "name": "岳阳市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430700",
+    "name": "常德市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430800",
+    "name": "张家界市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "430900",
+    "name": "益阳市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "431000",
+    "name": "郴州市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "431100",
+    "name": "永州市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "431200",
+    "name": "怀化市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "431300",
+    "name": "娄底市",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "433100",
+    "name": "湘西土家族苗族自治州",
+    "provinceCode": "430000",
+    "provinceName": "湖南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "440100",
+    "name": "广州市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "440200",
+    "name": "韶关市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440300",
+    "name": "深圳市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "440400",
+    "name": "珠海市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440500",
+    "name": "汕头市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440600",
+    "name": "佛山市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440700",
+    "name": "江门市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440800",
+    "name": "湛江市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "440900",
+    "name": "茂名市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441200",
+    "name": "肇庆市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441300",
+    "name": "惠州市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441400",
+    "name": "梅州市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441500",
+    "name": "汕尾市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441600",
+    "name": "河源市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441700",
+    "name": "阳江市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441800",
+    "name": "清远市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "441900",
+    "name": "东莞市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "442000",
+    "name": "中山市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "445100",
+    "name": "潮州市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "445200",
+    "name": "揭阳市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "445300",
+    "name": "云浮市",
+    "provinceCode": "440000",
+    "provinceName": "广东省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450100",
+    "name": "南宁市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450200",
+    "name": "柳州市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450300",
+    "name": "桂林市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450400",
+    "name": "梧州市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450500",
+    "name": "北海市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450600",
+    "name": "防城港市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450700",
+    "name": "钦州市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450800",
+    "name": "贵港市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "450900",
+    "name": "玉林市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "451000",
+    "name": "百色市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "451100",
+    "name": "贺州市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "451200",
+    "name": "河池市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "451300",
+    "name": "来宾市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "451400",
+    "name": "崇左市",
+    "provinceCode": "450000",
+    "provinceName": "广西壮族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "460100",
+    "name": "海口市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "460200",
+    "name": "三亚市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "460300",
+    "name": "三沙市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "460400",
+    "name": "儋州市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "469001",
+    "name": "五指山市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469002",
+    "name": "琼海市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469005",
+    "name": "文昌市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469006",
+    "name": "万宁市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469007",
+    "name": "东方市",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469021",
+    "name": "定安县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469022",
+    "name": "屯昌县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469023",
+    "name": "澄迈县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469024",
+    "name": "临高县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469025",
+    "name": "白沙黎族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469026",
+    "name": "昌江黎族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469027",
+    "name": "乐东黎族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469028",
+    "name": "陵水黎族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469029",
+    "name": "保亭黎族苗族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "469030",
+    "name": "琼中黎族苗族自治县",
+    "provinceCode": "460000",
+    "provinceName": "海南省",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "500000",
+    "name": "重庆市",
+    "provinceCode": "500000",
+    "provinceName": "重庆市",
+    "type": "直辖市",
+    "level": "city"
+  },
+  {
+    "code": "510100",
+    "name": "成都市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "510300",
+    "name": "自贡市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510400",
+    "name": "攀枝花市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510500",
+    "name": "泸州市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510600",
+    "name": "德阳市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510700",
+    "name": "绵阳市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510800",
+    "name": "广元市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "510900",
+    "name": "遂宁市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511000",
+    "name": "内江市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511100",
+    "name": "乐山市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511300",
+    "name": "南充市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511400",
+    "name": "眉山市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511500",
+    "name": "宜宾市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511600",
+    "name": "广安市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511700",
+    "name": "达州市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511800",
+    "name": "雅安市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "511900",
+    "name": "巴中市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "512000",
+    "name": "资阳市",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "513200",
+    "name": "阿坝藏族羌族自治州",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "513300",
+    "name": "甘孜藏族自治州",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "513400",
+    "name": "凉山彝族自治州",
+    "provinceCode": "510000",
+    "provinceName": "四川省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "520100",
+    "name": "贵阳市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "520200",
+    "name": "六盘水市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "520300",
+    "name": "遵义市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "520400",
+    "name": "安顺市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "520500",
+    "name": "毕节市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "520600",
+    "name": "铜仁市",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "522300",
+    "name": "黔西南布依族苗族自治州",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "522600",
+    "name": "黔东南苗族侗族自治州",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "522700",
+    "name": "黔南布依族苗族自治州",
+    "provinceCode": "520000",
+    "provinceName": "贵州省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "530100",
+    "name": "昆明市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530300",
+    "name": "曲靖市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530400",
+    "name": "玉溪市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530500",
+    "name": "保山市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530600",
+    "name": "昭通市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530700",
+    "name": "丽江市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530800",
+    "name": "普洱市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "530900",
+    "name": "临沧市",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "532300",
+    "name": "楚雄彝族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "532500",
+    "name": "红河哈尼族彝族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "532600",
+    "name": "文山壮族苗族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "532800",
+    "name": "西双版纳傣族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "532900",
+    "name": "大理白族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "533100",
+    "name": "德宏傣族景颇族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "533300",
+    "name": "怒江傈僳族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "533400",
+    "name": "迪庆藏族自治州",
+    "provinceCode": "530000",
+    "provinceName": "云南省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "540100",
+    "name": "拉萨市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "540200",
+    "name": "日喀则市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "540300",
+    "name": "昌都市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "540400",
+    "name": "林芝市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "540500",
+    "name": "山南市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "540600",
+    "name": "那曲市",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "542500",
+    "name": "阿里地区",
+    "provinceCode": "540000",
+    "provinceName": "西藏自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "610100",
+    "name": "西安市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "副省级市",
+    "level": "city"
+  },
+  {
+    "code": "610200",
+    "name": "铜川市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610300",
+    "name": "宝鸡市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610400",
+    "name": "咸阳市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610500",
+    "name": "渭南市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610600",
+    "name": "延安市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610700",
+    "name": "汉中市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610800",
+    "name": "榆林市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "610900",
+    "name": "安康市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "611000",
+    "name": "商洛市",
+    "provinceCode": "610000",
+    "provinceName": "陕西省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620100",
+    "name": "兰州市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "630100",
+    "name": "西宁市",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "630200",
+    "name": "海东市",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "632200",
+    "name": "海北藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "632300",
+    "name": "黄南藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "632500",
+    "name": "海南藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "632600",
+    "name": "果洛藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "632700",
+    "name": "玉树藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "632800",
+    "name": "海西蒙古族藏族自治州",
+    "provinceCode": "630000",
+    "provinceName": "青海省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "640100",
+    "name": "银川市",
+    "provinceCode": "640000",
+    "provinceName": "宁夏回族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "640200",
+    "name": "石嘴山市",
+    "provinceCode": "640000",
+    "provinceName": "宁夏回族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "640300",
+    "name": "吴忠市",
+    "provinceCode": "640000",
+    "provinceName": "宁夏回族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "640400",
+    "name": "固原市",
+    "provinceCode": "640000",
+    "provinceName": "宁夏回族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "640500",
+    "name": "中卫市",
+    "provinceCode": "640000",
+    "provinceName": "宁夏回族自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "650100",
+    "name": "乌鲁木齐市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "650200",
+    "name": "克拉玛依市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "650400",
+    "name": "吐鲁番市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "650500",
+    "name": "哈密市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "652300",
+    "name": "昌吉回族自治州",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "652700",
+    "name": "博尔塔拉蒙古自治州",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "652800",
+    "name": "巴音郭楞蒙古自治州",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "652900",
+    "name": "阿克苏地区",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "653000",
+    "name": "克孜勒苏柯尔克孜自治州",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "653100",
+    "name": "喀什地区",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "653200",
+    "name": "和田地区",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "654000",
+    "name": "伊犁哈萨克自治州",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "654200",
+    "name": "塔城地区",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "654300",
+    "name": "阿勒泰地区",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "地区",
+    "level": "city"
+  },
+  {
+    "code": "659001",
+    "name": "石河子市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659002",
+    "name": "阿拉尔市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659003",
+    "name": "图木舒克市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659004",
+    "name": "五家渠市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659005",
+    "name": "北屯市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "620200",
+    "name": "嘉峪关市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620300",
+    "name": "金昌市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620400",
+    "name": "白银市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620500",
+    "name": "天水市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620600",
+    "name": "武威市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620700",
+    "name": "张掖市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620800",
+    "name": "平凉市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "620900",
+    "name": "酒泉市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "621000",
+    "name": "庆阳市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "621100",
+    "name": "定西市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "621200",
+    "name": "陇南市",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "地级市",
+    "level": "city"
+  },
+  {
+    "code": "622900",
+    "name": "临夏回族自治州",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "623000",
+    "name": "甘南藏族自治州",
+    "provinceCode": "620000",
+    "provinceName": "甘肃省",
+    "type": "自治州",
+    "level": "city"
+  },
+  {
+    "code": "659006",
+    "name": "铁门关市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659007",
+    "name": "双河市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659008",
+    "name": "可克达拉市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659009",
+    "name": "昆玉市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "659010",
+    "name": "胡杨河市",
+    "provinceCode": "650000",
+    "provinceName": "新疆维吾尔自治区",
+    "type": "省直辖县",
+    "level": "city"
+  },
+  {
+    "code": "710000",
+    "name": "台湾省",
+    "provinceCode": "710000",
+    "provinceName": "台湾省",
+    "type": "不统计",
+    "level": "city"
+  },
+  {
+    "code": "810000",
+    "name": "香港特别行政区",
+    "provinceCode": "810000",
+    "provinceName": "香港特别行政区",
+    "type": "特别行政区",
+    "level": "city"
+  },
+  {
+    "code": "820000",
+    "name": "澳门特别行政区",
+    "provinceCode": "820000",
+    "provinceName": "澳门特别行政区",
+    "type": "特别行政区",
+    "level": "city"
+  }
+]

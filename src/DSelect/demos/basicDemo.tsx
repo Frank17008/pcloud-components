@@ -1,5 +1,5 @@
 /**
- * description: 基础用法：默认开启输入防抖和异步加载,异步加载时会显示loading加载中效果
+ * description: 基础用法：默认开启输入防抖和异步加载,异步加载时会显示加载中效果
  */
 import React from 'react';
 import { DSelect } from '@pointcloud/pui-components';

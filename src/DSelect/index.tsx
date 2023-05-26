@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-17 08:41:25
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 09:51:19
+ * @LastEditTime : 2023-05-26 14:44:38
  * @Description  : 基于antd的Select组件
  */
 import React, { forwardRef, useEffect, useRef, useState, useMemo, useContext } from 'react';
@@ -18,7 +18,7 @@ export type DSelectProps = Omit<SelectProps, 'options' | 'onSearch' | 'loading'>
   onSearch?: (params?: any) => Promise<DefaultOptionType[] | any[]>;
   /** antd的options属性，可以是一个options数组，或一个返回等价options数组的promise */
   options?: DefaultOptionType[] | DSelectProps['onSearch'];
-  /** antd的loading属性，是否显示加载中： true表示600毫秒，false或0表示不开启 */
+  /** antd的loading属性，是否显示加载中：传入数字表示延迟加载,单位毫秒，0等同于false */
   loading?: boolean | number;
   /** 是否开启防抖： true表示800毫秒，true表示默认值，false或0表示不开启 */
   debounce?: boolean | number;
@@ -41,7 +41,9 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
   const { getPrefixCls }: any = useContext(ConfigContext);
 
   const [options, setOptions] = useState<DefaultOptionType[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(
+    typeof initLoading === 'boolean' ? initLoading : true,
+  );
 
   const _className = `${getPrefixCls('select')} ${className}`;
   const _popupClassName = `${getPrefixCls('select-dropdown')} ${popupClassName}`;
@@ -58,7 +60,9 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
   const _showSearch = !!onSearch;
 
   const _debounce = getDelayTime(debounce);
-  const _loading = getDelayTime(initLoading, 600);
+  const _loadingState = getDelayTime(initLoading, 600);
+
+  const _loading = typeof initLoading === 'boolean' ? initLoading : loading;
 
   const _filterOption = getFilterOption(!_showSearch, filterOption, _fieldNames);
 
@@ -86,12 +90,12 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
 
   const updateOptions = (fun: DSelectProps['onSearch'], value?: string) => {
     // 设置加载中状态
-    if (_loading > 0) {
+    if (_loadingState > 0) {
       loadingRef.current.status = 'loading';
       clearTimeout(loadingRef.current.timer);
       loadingRef.current.timer = setTimeout(() => {
         loadingRef.current.status === 'loading' && setLoading(true);
-      }, _loading);
+      }, _loadingState);
     }
 
     // 记录请求参数,清空options
@@ -123,14 +127,14 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
       allowClear={true}
       filterOption={_filterOption}
       showSearch={_showSearch}
-      loading={loading}
       searchValue={searchValue}
       {...otherProps}
+      ref={ref}
       className={_className}
       popupClassName={_popupClassName}
       fieldNames={_fieldNames}
       onSearch={_showSearch ? _onSearch : undefined}
-      ref={ref}
+      loading={_loading}
       options={options}
     />
   );

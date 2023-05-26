@@ -1,5 +1,5 @@
 /**
- * description: 加载中：设置loading属性即可在远程搜索时显示加载中，支持延迟显示，默认600毫秒，传入false或0表示不显示
+ * description: 加载中：设置loading属性即可在远程搜索时显示加载中，支持延迟显示，默认600毫秒，传入0等同于false
  */
 import React, { useState } from 'react';
 
@@ -16,7 +16,7 @@ export default function loadingDemo() {
     { label: '选项4', value: 4, type: '443' },
   ];
 
-  const [loading, setLoading] = useState<boolean | number>(true);
+  const [loading, setLoading] = useState<boolean | number>(800);
   const onRadioChange = (e) => setLoading(e.target.value);
 
   const getOptionsAsync = () => {

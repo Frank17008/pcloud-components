@@ -11,3 +11,6 @@ export { default as DInput } from './DInput';
 
 export type { DSelectProps } from './DSelect';
 export { default as DSelect } from './DSelect';
+
+export type { DCascaderProps } from './DCascader';
+export { default as DCascader } from './DCascader';
