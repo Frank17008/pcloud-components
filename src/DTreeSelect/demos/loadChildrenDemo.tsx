@@ -1,12 +1,11 @@
 /**
- * description: 动态加载子级列表：loadData属性用于开启动态加载，默认使用options提供的方法,传入null表示不开启态加载
+ * description: 动态加载子级列表：loadData属性用于开启动态加载，默认使用treeData提供的方法,传入null表示不开启态加载
  */
 import React, { useState } from 'react';
 
 import { Radio } from 'antd';
-import { DefaultOptionType } from 'antd/lib/cascader';
 
-import { DCascader } from '@pointcloud/pui-components';
+import { DTreeSelect } from '@pointcloud/pui-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';
@@ -18,7 +17,7 @@ export default function loadChildrenDemo() {
   const onRadioChange = (e) => setEnableRemoteLoadData(e.target.value);
 
   const remoteLoadData = (option) => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<Array<{ value: string; label: string }>>((resolve, reject) => {
       let options;
       if (option) {
         const listMap = { province: cityList, city: countyList };
@@ -60,7 +59,12 @@ export default function loadChildrenDemo() {
           <Radio value={false}>关闭远程加载</Radio>
         </Radio.Group>
       </div>
-      <DCascader options={remoteLoadData} onChange={onChange} {...loadDataProps} />
+      <DTreeSelect
+        style={{ width: 200 }}
+        treeData={remoteLoadData}
+        onChange={onChange}
+        {...loadDataProps}
+      />
     </>
   );
 }

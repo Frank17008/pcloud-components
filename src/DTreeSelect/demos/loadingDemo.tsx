@@ -1,24 +1,22 @@
 /**
- * description: 动态加载子级列表：loadData属性用于开启动态加载，默认使用options提供的方法,传入null表示不开启态加载
+ * description: 加载中：设置loading属性即可在远程搜索时显示加载中，支持延迟显示，默认600毫秒，传入false或0表示不显示（loading效果目前对下拉列表无效）
  */
 import React, { useState } from 'react';
 
 import { Radio } from 'antd';
-import { DefaultOptionType } from 'antd/lib/cascader';
 
-import { DCascader } from '@pointcloud/pui-components';
+import { DTreeSelect } from '@pointcloud/pui-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';
 import countyList from './mockData/china_region_county.json';
 
-export default function loadChildrenDemo() {
-  const [enableRemoteLoadData, setEnableRemoteLoadData] = useState(undefined);
+export default function loadingDemo() {
+  const [loading, setLoading] = useState<boolean | number>(800);
+  const onRadioChange = (e) => setLoading(e.target.value);
 
-  const onRadioChange = (e) => setEnableRemoteLoadData(e.target.value);
-
-  const remoteLoadData = (option) => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+  const getOptionsAsync = (option): Promise<Array<{ value: string; label: string }>> => {
+    return new Promise((resolve) => {
       let options;
       if (option) {
         const listMap = { province: cityList, city: countyList };
@@ -31,6 +29,9 @@ export default function loadChildrenDemo() {
           label: item.name,
           isLeaf: item.level === 'county',
         }));
+        setTimeout(() => {
+          resolve(options);
+        }, 1200);
       } else {
         options = provinceList.map((item) => ({
           ...item,
@@ -38,8 +39,10 @@ export default function loadChildrenDemo() {
           value: item.code,
           isLeaf: false,
         }));
+        setTimeout(() => {
+          resolve(options);
+        }, 3000);
       }
-      resolve(options);
     });
   };
 
@@ -47,20 +50,23 @@ export default function loadChildrenDemo() {
     console.log(values, options);
   };
 
-  const loadDataFn = enableRemoteLoadData === true ? remoteLoadData : null;
-  const loadDataProps = enableRemoteLoadData === undefined ? undefined : { loadData: loadDataFn };
-
   return (
     <>
       <div style={{ marginBottom: '12px' }}>
         <span>切换类型：</span>
-        <Radio.Group value={enableRemoteLoadData} onChange={onRadioChange}>
-          <Radio value={undefined}>默认</Radio>
-          <Radio value={true}>开启远程加载</Radio>
-          <Radio value={false}>关闭远程加载</Radio>
+        <Radio.Group value={loading} onChange={onRadioChange}>
+          <Radio value={true}>显示加载中</Radio>
+          <Radio value={false}>不显示加载中</Radio>
+          <Radio value={800}>延时800毫秒</Radio>
+          <Radio value={2000}>延时2000毫秒</Radio>
         </Radio.Group>
       </div>
-      <DCascader options={remoteLoadData} onChange={onChange} {...loadDataProps} />
+      <DTreeSelect
+        style={{ width: 200 }}
+        treeData={getOptionsAsync}
+        loading={loading}
+        onChange={onChange}
+      />
     </>
   );
 }

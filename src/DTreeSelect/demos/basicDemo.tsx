@@ -2,14 +2,14 @@
  * description: 基础用法：默认开启异步加载,自动加载子级列表,加载时会显示加载中效果
  */
 import React from 'react';
-import { DCascader } from '@pointcloud/pui-components';
+import { DTreeSelect } from '@pointcloud/pui-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';
 import countyList from './mockData/china_region_county.json';
 
 export default function basicDemo() {
-  const getOptionsAsync = (value, option): Promise<Array<{ value: string; label: string }>> => {
+  const getOptionsAsync = (option): Promise<Array<{ value: string; label: string }>> => {
     return new Promise((resolve) => {
       let options;
       if (option) {
@@ -39,5 +39,7 @@ export default function basicDemo() {
     console.log(values, options);
   };
 
-  return <DCascader options={getOptionsAsync} showSearch onChange={onChange} />;
+  return (
+    <DTreeSelect style={{ width: 200 }} treeData={getOptionsAsync} showSearch onChange={onChange} />
+  );
 }

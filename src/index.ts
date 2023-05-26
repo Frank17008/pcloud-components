@@ -14,3 +14,6 @@ export { default as DSelect } from './DSelect';
 
 export type { DCascaderProps } from './DCascader';
 export { default as DCascader } from './DCascader';
+
+export type { DTreeSelectProps } from './DTreeSelect';
+export { default as DTreeSelect } from './DTreeSelect';

@@ -18,5 +18,7 @@ export default function basicDemo() {
     console.log(value, option);
   };
 
-  return <DSelect style={{ width: 200 }} options={getOptionsAsync} onChange={onChange} />;
+  return (
+    <DSelect style={{ width: 200 }} options={getOptionsAsync} showSearch onChange={onChange} />
+  );
 }
