@@ -38,4 +38,4 @@ group:
 | onLoadData | 等同 antd 的 loadData 属性,用于监听 antd loadData 事件 | `(option?) => void` | - |  |
 | loading | 是否显示加载中（传入数字表示延迟加载,单位毫秒，0 等同于 false） | `boolean \| number` | 600 |  |
 
-其他属性同 antd Input 组件，详见：https://4x-ant-design.antgroup.com/components/cascader-cn/#API
+其他属性同 antd TreeSelect 组件，详见：https://4x-ant-design.antgroup.com/components/tree-select-cn/#API

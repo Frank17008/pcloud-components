@@ -43,4 +43,4 @@ group:
 | loading | antd 的 loading 属性，是否显示加载中（传入数字表示延迟加载,单位毫秒，0 等同于 false） | `boolean \| number` | 600 |  |
 | debounce | 是否开启防抖（true 表示 800 毫秒，false 或 0 表示不开启） | `boolean \| number` | false |  |
 
-其他属性同 antd Input 组件，详见：https://4x-ant-design.antgroup.com/components/select-cn/#API
+其他属性同 antd Select 组件，详见：https://4x-ant-design.antgroup.com/components/select-cn/#API
