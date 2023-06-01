@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'antd';
-import { Loading } from '@pointcloud/pui-components';
+import { Loading } from '@pointcloud/pcloud-components';
 
 export default () => {
   function onClick() {

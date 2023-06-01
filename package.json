@@ -1,6 +1,6 @@
 {
   "name": "@pointcloud/pcloud-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "private": false,
   "description": "pointcloud react 组件库",
   "keywords": [
@@ -18,12 +18,11 @@
   ],
   "scripts": {
     "build": "father build",
-    "deploy": "npm run docs:build && npm run docs:deploy",
+    "deploy": "npm run docs:build",
     "docker:build": "docker build -t pcloud-components .",
     "docker:push": "npm run deploy && npm run docker:build && npm run docker:tag && docker push tianhu.pcgi.com.cn:9888/base-project/pcloud-components",
     "docker:tag": "docker tag pcloud-components tianhu.pcgi.com.cn:9888/base-project/pcloud-components",
     "docs:build": "dumi build",
-    "docs:deploy": "gh-pages -d docs-dist",
     "prepublishOnly": "npm run build",
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "start": "dumi dev",

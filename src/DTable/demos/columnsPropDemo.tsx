@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-import { DTable, DTableProps } from '@pointcloud/pui-components';
+import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
 export default function columnsPropDemo() {
   const commonColumnsProp: DTableProps['columnsProp'] = { align: 'left', width: 120 };

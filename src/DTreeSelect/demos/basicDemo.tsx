@@ -2,7 +2,7 @@
  * description: 基础用法：默认开启异步加载,自动加载子级列表,加载时会显示加载中效果
  */
 import React from 'react';
-import { DTreeSelect } from '@pointcloud/pui-components';
+import { DTreeSelect } from '@pointcloud/pcloud-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';

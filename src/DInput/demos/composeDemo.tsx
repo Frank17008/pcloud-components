@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { Radio } from 'antd';
 
-import { DInput } from '@pointcloud/pui-components';
+import { DInput } from '@pointcloud/pcloud-components';
 
 export default function composeDemo() {
   const [enableCompose, setEnableCompose] = useState(true);

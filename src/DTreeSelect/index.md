@@ -9,7 +9,7 @@ group:
 
 <span style="font-size:24px;color:#454d64;font-weight:500">DTreeSelect 树选择</span>
 
-基于 antd 4.24.8 `TreeSelect` 的二次封装组件
+基于 antd 4.19.3 `TreeSelect` 的二次封装组件
 
 - treeData、loadData 均支持传入异步函数，在 From 表单组件中使用更方便
 - 加载选项列表时可以显示加载中效果

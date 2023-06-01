@@ -16,7 +16,7 @@ group:
 GlobalConfig 使用 React 的 context 特性，只需在应用外围包裹一次即可全局生效。
 
 ```jsx | pure
-import { ConfigProvider } from '@pointcloud/pui-components';
+import { ConfigProvider } from '@pointcloud/pcloud-components';
 
 // ...
 export default () => (

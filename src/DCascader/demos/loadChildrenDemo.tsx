@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { Radio } from 'antd';
 import { DefaultOptionType } from 'antd/lib/cascader';
 
-import { DCascader } from '@pointcloud/pui-components';
+import { DCascader } from '@pointcloud/pcloud-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';

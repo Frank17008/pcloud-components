@@ -2,7 +2,7 @@
  * description: 基础用法：默认开启输入防抖和异步加载,异步加载时会显示加载中效果
  */
 import React from 'react';
-import { DSelect } from '@pointcloud/pui-components';
+import { DSelect } from '@pointcloud/pcloud-components';
 
 export default function basicDemo() {
   const options = [

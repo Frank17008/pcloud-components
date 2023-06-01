@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 import { Radio } from 'antd';
 
-import { DTreeSelect } from '@pointcloud/pui-components';
+import { DTreeSelect } from '@pointcloud/pcloud-components';
 
 import provinceList from './mockData/china_region_province.json';
 import cityList from './mockData/china_region_city.json';

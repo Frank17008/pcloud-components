@@ -2,7 +2,7 @@
  * description: 基础用法：设置loadMore属性即可自动加载表格数据，分页变化时会自动调用该函数，如果在外部监听了分页的onChange事件，则不会触发loadMore，但如果外部onChange返回值为undefined则正常触loadMore
  */
 import React from 'react';
-import { DTable, DTableProps } from '@pointcloud/pui-components';
+import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
 export default function basicDemo() {
   const columns: DTableProps['columns'] = [

@@ -2,7 +2,7 @@ import { defineConfig } from 'dumi';
 const path = require('path');
 
 export default defineConfig({
-  title: 'pui-components',
+  title: 'pcloud-components',
   favicon: '/images/logo.png',
   logo: '/images/logo.png',
   outputPath: 'docs-dist',
@@ -38,7 +38,7 @@ export default defineConfig({
   ],
   chainWebpack(memo) {
     // 设置 alias
-    memo.resolve.alias.set('@pointcloud/pui-components', path.resolve(__dirname, 'src'));
+    memo.resolve.alias.set('@pointcloud/pcloud-components', path.resolve(__dirname, 'src'));
     // 支持es
     memo.module
       .rule('mjs')

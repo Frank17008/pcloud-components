@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { Button, Radio } from 'antd';
 
-import { DTable, DTableProps } from '@pointcloud/pui-components';
+import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
 export default function actionColumnDemo() {
   const [actionType, setActionType] = useState<'object' | 'render'>('object');

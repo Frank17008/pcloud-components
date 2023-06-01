@@ -4,7 +4,7 @@
 import React, { useState } from 'react';
 import { Radio } from 'antd';
 
-import { DTable, DTableProps } from '@pointcloud/pui-components';
+import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
 export default function errorMsgDemo() {
   const [showErrorMsg, setShowErrorMsg] = useState<boolean>(false);

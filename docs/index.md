@@ -1,6 +1,6 @@
 ---
 hero:
-  title: pui-components
+  title: pcloud-components
   desc: 基于Antd封装的轻量级React业务组件库
   actions:
     - text: Getting Started
@@ -18,4 +18,4 @@ features:
 footer: Open-source MIT Licensed | Copyright PointCloud © 2020
 ---
 
-## Hello pui-components!
+## Hello pcloud-components!

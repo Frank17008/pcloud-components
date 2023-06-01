@@ -9,7 +9,7 @@ group:
 
 <span style="font-size:24px;color:#454d64;font-weight:500">DInput 输入框</span>
 
-基于 antd 4.24.8 `Input` 的二次封装组件
+基于 antd 4.19.3 `Input` 的二次封装组件
 
 - 提供合成输入组合事件，解决中文拼音输入也会触发 onChange 事件的问题
 - 提供输入防抖功能

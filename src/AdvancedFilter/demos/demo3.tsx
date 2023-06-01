@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { AdvancedFilter } from '@pointcloud/pui-components';
+import { AdvancedFilter } from '@pointcloud/pcloud-components';
 import { CaretDownOutlined } from '@ant-design/icons';
 import { Button } from 'antd';
 

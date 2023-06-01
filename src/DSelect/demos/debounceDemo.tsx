@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 import { Radio } from 'antd';
 import { DefaultOptionType } from 'antd/lib/select';
 
-import { DSelect } from '@pointcloud/pui-components';
+import { DSelect } from '@pointcloud/pcloud-components';
 
 export default function debounceDemo() {
   const options = [

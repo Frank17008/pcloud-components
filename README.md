@@ -1,6 +1,6 @@
-# pui-components
+# pcloud-components
 
-pui-components 是一套基于 Antd v4.19.3 + React v17.0.0 开发的业务组件库。
+pcloud-components 是一套基于 Antd v4.19.3 + React v17.0.0 开发的业务组件库。
 
 ## 开始
 
