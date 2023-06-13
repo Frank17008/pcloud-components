@@ -1,7 +1,6 @@
 @import '../../commonStyle/index.less';
 .@{prefix}-modal-container {
   .ant-modal-wrap {
-    position: absolute;
     .ant-modal {
       max-width: unset;
       height: 100%;
@@ -10,5 +9,17 @@
         height: 100%;
       }
     }
+  }
+}
+
+.@{prefix}-absolute-modal-container {
+  .ant-modal-wrap {
+    position: fixed;
+  }
+}
+
+.@{prefix}-relative-modal-container {
+  .ant-modal-wrap {
+    position: absolute;
   }
 }

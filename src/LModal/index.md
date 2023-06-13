@@ -26,8 +26,9 @@ group:
 ## API
 
 | Name | Description | Type | Default |
-| :-: | :-- | :-: | :-: | --- | --- | --- |
+| :-: | :-- | :-: | :-: |
 | children | 自定义弹框内容 | React.ReactDOM | - |
+| mode | relative:相对位置弹框<br />absolute:全局弹框 | relative \| absolute  | absolute |
 | afterClose | Modal 完全关闭后的回调 | function | - |
 | cancelButtonProps | cancel 按钮 props | ButtonProps | - |
 | cancelText | 取消按钮文字 | ReactNode | 取消 |
@@ -39,7 +40,7 @@ group:
 | focusTriggerAfterClose | 对话框关闭后是否需要聚焦触发元素 | boolean | TRUE |
 | footer | 底部内容，当不需要默认底部按钮时，可以设为  footer={null} | ReactNode | (确定取消按钮) |
 | forceRender | 强制渲染 Modal | boolean | FALSE |
-| getContainer | 指定 Modal 挂载的节点，但依旧为全局展示，false  为挂载在当前位置 | HTMLElement | () => HTMLElement | Selectors | false | document.body |
+| getContainer | 指定 Modal 挂载的节点，但依旧为全局展示，false  为挂载在当前位置 | HTMLElement\| () => HTMLElement \| Selectors \| false | document.body |
 | keyboard | 是否支持键盘 esc 关闭 | boolean | TRUE |
 | mask | 是否展示遮罩 | boolean | TRUE |
 | maskClosable | 点击蒙层是否允许关闭 | boolean | TRUE |

@@ -13,17 +13,16 @@ function Demo4() {
     setData({ ...data });
   };
   return (
-    <div style={{ position: 'relative', width: '100%', height: '500px' }}>
+    <div style={{ width: '100%', height: '100px' }}>
       <Button onClick={onOPen}>open</Button>
       <LModal
         visible={data.visible}
         onCancel={onClose}
-        style={{ width: '100%', height: '100%' }}
+        style={{ width: '80%', height: '50%' }}
         bodyStyle={{ height: '100%' }}
-        mask={false}
         footer={null}
       >
-        <div style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
+        <div style={{ height: '100%', overflow: 'auto' }}>
           <div
             style={{
               height: 60,
@@ -32,7 +31,7 @@ function Demo4() {
           >
             header
           </div>
-          <div style={{ flex: 1, backgroundColor: 'blue' }}>content</div>
+          <div style={{ height: 1000, backgroundColor: 'blue' }}>content</div>
           <div
             style={{
               height: 60,
