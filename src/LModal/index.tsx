@@ -1,10 +1,11 @@
 import { ConfigContext } from '@/ConfigProvider';
 import { Modal, ModalProps } from 'antd';
 import React, { useContext, useEffect, useMemo, useRef } from 'react';
-import { IProps } from './interface';
+import { LModalProps } from './interface';
 import './styles/index.less';
+export { LModalProps };
 
-function LModal(props: IProps) {
+function LModal(props: LModalProps) {
   const { children, mode = 'absolute', ...otherProps } = props;
 
   const { getPrefixCls }: any = useContext(ConfigContext);

@@ -20,3 +20,6 @@ export { default as DTreeSelect } from './DTreeSelect';
 
 export type { DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
 export { default as DTable } from './DTable';
+
+export type { LModalProps } from './LModal';
+export { default as LModal } from './LModal';
