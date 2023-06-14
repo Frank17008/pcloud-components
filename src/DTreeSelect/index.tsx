@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-22 10:38:17
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 17:51:19
+ * @LastEditTime : 2023-06-13 15:39:42
  * @Description  : 基于antd的TreeSelect组件
  */
 
@@ -145,7 +145,7 @@ function InternalTreeSelect(props: DTreeSelectProps, ref: React.Ref<BaseSelectRe
       ref={ref}
       className={_className}
       popupClassName={_popupClassName}
-      fieldNames={_fieldNames}
+      fieldNames={fieldNames}
       treeNodeFilterProp={_treeNodeFilterProp}
       treeData={treeData}
       loadData={_loadData}
