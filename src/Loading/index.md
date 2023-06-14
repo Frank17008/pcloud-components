@@ -19,10 +19,14 @@ group:
 
 <code src="./demos/demo2.tsx" />
 
+## 指定挂载位置
+
+<code src="./demos/demo3.tsx" />
+
 ## API
 
 | Name | Description | Type | 返回值 | Default |
 | :-: | :-- | :-: | :-: | :-: |
-| open | 打开方法 | (tip?:string) => React.ReactDOM | React.ReactDOM | tip 默认值：数据请求中... |
+| open | 打开方法 | ({tip?:string,container?:ReactInstance}) => React.ReactDOM | React.ReactDOM | tip 默认值：数据请求中...<br />container 默认值：document.body |
 | close | 关闭方法 | Function | -- | -- |
 | getInstance | 获取 loading 实例 | Function | React.ReactDOM | -- |

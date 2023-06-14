@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ReactInstance, ReactNode } from 'react';
 
 export interface LoadingInstanceProps {
   /**
@@ -6,10 +6,11 @@ export interface LoadingInstanceProps {
    * @default '数据请求中...'
    */
   tip?: string;
+  container?: ReactInstance | undefined;
 }
 
 export interface LoadingProps {
-  open: (tip?: string) => React.ReactDOM;
+  open: (param: LoadingInstanceProps) => React.ReactDOM;
   close: () => void;
   getInstance: () => React.ReactDOM;
 }
