@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import LModal from '..';
+import { LModal } from '@pointcloud/pcloud-components';
 import { Button } from 'antd';
 
 function Demo1() {

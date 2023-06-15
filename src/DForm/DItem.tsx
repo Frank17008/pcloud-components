@@ -136,7 +136,7 @@ export type DItemProps =
   | ButtonProps
   | DividerProps;
 
-function DItem(props: InternalItemProps) {
+function DItem(props: any) {
   const { formItemProps, label = '', name, renderType, render, children, ...otherProps } = props;
   const _formItemProps: FormItemProps = { label, name, ...formItemProps };
   if (renderType && renderType !== 'custom') {

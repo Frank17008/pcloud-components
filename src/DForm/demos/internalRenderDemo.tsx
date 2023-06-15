@@ -1,4 +1,5 @@
-import React, { Button } from 'antd';
+import React from 'react';
+import { Button } from 'antd';
 import { DForm, DFormProps } from '@pointcloud/pcloud-components';
 
 const selectOptions = [
