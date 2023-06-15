@@ -5,3 +5,21 @@ export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as ConfigProvider } from './ConfigProvider';
 export { default as Loading } from './Loading';
 export { default as NoData } from './NoData';
+
+export type { DInputProps } from './DInput';
+export { default as DInput } from './DInput';
+
+export type { DSelectProps } from './DSelect';
+export { default as DSelect } from './DSelect';
+
+export type { DCascaderProps } from './DCascader';
+export { default as DCascader } from './DCascader';
+
+export type { DTreeSelectProps } from './DTreeSelect';
+export { default as DTreeSelect } from './DTreeSelect';
+
+export type { DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
+export { default as DTable } from './DTable';
+
+export type { LModalProps } from './LModal';
+export { default as LModal } from './LModal';

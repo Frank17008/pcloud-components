@@ -11,7 +11,7 @@ group:
 
 ```jsx
 import * as React from 'react';
-import { ErrorBoundary } from '@pointcloud/pui-components';
+import { ErrorBoundary } from '@pointcloud/pcloud-components';
 
 const Test = () => {
   const err = {};

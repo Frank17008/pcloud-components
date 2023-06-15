@@ -1,14 +1,14 @@
 import Loading from './loading';
-import { LoadingProps } from './interface';
+import { LoadingProps, LoadingInstanceProps } from './interface';
 
 let loadingInstance: any = null;
-const getLoadingInstance = (tip?: string) => {
-  loadingInstance = loadingInstance || Loading.newInstance({ tip });
+const getLoadingInstance = (params) => {
+  loadingInstance = loadingInstance || Loading.newInstance(params);
   return loadingInstance;
 };
 export default {
-  open(tip?: string): LoadingProps {
-    return getLoadingInstance(tip);
+  open(params?: LoadingInstanceProps): LoadingProps {
+    return getLoadingInstance(params);
   },
   close(): void {
     if (loadingInstance) {

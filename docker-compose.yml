@@ -1,8 +1,8 @@
 version: '3'
 services:
   puiapp:
-    image: tianhu.pcgi.com.cn:9888/base-project/pui-components
-    container_name: 'pui-components'
+    image: tianhu.pcgi.com.cn:9888/base-project/pcloud-components
+    container_name: 'pcloud-components'
     environment:
       - TZ=Asia/Shanghai
     ports:
