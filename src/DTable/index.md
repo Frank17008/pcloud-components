@@ -9,7 +9,7 @@ group:
 
 <span style="font-size:24px;color:#454d64;font-weight:500">DTable 表格</span>
 
-基于 antd 4.19.3 `Table` 的二次封装组件
+基于 antd 4.24.10 `Table` 的二次封装组件
 
 - 支持表格数据异步加载、实现自动分页加载，支持加载时使用额外的请求参数
 - 支持表格可滚动区域百分比设置，加载时显示 loading 效果
