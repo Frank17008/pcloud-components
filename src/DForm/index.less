@@ -1,0 +1,31 @@
+@import '../commonStyle/index.less';
+.@{prefix}-form {
+  .form-wrapper > * {
+    min-height: 32px;
+    margin-right: 0;
+    margin-bottom: 24px;
+    padding-right: 16px;
+  }
+}
+
+.@{prefix}-form.ant-form-horizontal .ant-form-item-label {
+  min-width: 80px;
+}
+
+.@{prefix}-form.ant-form-inline .form-wrapper,
+.@{prefix}-form.ant-form-inline.inlineVertical .form-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  height: min-content;
+}
+
+.@{prefix}-form.ant-form-inline.inlineVertical {
+  .ant-form-item-row {
+    flex-direction: column;
+
+    .ant-form-item-label {
+      text-align: left;
+    }
+  }
+}

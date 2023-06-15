@@ -9,7 +9,7 @@ group:
 
 <span style="font-size:24px;color:#454d64;font-weight:500">DSelect 选择器</span>
 
-基于 antd 4.19.3 `Select` 的二次封装组件
+基于 antd 4.24.10 `Select` 的二次封装组件
 
 - options、onSearch 均支持传入异步函数，在 From 表单组件中使用更方便
 - 支持远程搜索，支持搜索时防抖功能

@@ -1,6 +1,6 @@
 # pcloud-components
 
-pcloud-components 是一套基于 Antd v4.19.3 + React v17.0.0 开发的业务组件库。
+pcloud-components 是一套基于 Antd v4.24.10 + React v17.0.0 开发的业务组件库。
 
 ## 开始
 
@@ -26,6 +26,12 @@ $ npm run docs:build
 
 ```bash
 $ npm run build
+```
+
+发布 npm
+
+```bash
+$ npm publish
 ```
 
 发布文档站点

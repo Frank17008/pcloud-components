@@ -21,5 +21,8 @@ export { default as DTreeSelect } from './DTreeSelect';
 export type { DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
 export { default as DTable } from './DTable';
 
-export type { LModalProps } from './LModal';
+export type { DFormProps } from './DForm';
+export { default as DForm } from './DForm';
+
+export type { LModalProps } from './LModal/interface';
 export { default as LModal } from './LModal';
