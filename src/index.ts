@@ -24,5 +24,5 @@ export { default as DTable } from './DTable';
 export type { DFormProps } from './DForm';
 export { default as DForm } from './DForm';
 
-export type { LModalProps } from './LModal';
+export type { LModalProps } from './LModal/interface';
 export { default as LModal } from './LModal';

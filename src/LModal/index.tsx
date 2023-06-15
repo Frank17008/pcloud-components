@@ -3,7 +3,6 @@ import { Modal, ModalProps } from 'antd';
 import React, { useContext, useEffect, useMemo, useRef } from 'react';
 import { LModalProps } from './interface';
 import './styles/index.less';
-export { LModalProps };
 
 function LModal(props: LModalProps) {
   const { children, mode = 'absolute', ...otherProps } = props;
