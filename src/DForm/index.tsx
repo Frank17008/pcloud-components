@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-02 09:29:11
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-15 08:28:12
+ * @LastEditTime : 2023-06-16 09:09:24
  * @Description  : 基于antd的Form组件
  */
 
@@ -33,7 +33,7 @@ function getChildren(
   children: DFormProps['children'],
   _defaultItemProps: DFormProps['defaultItemProps'],
 ) {
-  let list: any[] = [];
+  let list: ReactNode[] = [];
   if (items instanceof Array && items.length > 0) {
     list = items.map((item: InternalItemProps, index) => {
       const _item = helper.merge(_defaultItemProps, item);
@@ -52,7 +52,7 @@ function InternalForm(props: DFormProps, ref: React.Ref<FormInstance<any>>) {
 
   const { getPrefixCls }: any = useContext(ConfigContext);
 
-  const _className = `${getPrefixCls('d-form')} ${className} ${
+  const _className = `${getPrefixCls('form')} ${className} ${
     layout === 'inlineVertical' ? 'inlineVertical' : ''
   }`;
 

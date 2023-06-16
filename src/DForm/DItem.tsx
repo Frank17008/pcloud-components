@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, ReactNode } from 'react';
 import {
   InputProps,
   InputNumberProps,
@@ -105,6 +105,7 @@ type DCustomItemProps = {
   ) => ReactElement;
   /** Form.Item 的其他属性 */
   formItemProps?: FormItemProps;
+  children?: ReactNode;
 };
 
 export type DItemProps =
@@ -136,7 +137,8 @@ export type DItemProps =
   | ButtonProps
   | DividerProps;
 
-function DItem(props: any) {
+function DItem(props: DItemProps) {
+  // @ts-ignore
   const { formItemProps, label = '', name, renderType, render, children, ...otherProps } = props;
   const _formItemProps: FormItemProps = { label, name, ...formItemProps };
   if (renderType && renderType !== 'custom') {
