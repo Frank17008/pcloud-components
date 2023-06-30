@@ -1,4 +1,4 @@
-import React, { ReactElement, ReactNode } from 'react';
+import { ReactNode } from 'react';
 import {
   InputProps,
   InputNumberProps,
@@ -30,6 +30,7 @@ import { DSelectProps } from '../DSelect';
 import { DCascaderProps } from '../DCascader';
 import { DTreeSelectProps } from '../DTreeSelect';
 import itemsMap from './DItemsMap';
+import { DUploadProps } from '../DUpload';
 
 type RenderTypeProps =
   | 'dInput'
@@ -55,6 +56,7 @@ type RenderTypeProps =
   | 'switch'
   | 'transfer'
   | 'upload'
+  | 'dupload'
   | 'other'
   | 'button'
   | 'divider'
@@ -62,6 +64,7 @@ type RenderTypeProps =
 
 // eslint-disable-next-line no-use-before-define
 export type InternalItemProps = DCustomItemProps &
+  FormItemProps &
   DInputProps &
   InputProps &
   TextAreaProps &
@@ -86,6 +89,7 @@ export type InternalItemProps = DCustomItemProps &
   SwitchProps &
   TransferProps<any> &
   UploadProps &
+  DUploadProps &
   ButtonProps &
   DividerProps;
 
@@ -102,13 +106,14 @@ type DCustomItemProps = {
     props: InternalItemProps,
     formItemProps: FormItemProps,
     allProps?: InternalItemProps,
-  ) => ReactElement;
+  ) => ReactNode;
   /** Form.Item 的其他属性 */
   formItemProps?: FormItemProps;
   children?: ReactNode;
 };
 
 export type DItemProps =
+  | FormItemProps
   | DCustomItemProps
   | DInputProps
   | InputProps
@@ -134,10 +139,11 @@ export type DItemProps =
   | SwitchProps
   | TransferProps<any>
   | UploadProps
+  | DUploadProps
   | ButtonProps
   | DividerProps;
 
-function DItem(props: DItemProps) {
+function DItem(props: InternalItemProps) {
   // @ts-ignore
   const { formItemProps, label = '', name, renderType, render, children, ...otherProps } = props;
   const _formItemProps: FormItemProps = { label, name, ...formItemProps };

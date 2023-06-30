@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-12 17:35:10
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-15 08:36:23
+ * @LastEditTime : 2023-06-30 16:45:59
  * @Description  : 根据renderType渲染对应的表单项组件
  */
 
@@ -36,6 +36,7 @@ import DInput from '../DInput';
 import DSelect from '../DSelect';
 import DTreeSelect from '../DTreeSelect';
 import DCascader from '../DCascader';
+import DUpload from '../DUpload';
 import { InternalItemProps } from './DItem';
 
 const renderMap = {
@@ -278,6 +279,19 @@ const renderMap = {
     return (
       <Form.Item {...formItemProps}>
         <Upload {...props}>{children || label || ''}</Upload>
+      </Form.Item>
+    );
+  },
+  dupload: (
+    props: InternalItemProps,
+    formItemProps: FormItemProps,
+    label: InternalItemProps['label'],
+    render: InternalItemProps['render'],
+    children: InternalItemProps['children'],
+  ): ReactElement => {
+    return (
+      <Form.Item {...formItemProps}>
+        <DUpload {...props}>{children}</DUpload>
       </Form.Item>
     );
   },
