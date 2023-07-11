@@ -1,0 +1,70 @@
+@import '../../commonStyle/index.less';
+
+.@{prefix}-table {
+  .ant-spin-nested-loading,
+  .ant-spin-container,
+  .ant-table-container,
+  .ant-table {
+    width: 100%;
+    height: 100%;
+  }
+
+  // 隐藏表头最后一个滚动样式单元格
+  // .ant-table-thead .ant-table-cell-scrollbar {
+  //     position: absolute;
+  //     top: -1px;
+  //     border: none;
+  //     box-shadow: none;
+  //     background-color: #2e404d;
+  // }
+
+  .ant-table-body {
+    position: absolute;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: calc(100% - 56px);
+    max-height: calc(100% - 56px);
+
+    // 表头显示省略号，但表内单元格不省略
+    .ant-table-tbody > tr > td.ant-table-cell.ant-table-cell-ellipsis {
+      white-space: initial;
+    }
+
+    // x轨道的宽度和y轨道的高度
+    &::-webkit-scrollbar {
+      width: 4px;
+      height: 8px;
+    }
+
+    // 轨道拖动部分的背景颜色
+    &::-webkit-scrollbar-thumb {
+      background-color: #0084ff;
+    }
+
+    // 轨道背景颜色
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+      border-radius: 2px;
+    }
+
+    // x、y两条轨道的交叉处
+    &::-webkit-scrollbar-corner {
+      background-color: #f1f1f1;
+    }
+  }
+
+  .ant-spin-nested-loading > div > .ant-spin {
+    max-height: initial;
+  }
+
+  .ant-pagination-total-text span {
+    color: #40a9ff;
+    font-weight: bold;
+  }
+
+  &.height-on-page {
+    .ant-table {
+      height: calc(100% - 56px);
+    }
+  }
+}
