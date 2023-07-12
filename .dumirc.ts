@@ -40,7 +40,7 @@ const themeConfig: SiteThemeConfig = {
 
 export default defineConfig({
   themeConfig,
-  resolve: { docDirs: ['docs', 'src'] },
+  resolve: { docDirs: ['docs'] },
   outputPath: 'docs-dist',
   favicons: ['/images/favicon.png'],
   locales: [

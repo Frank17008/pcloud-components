@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-07-05 14:31:47
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-11 10:11:47
+ * @LastEditTime : 2023-07-12 10:34:24
  * @Description  : 自定义插件，用于在webpack中添加source-replace-loader
  */
 import { IApi } from 'dumi';
@@ -26,11 +26,12 @@ export default (api: IApi) => {
           // 对antd-style目录下的文件进行处理
           test: /[\\|/]antd-style[\\|/][^\.]*\.(js|jsx|ts|tsx)$/,
           // 尽可能使用绝对路径
-          use: { loader: path.join(__dirname, './source-replace-loader.js'), options: { alias: api.userConfig.dumiThemeAlias } },
+          use: { loader: path.join(__dirname, '../../scripts/source-replace-loader.js'), options: { alias: api.userConfig.dumiThemeAlias } },
         },
         ...memo.module.rules,
       ];
     }
+    console.log('===========================>>', path.join(__dirname, '/scripts/source-replace-loader.js'));
     return memo;
   });
 };

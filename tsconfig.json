@@ -12,5 +12,5 @@
     "paths": { "@@/*": [".dumi/tmp/*"], "@pointcloud/pcloud-components": ["src"], "@pointcloud/pcloud-components/*": ["src/*", "*"] }
   },
   "compileOnSave": true,
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "scripts/**/*"]
 }

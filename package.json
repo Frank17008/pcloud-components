@@ -19,7 +19,7 @@
   "scripts": {
     "build": "father build",
     "build:watch": "father dev",
-    "clean": "node .dumi/clean-tmp.js",
+    "clean": "node scripts/clean-tmp.js",
     "dev": "dumi dev",
     "docs:build": "dumi build",
     "doctor": "father doctor",
