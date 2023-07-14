@@ -27,7 +27,7 @@ group:
 
 ## 自定义表单项渲染类型
 
-<code src="./demos/customRenderDemo.tsx" title="自定义表单项渲染类型" description="通过 items 的 renderType 与 render 实现属性自定义渲染类型,renderType='other'时渲染结果会包含在 Form.Item中"></code>
+<code src="./demos/customRenderDemo.tsx" title="自定义表单项渲染类型" description="通过 items 的 renderType 与 render 属性实现自定义渲染类型,renderType='other'时渲染结果会包含在 Form.Item中"></code>
 
 ## 设置表单项
 
@@ -64,6 +64,6 @@ DItemProps
 | -             | renderType 字段所指定的组件支持的其他属性               | `any`                                                                                         | -      |      |
 
 renderType 可选值:  
-`'dInput' | 'input' | 'textArea' | 'password' | 'inputNumber' | 'autoComplete' | 'dSelect' | 'select' | 'dCascader' | 'cascader' | 'dTreeSelect' | 'treeSelect' | 'datePicker' | 'timePicker' | 'rangePicker' | 'mentions' | 'checkbox' | 'radio' | 'rate' | 'slider' | 'switch' | 'transfer' | 'upload' | 'other' | 'button' | 'divider' | 'custom'`
+`'dInput' | 'input' | 'textArea' | 'password' | 'inputNumber' | 'autoComplete' | 'dSelect' | 'select' | 'dCascader' | 'cascader' | 'dTreeSelect' | 'treeSelect' | 'datePicker' | 'timePicker' | 'rangePicker' | 'mentions' | 'checkbox' | 'radio' | 'rate' | 'slider' | 'switch' | 'transfer' | 'upload' | 'dUpload' | 'other' | 'button' | 'divider' | 'custom'`
 
 其他属性同 antd Form 组件，详见：https://4x-ant-design.antgroup.com/components/form-cn/#API

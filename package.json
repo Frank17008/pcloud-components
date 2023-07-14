@@ -28,7 +28,7 @@
     "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run lint && npm run build",
-    "prettier": "prettier -c --write \"{src,config,docs}/**\"",
+    "prettier": "prettier -c --write \"{src,config,docs,scripts,.dumi/theme}/**\"",
     "start": "npm run clean && npm run dev"
   },
   "commitlint": {

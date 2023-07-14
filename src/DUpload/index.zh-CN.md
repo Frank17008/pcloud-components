@@ -38,22 +38,22 @@ group:
 
 ## API
 
-| 参数          | 说明                                                                                            | 类型                                                                                                                                      | 默认值 | 版本 |
-| :------------ | :---------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- | :----- | :--- |
-| value         | 初始文件列表(相当于 defaultFileList,但优先级高于 defaultFileList)                               | `DUploadFile \| DUploadFile[]`                                                                                                            |        |      |
-| fileList      | 文件列表(在 Form 组件中表现为受控列表，在一般情况下相当于初始文件列表，其优先级高于 value 属性) | `DUploadFile \| DUploadFile[]`                                                                                                            |        |      |
-| onChange      | 文件列表变化时的回调(仅在 customRequest 或 onRemove 后触发)                                     | `(list: DUploadFile[], info: UploadChangeParam<DUploadFile>) => void`                                                                     |        |      |
-| customRequest | 文件上传时的回调函数，支持 Promise                                                              | `customRequest?: (file: DUploadFile, list: DUploadFile[], requestOption: any) => DUploadFile[] \| Promise<DUploadFile[] \| void> \| void` |        |      |
-| onRemove      | 点击删除按钮时的回调，支持 Promise                                                              | `(file: DUploadFile, list: DUploadFile[]) => DUploadFile[] \| Promise<DUploadFile[] \| void> \| void`                                     |        |      |
-| onDownload    | 点击下载按钮时的回调，支持 Promise                                                              | `(file: DUploadFile) => DUploadFile \| Blob \| Promise<DUploadFile \| Blob> \| void`                                                      |        |      |
-| onPreview     | 点击预览按钮时的回调，支持 Promise                                                              | `(file: DUploadFile) => DUploadFile \| Blob \| Promise<DUploadFile \| Blob> \| void`                                                      |        |      |
-| thumbOption   | 上传文件时的缩略图选项,null 表示不生成缩略图，(详见下文`ThumbOptionProps`介绍)                  | `ThumbOptionProps \| null`                                                                                                                |        |      |
-| itemClassName | 列表项样式类名                                                                                  | `string`                                                                                                                                  |        |      |
-| enablePreview | 是否强制允许文件预览                                                                            | `boolean`                                                                                                                                 | false  |      |
+| 参数          | 说明                                                                                              | 类型                                                                                                                                      | 默认值 | 版本 |
+| :------------ | :------------------------------------------------------------------------------------------------ | :---------------------------------------------------------------------------------------------------------------------------------------- | :----- | :--- |
+| value         | 初始文件列表(相当于 defaultFileList,但优先级高于 defaultFileList)                                 | `DUploadFile \| DUploadFile[]`                                                                                                            |        |      |
+| fileList      | 文件列表(在 Form 组件中表现为受控列表，在一般情况下相当于初始文件列表，其优先级高于 value 属性)   | `DUploadFile \| DUploadFile[]`                                                                                                            |        |      |
+| onChange      | 文件列表变化时的回调(仅在 customRequest 或 onRemove 后触发)                                       | `(list: DUploadFile[], info: UploadChangeParam<DUploadFile>) => void`                                                                     |        |      |
+| customRequest | 文件上传时的回调函数，支持 Promise                                                                | `customRequest?: (file: DUploadFile, list: DUploadFile[], requestOption: any) => DUploadFile[] \| Promise<DUploadFile[] \| void> \| void` |        |      |
+| onRemove      | 点击删除按钮时的回调，支持 Promise                                                                | `(file: DUploadFile, list: DUploadFile[]) => DUploadFile[] \| Promise<DUploadFile[] \| void> \| void`                                     |        |      |
+| onDownload    | 点击下载按钮时的回调，支持 Promise                                                                | `(file: DUploadFile) => DUploadFile \| Blob \| Promise<DUploadFile \| Blob> \| void`                                                      |        |      |
+| onPreview     | 点击预览按钮时的回调，支持 Promise                                                                | `(file: DUploadFile) => DUploadFile \| Blob \| Promise<DUploadFile \| Blob> \| void`                                                      |        |      |
+| thumbOption   | 上传文件时的缩略图选项,null 表示不生成缩略图，(详见下文[ThumbOptionProps](#thumboptionprops)介绍) | `ThumbOptionProps \| null`                                                                                                                |        |      |
+| itemClassName | 列表项样式类名                                                                                    | `string`                                                                                                                                  |        |      |
+| enablePreview | 是否强制允许文件预览                                                                              | `boolean`                                                                                                                                 | false  |      |
 
 其他属性同 antd Upload 组件，详见：https://4x-ant-design.antgroup.com/components/upload-cn/#API
 
-## DUploadFile
+### DUploadFile
 
 | 参数   | 说明                                               | 类型                   | 默认值 | 版本 |
 | :----- | :------------------------------------------------- | :--------------------- | :----- | :--- |
@@ -63,7 +63,7 @@ group:
 
 继承自 UploadFile，附带额外属性用于渲染，详见：https://4x-ant-design.antgroup.com/components/upload-cn/#UploadFile
 
-## ThumbOptionProps
+### ThumbOptionProps
 
 | 参数        | 说明                                                                                         | 类型                                                               | 默认值                                                      | 版本 |
 | :---------- | :------------------------------------------------------------------------------------------- | :----------------------------------------------------------------- | :---------------------------------------------------------- | :--- |
@@ -73,14 +73,23 @@ group:
 | onError     | 缩略图生成失败时的回调函数                                                                   | `(err: Error) => void`                                             |                                                             |      |
 | getThumbUrl | 自定义生成 base64 缩略图的方法                                                               | `(file: DUploadFile, option: ThumbOptionProps) => Promise<string>` |                                                             |      |
 
-## DUpload.imageToBase64 方法
+### DUpload.imageToBase64 方法
 
-imageToBase64 方法用于将图像格式的文件转换为 base64 格式,可以使用 CompressProps 参数对 base64 进行适当的压缩以减小体积
+imageToBase64 方法用于将图像格式的文件转换为 base64 格式,可以使用 compress 参数对 base64 进行适当的压缩以减小体积
 
-###### 声明格式:
+##### 声明格式
 
-`function imageToBase64(blob: Blob, options?: CompressProps | null): Promise<string> `
+```jsx {0} | pure
+function imageToBase64(blob: Blob, compress?: CompressProps | null): Promise<string>
+```
 
-###### 用法示例:
+##### 用法示例
 
-`imageToBase64 (file,{ width: 300, height: 200, quality: 0.7 }).then( url => console.log( url ) )`
+```jsx {0} | pure
+import { DUpload } from 'antd-plus-ui';
+const { imageToBase64 } = DUpload;
+
+imageToBase64(file, { width: 300, height: 200, quality: 0.7 }).then((url) => {
+  console.log(url);
+});
+```

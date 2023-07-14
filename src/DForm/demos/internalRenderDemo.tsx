@@ -108,7 +108,7 @@ const items: DFormProps['items'] = [
     listType: 'picture-card',
     formItemProps: { label: 'upload卡片模式' },
   },
-  { name: 'dupload', label: 'dupload卡片模式', renderType: 'dupload' },
+  { name: 'dupload', label: 'dupload卡片模式', renderType: 'dUpload' },
   { name: 'submit', label: '提交', renderType: 'button', htmlType: 'submit', type: 'primary' },
   {
     name: 'reset',

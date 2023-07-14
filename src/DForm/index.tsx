@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-02 09:29:11
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-16 09:09:24
+ * @LastEditTime : 2023-07-14 13:53:10
  * @Description  : 基于antd的Form组件
  */
 
@@ -12,7 +12,7 @@ import { Form, FormProps, FormInstance } from 'antd';
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
 import helper from './helper';
-import DItem, { DItemProps, InternalItemProps } from './DItem';
+import DItem, { DItemProps } from './DItem';
 import './index.less';
 
 type InternalFormProps = {
@@ -31,7 +31,7 @@ export type DFormProps = Omit<FormProps, 'children' | 'layout'> & InternalFormPr
 function getChildren(items, children: DFormProps['children'], _defaultItemProps: DFormProps['defaultItemProps']) {
   let list: ReactNode[] = [];
   if (items instanceof Array && items.length > 0) {
-    list = items.map((item: InternalItemProps, index) => {
+    list = items.map((item: DItemProps, index) => {
       const _item = helper.merge(_defaultItemProps, item);
       return <DItem key={item?.name || index} {..._item} />;
     });
