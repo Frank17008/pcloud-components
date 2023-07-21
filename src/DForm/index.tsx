@@ -2,17 +2,17 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-02 09:29:11
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-16 09:09:24
+ * @LastEditTime : 2023-07-14 13:53:10
  * @Description  : 基于antd的Form组件
  */
 
 import React, { forwardRef, useMemo, useContext, ReactNode } from 'react';
 import { Form, FormProps, FormInstance } from 'antd';
 
-import { ConfigContext } from '@/ConfigProvider';
+import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
 import helper from './helper';
-import DItem, { DItemProps, InternalItemProps } from './DItem';
+import DItem, { DItemProps } from './DItem';
 import './index.less';
 
 type InternalFormProps = {
@@ -28,14 +28,10 @@ type InternalFormProps = {
 
 export type DFormProps = Omit<FormProps, 'children' | 'layout'> & InternalFormProps;
 
-function getChildren(
-  items,
-  children: DFormProps['children'],
-  _defaultItemProps: DFormProps['defaultItemProps'],
-) {
+function getChildren(items, children: DFormProps['children'], _defaultItemProps: DFormProps['defaultItemProps']) {
   let list: ReactNode[] = [];
   if (items instanceof Array && items.length > 0) {
-    list = items.map((item: InternalItemProps, index) => {
+    list = items.map((item: DItemProps, index) => {
       const _item = helper.merge(_defaultItemProps, item);
       return <DItem key={item?.name || index} {..._item} />;
     });
@@ -52,16 +48,11 @@ function InternalForm(props: DFormProps, ref: React.Ref<FormInstance<any>>) {
 
   const { getPrefixCls }: any = useContext(ConfigContext);
 
-  const _className = `${getPrefixCls('form')} ${className} ${
-    layout === 'inlineVertical' ? 'inlineVertical' : ''
-  }`;
+  const _className = `${getPrefixCls('form')} ${className} ${layout === 'inlineVertical' ? 'inlineVertical' : ''}`;
 
   const _layout = layout === 'inlineVertical' ? 'inline' : layout;
 
-  const itemChildren = useMemo(
-    () => getChildren(items, children, defaultItemProps),
-    [items, children, defaultItemProps],
-  );
+  const itemChildren = useMemo(() => getChildren(items, children, defaultItemProps), [items, children, defaultItemProps]);
 
   return (
     <Form {...otherProps} className={_className} layout={_layout} ref={ref}>

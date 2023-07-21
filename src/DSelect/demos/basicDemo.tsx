@@ -4,7 +4,7 @@
 import React from 'react';
 import { DSelect } from '@pointcloud/pcloud-components';
 
-export default function basicDemo() {
+export default function BasicDemo() {
   const options = [
     { label: '选项1', value: 1 },
     { label: '选项2', value: 2 },
@@ -18,7 +18,5 @@ export default function basicDemo() {
     console.log(value, option);
   };
 
-  return (
-    <DSelect style={{ width: 200 }} options={getOptionsAsync} showSearch onChange={onChange} />
-  );
+  return <DSelect style={{ width: 200 }} options={getOptionsAsync} showSearch onChange={onChange} />;
 }

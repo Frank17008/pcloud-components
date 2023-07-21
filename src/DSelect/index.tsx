@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-17 08:41:25
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 14:44:38
+ * @LastEditTime : 2023-07-11 15:44:04
  * @Description  : 基于antd的Select组件
  */
 import React, { forwardRef, useEffect, useRef, useState, useMemo, useContext } from 'react';
@@ -11,10 +11,11 @@ import { Select, SelectProps } from 'antd';
 import { DefaultOptionType } from 'antd/lib/select';
 import { BaseSelectRef } from 'rc-select/lib/BaseSelect';
 
-import { ConfigContext } from '@/ConfigProvider';
+import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
 export type DSelectProps = Omit<SelectProps, 'options' | 'onSearch' | 'loading'> & {
   /** antd的onSearch属性，onSearch有效时showSearch自动为true */
+  // eslint-disable-next-line no-unused-vars
   onSearch?: (params?: any) => Promise<DefaultOptionType[] | any[]>;
   /** antd的options属性，可以是一个options数组，或一个返回等价options数组的promise */
   options?: DefaultOptionType[] | DSelectProps['onSearch'];
@@ -41,9 +42,7 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
   const { getPrefixCls }: any = useContext(ConfigContext);
 
   const [options, setOptions] = useState<DefaultOptionType[]>([]);
-  const [loading, setLoading] = useState<boolean>(
-    typeof initLoading === 'boolean' ? initLoading : true,
-  );
+  const [loading, setLoading] = useState<boolean>(typeof initLoading === 'boolean' ? initLoading : true);
 
   const _className = `${getPrefixCls('select')} ${className}`;
   const _popupClassName = `${getPrefixCls('select-dropdown')} ${popupClassName}`;
@@ -67,11 +66,7 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
   const _filterOption = getFilterOption(!_showSearch, filterOption, _fieldNames);
 
   const getOptions = useMemo(
-    () =>
-      typeof initOptions === 'function'
-        ? initOptions
-        : (params?: any): Promise<DefaultOptionType[] | any[]> =>
-            Promise.resolve(initOptions || []),
+    () => (typeof initOptions === 'function' ? initOptions : (params?: any): Promise<DefaultOptionType[] | any[]> => Promise.resolve(initOptions || [])),
     [initOptions],
   );
 

@@ -1,4 +1,4 @@
-import { ConfigContext } from '@/ConfigProvider';
+import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 import { Modal, ModalProps } from 'antd';
 import React, { useContext, useEffect, useMemo, useRef } from 'react';
 import { LModalProps } from './interface';
@@ -43,9 +43,7 @@ function LModal(props: LModalProps) {
   return (
     <div
       ref={containerRef}
-      className={`${getPrefixCls('modal-container')} ${getPrefixCls(
-        mode === 'absolute' ? 'absolute-modal-container' : 'relative-modal-container',
-      )}`}
+      className={`${getPrefixCls('modal-container')} ${getPrefixCls(mode === 'absolute' ? 'absolute-modal-container' : 'relative-modal-container')}`}
     >
       <Modal {...style}>{children}</Modal>
     </div>

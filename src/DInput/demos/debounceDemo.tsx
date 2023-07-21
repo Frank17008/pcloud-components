@@ -6,13 +6,13 @@ import { Radio } from 'antd';
 
 import { DInput } from '@pointcloud/pcloud-components';
 
-export default function debounceDemo() {
+export default function DebounceDemo() {
   const [debounce, setDebounce] = useState(true);
   const [value, setValue] = useState('');
 
   const onRadioChange = (e) => setDebounce(e.target.value);
 
-  const onChange = (v, e) => {
+  const onChange = (v) => {
     console.log('文本框内容发生变化:', value);
     setValue(v);
   };

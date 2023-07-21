@@ -99,7 +99,6 @@ const items: DFormProps['items'] = [
     name: 'upload',
     label: 'upload上传',
     renderType: 'upload',
-    fileList: [],
     children: <Button>upload上传</Button>,
   },
   {
@@ -107,9 +106,9 @@ const items: DFormProps['items'] = [
     label: '+',
     renderType: 'upload',
     listType: 'picture-card',
-    fileList: [],
     formItemProps: { label: 'upload卡片模式' },
   },
+  { name: 'dupload', label: 'dupload卡片模式', renderType: 'dUpload' },
   { name: 'submit', label: '提交', renderType: 'button', htmlType: 'submit', type: 'primary' },
   {
     name: 'reset',

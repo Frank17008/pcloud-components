@@ -4,7 +4,7 @@
 import React from 'react';
 import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
-export default function basicDemo() {
+export default function BasicDemo() {
   const columns: DTableProps['columns'] = [
     { dataIndex: 'id', title: 'id' },
     { dataIndex: 'name', title: '标题' },

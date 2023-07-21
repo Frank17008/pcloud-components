@@ -6,7 +6,7 @@ import { Button, Radio } from 'antd';
 
 import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
-export default function actionColumnDemo() {
+export default function ActionColumnDemo() {
   const [actionType, setActionType] = useState<'object' | 'render'>('object');
 
   const columns: DTableProps['columns'] = [
@@ -57,12 +57,7 @@ export default function actionColumnDemo() {
           <Radio value="render">自定义渲染</Radio>
         </Radio.Group>
       </div>
-      <DTable
-        style={{ height: 400 }}
-        columns={columns}
-        loadMore={loadMore}
-        actionColumn={_actionColumn}
-      />
+      <DTable style={{ height: 400 }} columns={columns} loadMore={loadMore} actionColumn={_actionColumn} />
     </>
   );
 }

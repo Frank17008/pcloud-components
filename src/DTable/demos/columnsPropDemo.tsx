@@ -5,7 +5,7 @@ import React from 'react';
 
 import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
-export default function columnsPropDemo() {
+export default function ColumnsPropDemo() {
   const commonColumnsProp: DTableProps['columnsProp'] = { align: 'left', width: 120 };
   const columns: DTableProps['columns'] = [
     { dataIndex: 'id', title: 'id', width: 60, align: 'center' },
@@ -28,12 +28,5 @@ export default function columnsPropDemo() {
     }
     return Promise.resolve({ total, records });
   };
-  return (
-    <DTable
-      style={{ height: 400 }}
-      columnsProp={commonColumnsProp}
-      columns={columns}
-      loadMore={loadMore}
-    />
-  );
+  return <DTable style={{ height: 400 }} columnsProp={commonColumnsProp} columns={columns} loadMore={loadMore} />;
 }

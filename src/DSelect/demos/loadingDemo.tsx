@@ -8,7 +8,7 @@ import { DefaultOptionType } from 'antd/lib/select';
 
 import { DSelect } from '@pointcloud/pcloud-components';
 
-export default function loadingDemo() {
+export default function LoadingDemo() {
   const options = [
     { label: '选项1', value: 1, type: '640' },
     { label: '选项2', value: 2, type: '640' },
@@ -48,13 +48,7 @@ export default function loadingDemo() {
           <Radio value={2000}>延时2000毫秒</Radio>
         </Radio.Group>
       </div>
-      <DSelect
-        style={{ width: 200 }}
-        options={getOptionsAsync}
-        onChange={onChange}
-        onSearch={remoteSearch}
-        loading={loading}
-      />
+      <DSelect style={{ width: 200 }} options={getOptionsAsync} onChange={onChange} onSearch={remoteSearch} loading={loading} />
     </>
   );
 }

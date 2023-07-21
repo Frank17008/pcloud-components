@@ -16,7 +16,7 @@ export interface FormProps {
   /**
    * @description 点击重置按钮时触发
    */
-  onReset?: Function;
+  onReset?: () => void;
 }
 
 export interface FProps extends FormProps {
@@ -82,16 +82,7 @@ export interface FormItem {
    */
   format?: string;
 }
-export type FormItemType =
-  | 'input'
-  | 'inputNumber'
-  | 'radio'
-  | 'select'
-  | 'checkbox'
-  | 'datePicker'
-  | 'rangePicker'
-  | 'switch'
-  | 'treeSelect';
+export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
 
 export interface InputProps {
   /**

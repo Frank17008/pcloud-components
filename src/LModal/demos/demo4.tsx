@@ -15,13 +15,7 @@ function Demo4() {
   return (
     <div style={{ width: '100%', height: '100px' }}>
       <Button onClick={onOPen}>open</Button>
-      <LModal
-        visible={data.visible}
-        onCancel={onClose}
-        style={{ width: '80%', height: '50%' }}
-        bodyStyle={{ height: '100%' }}
-        footer={null}
-      >
+      <LModal visible={data.visible} onCancel={onClose} style={{ width: '80%', height: '50%' }} bodyStyle={{ height: '100%' }} footer={null}>
         <div style={{ height: '100%', overflow: 'auto' }}>
           <div
             style={{

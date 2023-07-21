@@ -42,10 +42,7 @@ function getType(value): any {
 
 const defaultCustomizer = (objValue, srcValue) => {
   // 将空对象和空数组当成基本类型处理，不进行合并
-  if (
-    (srcValue instanceof Array && srcValue.length < 1) ||
-    getType(srcValue) === TYPES.OPTION_TYPE_PRIMARY
-  ) {
+  if ((srcValue instanceof Array && srcValue.length < 1) || getType(srcValue) === TYPES.OPTION_TYPE_PRIMARY) {
     return srcValue;
   }
 };

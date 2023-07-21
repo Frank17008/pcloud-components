@@ -2,17 +2,18 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-16 10:08:26
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-05-26 09:44:03
+ * @LastEditTime : 2023-07-11 17:14:59
  * @Description  : 基于antd的Input组件
  */
 import React, { ChangeEvent, useRef, forwardRef, useState, useContext } from 'react';
 
 import { Input, InputProps, InputRef } from 'antd';
 
-import { ConfigContext } from '@/ConfigProvider';
+import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
 export type DInputProps = Omit<InputProps, 'onChange'> & {
   /** 输入框内容变化时的回调 */
+  // eslint-disable-next-line no-unused-vars
   onChange?: (value: string, event: ChangeEvent<HTMLInputElement>) => void;
   /** 是否启用合成输入 */
   enableCompose?: boolean;
@@ -21,16 +22,7 @@ export type DInputProps = Omit<InputProps, 'onChange'> & {
 };
 
 function InternalInput(props: DInputProps, ref: React.Ref<InputRef>) {
-  const {
-    className = '',
-    onChange,
-    onCompositionStart,
-    onCompositionEnd,
-    value: initValue,
-    debounce = false,
-    enableCompose = true,
-    ...otherProps
-  } = props;
+  const { className = '', onChange, onCompositionStart, onCompositionEnd, value: initValue, debounce = false, enableCompose = true, ...otherProps } = props;
 
   const { getPrefixCls }: any = useContext(ConfigContext);
 

@@ -32,6 +32,7 @@ function Loading(props: LoadingInstanceProps) {
 Loading.newInstance = function newNotificationInstance(args: LoadingInstanceProps) {
   const { container, ...otherProps } = args || {};
   const div = document.createElement('div');
+  // eslint-disable-next-line react/no-find-dom-node
   const element = ReactDOM.findDOMNode(container);
   if (element) {
     element.appendChild(div);

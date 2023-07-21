@@ -5,8 +5,7 @@ export const defaultPrefixCls = 'pui';
 
 // export const ConfigContext = createContext<ConfigProviderProps>({} as ConfigProviderProps);
 export const ConfigContext = createContext<ConfigProviderProps>({
-  getPrefixCls: (componentName: string, customPrefix?: string) =>
-    `${customPrefix || defaultPrefixCls}-${componentName}`,
+  getPrefixCls: (componentName: string, customPrefix?: string) => `${customPrefix || defaultPrefixCls}-${componentName}`,
 });
 
 const ConfigProvider = (props: ConfigProviderProps) => {

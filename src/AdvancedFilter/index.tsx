@@ -13,8 +13,7 @@ const variants = {
 };
 
 const AdvancedFilter: React.FC<FilterProps> = (props) => {
-  const { left, right, inputProps, formItemConfig, fRef, icon, onValuesChange, onSearch, onReset } =
-    props;
+  const { left, right, inputProps, formItemConfig, fRef, icon, onValuesChange, onSearch, onReset } = props;
 
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
   const classname = getPrefixCls('search-filter');
@@ -39,13 +38,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
     inputProps?.inputSearch && inputProps.inputSearch({ [inputProps.name]: v });
   };
   return (
-    <Collapse
-      className={wrapperClass}
-      activeKey={panelVisible ? '1' : 'none'}
-      collapsible="header"
-      ghost
-      bordered={false}
-    >
+    <Collapse className={wrapperClass} activeKey={panelVisible ? '1' : 'none'} collapsible="header" ghost bordered={false}>
       <Collapse.Panel
         key="1"
         showArrow={false}
@@ -73,11 +66,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
               <Button className="button" onClick={() => setPanelVisible(!panelVisible)}>
                 高级筛选
                 {icon && (
-                  <motion.span
-                    className="icon"
-                    animate={panelVisible ? 'down' : 'up'}
-                    variants={variants}
-                  >
+                  <motion.span className="icon" animate={panelVisible ? 'down' : 'up'} variants={variants}>
                     {icon}
                   </motion.span>
                 )}
@@ -91,12 +80,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
           <span className="icon" /> 查询条件
         </div>
         <div className="search-content">
-          <FormFilter
-            formRef={formRef}
-            formItemConfig={formItemConfig}
-            onSearch={handleSearch}
-            onReset={onReset}
-          />
+          <FormFilter formRef={formRef} formItemConfig={formItemConfig} onSearch={handleSearch} onReset={onReset} />
         </div>
       </Collapse.Panel>
     </Collapse>

@@ -6,7 +6,7 @@ import { Radio } from 'antd';
 
 import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
-export default function errorMsgDemo() {
+export default function ErorMsgDemo() {
   const [showErrorMsg, setShowErrorMsg] = useState<boolean>(false);
 
   const columns: DTableProps['columns'] = [
@@ -38,10 +38,7 @@ export default function errorMsgDemo() {
     }
   };
 
-  const _showErrorMsg =
-    typeof showErrorMsg === 'boolean'
-      ? showErrorMsg
-      : (err) => `加载数据失败,请检查后重试: ${err?.message || ''}`;
+  const _showErrorMsg = typeof showErrorMsg === 'boolean' ? showErrorMsg : (err) => `加载数据失败,请检查后重试: ${err?.message || ''}`;
 
   return (
     <>
@@ -52,13 +49,7 @@ export default function errorMsgDemo() {
           <Radio value={undefined}>显示自定义错误信息</Radio>
         </Radio.Group>
       </div>
-      <DTable
-        style={{ height: 400 }}
-        columns={columns}
-        extraParams={{ hasDesc: showErrorMsg === false }}
-        showErrorMsg={_showErrorMsg}
-        loadMore={loadMore}
-      />
+      <DTable style={{ height: 400 }} columns={columns} extraParams={{ hasDesc: showErrorMsg === false }} showErrorMsg={_showErrorMsg} loadMore={loadMore} />
     </>
   );
 }
