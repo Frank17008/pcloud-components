@@ -14,7 +14,7 @@ import * as React from 'react';
 import { ErrorBoundary } from '@pointcloud/pcloud-components';
 
 const Test = () => {
-  const err = {};
+  const err = '网络开小差了...';
   return <ErrorBoundary err={err} />;
 };
 export default Test;

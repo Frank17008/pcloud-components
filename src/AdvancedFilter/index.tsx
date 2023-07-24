@@ -6,11 +6,6 @@ import { FilterProps } from './interface';
 import { ConfigContext } from '../ConfigProvider';
 import './styles/index.less';
 
-const variants = {
-  down: { transform: 'rotateZ(180deg)' },
-  up: { transform: 'rotateZ(0deg)' },
-};
-
 const AdvancedFilter: React.FC<FilterProps> = (props) => {
   const { left, right, inputProps, formItemConfig, fRef, icon, onValuesChange, onSearch, onReset } = props;
 
