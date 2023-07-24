@@ -1,6 +1,8 @@
 node_modules
 /dist
 /docs-dist
+.umi
+.umi-production
 .dumi/tmp
 .dumi/tmp-test
 .dumi/tmp-production

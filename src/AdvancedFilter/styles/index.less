@@ -86,6 +86,15 @@
 
         .icon {
           margin-left: 8px;
+          transition: transform 0.4s;
+
+          &.down {
+            transform: rotateZ(180deg);
+          }
+
+          &.up {
+            transform: rotateZ(0deg);
+          }
         }
       }
     }

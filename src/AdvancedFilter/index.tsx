@@ -1,7 +1,6 @@
 import React, { useState, useRef, useImperativeHandle, useContext } from 'react';
 import { Input, Button, Collapse } from 'antd';
 import classNames from 'classnames';
-import { motion } from 'framer-motion';
 import FormFilter from './FormFilter';
 import { FilterProps } from './interface';
 import { ConfigContext } from '../ConfigProvider';
@@ -65,11 +64,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
               />
               <Button className="button" onClick={() => setPanelVisible(!panelVisible)}>
                 高级筛选
-                {icon && (
-                  <motion.span className="icon" animate={panelVisible ? 'down' : 'up'} variants={variants}>
-                    {icon}
-                  </motion.span>
-                )}
+                <span className={`${panelVisible ? 'down' : 'up'} icon`}>{icon}</span>
               </Button>
               {right && <div className="right">{right}</div>}
             </div>
