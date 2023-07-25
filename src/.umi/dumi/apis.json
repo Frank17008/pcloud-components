@@ -51,7 +51,7 @@
       {
         "identifier": "onReset",
         "description": "点击重置按钮时触发",
-        "type": "Function"
+        "type": "() => void"
       }
     ]
   },

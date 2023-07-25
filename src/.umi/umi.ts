@@ -23,9 +23,8 @@ const getClientRender = (args: { hot?: boolean; routes?: any[] } = {}) => plugin
         plugin,
         history: createHistory(args.hot),
         isServer: process.env.__IS_SERVER,
-        dynamicImport: true,
         rootElement: 'root',
-        defaultTitle: `pcloud-components`,
+        defaultTitle: ``,
       },
     });
     return renderClient(opts);
