@@ -32,7 +32,7 @@ function Loading(props: LoadingInstanceProps) {
 Loading.newInstance = function newNotificationInstance(args: LoadingInstanceProps) {
   const { container, ...otherProps } = args || {};
   const div = document.createElement('div');
-  const element = ReactDOM.findDOMNode(container);
+  const element: any = ReactDOM.findDOMNode(container);
   if (element) {
     element.appendChild(div);
     element.style.position = 'relative';

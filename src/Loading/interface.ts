@@ -1,11 +1,12 @@
+import { SpinProps } from 'antd';
 import React, { ReactInstance, ReactNode } from 'react';
 
-export interface LoadingInstanceProps {
+export interface LoadingInstanceProps extends SpinProps {
   /**
-   * @description 加载的文字提示
-   * @default '数据请求中...'
+   * @description 加载框容器
+   * @default body
    */
-  tip?: string;
+
   container?: ReactInstance | undefined;
 }
 
