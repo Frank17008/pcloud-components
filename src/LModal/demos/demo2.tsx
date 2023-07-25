@@ -15,7 +15,7 @@ function Demo2() {
   return (
     <div style={{ width: '100%', height: '300px' }}>
       <Button onClick={onOPen}>open</Button>
-      <LModal visible={data.visible} onCancel={onClose} mode="relative">
+      <LModal open={data.visible} onCancel={onClose} mode="relative">
         <div>111</div>
       </LModal>
     </div>

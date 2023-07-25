@@ -1,0 +1,128 @@
+{
+  "AdvancedFilter": {
+    "default": [
+      {
+        "identifier": "left",
+        "description": "左侧渲染区",
+        "type": "ReactNode"
+      },
+      {
+        "identifier": "right",
+        "description": "右侧渲染区",
+        "type": "ReactNode"
+      },
+      {
+        "identifier": "inputProps",
+        "description": "input检索框props",
+        "type": "InputProps",
+        "required": true
+      },
+      {
+        "identifier": "children",
+        "description": "children",
+        "type": "ReactNode"
+      },
+      {
+        "identifier": "fRef",
+        "description": "表单引用ref值",
+        "type": "any"
+      },
+      {
+        "identifier": "icon",
+        "description": "筛选文字按钮图标",
+        "type": "ReactNode"
+      },
+      {
+        "identifier": "formItemConfig",
+        "description": "筛选项配置",
+        "type": "FormItem[]",
+        "required": true
+      },
+      {
+        "identifier": "onValuesChange",
+        "description": "筛选项值变更时触发",
+        "type": "(v: any) => void"
+      },
+      {
+        "identifier": "onSearch",
+        "description": "点击查询按钮时触发",
+        "type": "(v: any) => void"
+      },
+      {
+        "identifier": "onReset",
+        "description": "点击重置按钮时触发",
+        "type": "() => void"
+      }
+    ]
+  },
+  "ConfigProvider": {
+    "default": [
+      {
+        "identifier": "prefixCls",
+        "description": "全局组件类名前缀",
+        "type": "string",
+        "default": "pui"
+      },
+      {
+        "identifier": "getPrefixCls",
+        "type": "(componentName: string, customPrefix?: string) => string"
+      }
+    ]
+  },
+  "LabelValue": {
+    "default": [
+      {
+        "identifier": "label",
+        "description": "文字标签",
+        "type": "string",
+        "default": ""
+      },
+      {
+        "identifier": "value",
+        "description": "文字标签值",
+        "type": "string",
+        "default": ""
+      },
+      {
+        "identifier": "emptyValue",
+        "description": "文字标签值为空时的值",
+        "type": "string",
+        "default": "-"
+      },
+      {
+        "identifier": "className",
+        "description": "类名",
+        "type": "string",
+        "default": ""
+      },
+      {
+        "identifier": "noWrap",
+        "description": "是否不换行",
+        "type": "boolean",
+        "default": "false"
+      },
+      {
+        "identifier": "noColon",
+        "description": "是否隐藏冒号",
+        "type": "boolean",
+        "default": "false"
+      }
+    ]
+  },
+  "NoData": {
+    "default": [
+      {
+        "identifier": "emptyText",
+        "description": "无数据时的文字描述",
+        "type": "string",
+        "default": "暂无结果"
+      },
+      {
+        "identifier": "src",
+        "description": "无数据时展示的图片",
+        "type": "string",
+        "default": "内置的base64图片"
+      }
+    ]
+  }
+}

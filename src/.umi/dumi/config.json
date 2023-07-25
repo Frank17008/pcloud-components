@@ -1,0 +1,249 @@
+{
+  "menus": {
+    "en-US": {
+      "*": [
+        {
+          "path": "/",
+          "title": "pcloud-components",
+          "meta": {
+            "order": null
+          }
+        }
+      ]
+    },
+    "zh-CN": {
+      "/components": [
+        {
+          "title": "业务组件",
+          "path": "/components/advanced-filter",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/advanced-filter",
+              "title": "AdvancedFilter",
+              "meta": {}
+            },
+            {
+              "path": "/components/dcascader",
+              "title": "DCascader",
+              "meta": {}
+            },
+            {
+              "path": "/components/dform",
+              "title": "DForm",
+              "meta": {}
+            },
+            {
+              "path": "/components/dinput",
+              "title": "DInput",
+              "meta": {}
+            },
+            {
+              "path": "/components/dselect",
+              "title": "DSelect",
+              "meta": {}
+            },
+            {
+              "path": "/components/dtable",
+              "title": "DTable",
+              "meta": {}
+            },
+            {
+              "path": "/components/dtree-select",
+              "title": "DTreeSelect",
+              "meta": {}
+            },
+            {
+              "path": "/components/dupload",
+              "title": "Upload",
+              "meta": {}
+            },
+            {
+              "path": "/components/error-boundary",
+              "title": "ErrorBoundary",
+              "meta": {}
+            },
+            {
+              "path": "/components/label-value",
+              "title": "LabelValue",
+              "meta": {}
+            },
+            {
+              "path": "/components/lmodal",
+              "title": "LModal",
+              "meta": {}
+            },
+            {
+              "path": "/components/loading",
+              "title": "Loading",
+              "meta": {}
+            },
+            {
+              "path": "/components/no-data",
+              "title": "NoData",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "其他",
+          "path": "/components/config-provider",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/config-provider",
+              "title": "ConfigProvider",
+              "meta": {}
+            }
+          ]
+        }
+      ],
+      "*": [
+        {
+          "title": "介绍",
+          "path": "/zh-CN",
+          "meta": {
+            "order": -1,
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/zh-CN/guide",
+              "title": "简介",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "path": "/zh-CN",
+          "title": "Index",
+          "meta": {}
+        },
+        {
+          "title": "组件",
+          "path": "/zh-CN/components",
+          "meta": {},
+          "children": [
+            {
+              "path": "/zh-CN/components",
+              "title": "组件概览",
+              "meta": {}
+            }
+          ]
+        }
+      ],
+      "/zh-CN/components": [
+        {
+          "title": "业务组件",
+          "path": "/zh-CN/components/advanced-filter",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/zh-CN/components/advanced-filter",
+              "title": "AdvancedFilter",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dcascader",
+              "title": "DCascader",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dform",
+              "title": "DForm",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dinput",
+              "title": "DInput",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dselect",
+              "title": "DSelect",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dtable",
+              "title": "DTable",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dtree-select",
+              "title": "DTreeSelect",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/dupload",
+              "title": "Upload",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/error-boundary",
+              "title": "ErrorBoundary",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/label-value",
+              "title": "LabelValue",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/lmodal",
+              "title": "LModal",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/loading",
+              "title": "Loading",
+              "meta": {}
+            },
+            {
+              "path": "/zh-CN/components/no-data",
+              "title": "NoData",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "其他",
+          "path": "/zh-CN/components/config-provider",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/zh-CN/components/config-provider",
+              "title": "ConfigProvider",
+              "meta": {}
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    },
+    {
+      "name": "zh-CN",
+      "label": "中文"
+    }
+  ],
+  "navs": {},
+  "title": "@pointcloud/pcloud-components",
+  "mode": "doc",
+  "repository": {
+    "url": "",
+    "branch": "master"
+  },
+  "theme": {}
+}
