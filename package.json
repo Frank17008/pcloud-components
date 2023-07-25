@@ -1,6 +1,6 @@
 {
   "name": "@pointcloud/pcloud-components",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "private": false,
   "description": "pointcloud react 组件库",
   "keywords": [
@@ -24,8 +24,8 @@
     "docs:build": "dumi build",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
-    "lint:css": "stylelint \"{src,test}/**/*.{css,less}\"",
-    "lint:es": "eslint \"{src,test}/**/*.{js,jsx,ts,tsx}\"",
+    "lint:css": "stylelint \"{src,config,docs,scripts,.dumi/theme}/**/*.{css,less}\"",
+    "lint:es": "eslint \"{src,config,docs,scripts,.dumi/theme}/**/*.{js,jsx,ts,tsx}\"",
     "prepare": "husky install && dumi setup",
     "prepublishOnly": "father doctor && npm run lint && npm run build",
     "prettier": "prettier -c --write \"{src,config,docs,scripts,.dumi/theme}/**\"",
