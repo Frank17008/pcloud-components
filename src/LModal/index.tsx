@@ -22,7 +22,7 @@ function LModal(props: LModalProps) {
   }, [otherProps]);
 
   useEffect(() => {
-    if (otherProps.visible) {
+    if (otherProps.open) {
       document.body.style.overflow = 'hidden';
     } else {
       document.body.style.overflow = '';
@@ -30,7 +30,7 @@ function LModal(props: LModalProps) {
     return () => {
       document.body.style.overflow = '';
     };
-  }, [otherProps.visible]);
+  }, [otherProps.open]);
 
   useEffect(() => {
     if (containerRef.current) {
@@ -45,7 +45,9 @@ function LModal(props: LModalProps) {
     <div
       ref={containerRef}
       className={`${getPrefixCls('modal-container')} ${getPrefixCls(
-        mode === 'absolute' ? 'absolute-modal-container' : 'relative-modal-container',
+        mode === 'absolute' || mode === 'panel'
+          ? 'absolute-modal-container'
+          : 'relative-modal-container',
       )}`}
     >
       <Modal {...style}>{children}</Modal>
