@@ -6,7 +6,7 @@ import { Radio } from 'antd';
 
 import { DTable, DTableProps } from '@pointcloud/pcloud-components';
 
-export default function extraParamsDemo() {
+export default function ExtraParamsDemo() {
   const [queryPrams, setQueryParams] = useState(1);
 
   const columns: DTableProps['columns'] = [
@@ -52,12 +52,7 @@ export default function extraParamsDemo() {
           <Radio value={3}>类别3</Radio>
         </Radio.Group>
       </div>
-      <DTable
-        style={{ height: 400 }}
-        columns={columns}
-        loadMore={loadMore}
-        extraParams={{ type: queryPrams }}
-      />
+      <DTable style={{ height: 400 }} columns={columns} loadMore={loadMore} extraParams={{ type: queryPrams }} />
     </>
   );
 }

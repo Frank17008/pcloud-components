@@ -1,34 +1,41 @@
 @import '../../commonStyle/index.less';
+
 .@{prefix}-search-filter {
   align-items: center;
   width: 100%;
   margin-top: 10px;
   background-color: #fff;
+
   span.ant-collapse-header-text {
     display: inline-block;
     width: 100%;
     cursor: auto !important;
   }
+
   .ant-collapse-content-box {
-    padding: 0px;
+    padding: 0;
   }
 
   .search-header {
     display: flex;
     width: 100%;
+
     .left {
       max-width: 100%;
       overflow: hidden;
       white-space: no-wrap;
       text-overflow: ellipsis;
+
       :global {
         .ant-radio-wrapper:first-child {
           border-left: 1px solid #d9d9d9;
           border-radius: 5px 0 0 5px;
         }
+
         .ant-radio-wrapper:last-child {
           border-radius: 0 5px 5px 0;
         }
+
         .ant-radio-wrapper {
           margin-right: 0;
           padding: 4px 6px;
@@ -36,13 +43,16 @@
           border-top-width: 1px;
           border-left: 1px solid #fff;
           border-left-width: 1px;
+
           .ant-radio {
             display: none;
           }
         }
+
         .ant-radio-wrapper:hover {
           color: #1890ff;
         }
+
         .ant-radio-wrapper-checked {
           z-index: 1;
           color: #1890ff;
@@ -52,36 +62,43 @@
         }
       }
     }
+
     .right {
       display: flex;
       justify-content: center;
+
       .input {
         width: 200px;
         border-radius: 4px;
       }
+
       .button {
         margin-left: 10px;
         color: #fff;
         background-color: #ff7e00;
         border-radius: 4px;
+
         &:active,
         &:focus,
         &:hover {
           border-color: transparent;
         }
+
         .icon {
           margin-left: 8px;
         }
       }
     }
   }
+
   .title {
     display: flex;
     align-items: center;
-    margin: 0px 10px;
+    margin: 0 10px;
     padding-bottom: 10px;
     font-weight: bold;
     border-bottom: 1px solid #f0f0f0;
+
     span.icon {
       width: 4px;
       height: 16px;
@@ -90,6 +107,7 @@
       border-radius: 2px;
     }
   }
+
   .search-content {
     .filter-row {
       display: flex;
@@ -97,17 +115,20 @@
       width: 100%;
       padding: 10px;
     }
+
     .filter-col {
       height: 30px;
       margin-bottom: 10px;
       line-height: 30px;
     }
+
     .filter-col .ant-picker {
       width: 100%;
     }
 
     .search-btn {
       justify-content: center;
+
       > button {
         margin: 0 5px;
       }

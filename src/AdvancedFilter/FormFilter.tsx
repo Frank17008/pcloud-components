@@ -1,17 +1,4 @@
-import {
-  Row,
-  Col,
-  Input,
-  Button,
-  DatePicker,
-  Form,
-  Radio,
-  Select,
-  InputNumber,
-  TreeSelect,
-  Switch,
-  Checkbox,
-} from 'antd';
+import { Row, Col, Input, Button, DatePicker, Form, Radio, Select, InputNumber, TreeSelect, Switch, Checkbox } from 'antd';
 import React, { useImperativeHandle } from 'react';
 import { FProps, FormItem } from './interface';
 import './styles/index.less';
@@ -48,10 +35,7 @@ export default (props: FProps) => {
       v[fieldName] = v[fieldName]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss');
     }
     if (config?.type === 'rangePicker') {
-      v[fieldName] = [
-        v[fieldName][0]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss'),
-        v[fieldName][1]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss'),
-      ];
+      v[fieldName] = [v[fieldName][0]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss'), v[fieldName][1]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss')];
     }
     return v;
   };
@@ -62,34 +46,19 @@ export default (props: FProps) => {
   const renderComponent = (type: string, item: FormItem) => {
     switch (type) {
       case 'input':
-        return (
-          <Input {...item} allowClear placeholder={item.placeholder || `请输入${item.label}`} />
-        );
+        return <Input {...item} allowClear placeholder={item.placeholder || `请输入${item.label}`} />;
       case 'inputNumber':
         return <InputNumber {...item} placeholder={item.placeholder || `请输入${item.label}`} />;
       case 'radio':
         return <Radio.Group {...item} options={item.options} />;
       case 'select':
-        return (
-          <Select
-            {...item}
-            allowClear
-            placeholder={item.placeholder || `请选择${item.label}`}
-            options={item.options}
-          />
-        );
+        return <Select {...item} allowClear placeholder={item.placeholder || `请选择${item.label}`} options={item.options} />;
       case 'checkbox':
         return <Checkbox.Group {...item} options={item.options} />;
       case 'switch':
         return <Switch />;
       case 'datePicker':
-        return (
-          <DatePicker
-            {...item}
-            allowClear
-            placeholder={item.placeholder || `请选择${item.label}`}
-          />
-        );
+        return <DatePicker {...item} allowClear placeholder={item.placeholder || `请选择${item.label}`} />;
       case 'rangePicker':
         return <DatePicker.RangePicker allowClear />;
       case 'treeSelect':
@@ -108,13 +77,7 @@ export default (props: FProps) => {
     }
   };
   return (
-    <Form
-      {...formItemLayout}
-      className="form-filter"
-      form={form}
-      colon={false}
-      onValuesChange={valuesChange}
-    >
+    <Form {...formItemLayout} className="form-filter" form={form} colon={false} onValuesChange={valuesChange}>
       <Row className="filter-row">
         {formItemConfig?.map((item: FormItem) => {
           return (

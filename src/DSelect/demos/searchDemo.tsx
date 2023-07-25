@@ -8,7 +8,7 @@ import { DefaultOptionType } from 'antd/lib/select';
 
 import { DSelect } from '@pointcloud/pcloud-components';
 
-export default function searchDemo() {
+export default function SearchDemo() {
   const options = [
     { label: '选项1', value: 1, type: '640' },
     { label: '选项2', value: 2, type: '640' },
@@ -33,9 +33,7 @@ export default function searchDemo() {
     });
   };
 
-  const otherProps = enableRemoteSearch
-    ? { showSearch: true, onSearch: remoteSearch }
-    : { showSearch: true };
+  const otherProps = enableRemoteSearch ? { showSearch: true, onSearch: remoteSearch } : { showSearch: true };
 
   const onChange = (value, option) => {
     console.log(value, option);
@@ -50,12 +48,7 @@ export default function searchDemo() {
           <Radio value={false}>本地搜索</Radio>
         </Radio.Group>
       </div>
-      <DSelect
-        style={{ width: 200 }}
-        options={getOptionsAsync}
-        onChange={onChange}
-        {...otherProps}
-      />
+      <DSelect style={{ width: 200 }} options={getOptionsAsync} onChange={onChange} {...otherProps} />
     </>
   );
 }

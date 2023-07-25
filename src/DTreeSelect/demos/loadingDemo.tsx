@@ -1,22 +1,36 @@
-/**
- * description: 加载中：设置loading属性即可在远程搜索时显示加载中，支持延迟显示，默认600毫秒，传入false或0表示不显示（loading效果目前对下拉列表无效）
- */
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { Radio } from 'antd';
 
 import { DTreeSelect } from '@pointcloud/pcloud-components';
 
-import provinceList from './mockData/china_region_province.json';
-import cityList from './mockData/china_region_city.json';
-import countyList from './mockData/china_region_county.json';
+const getRegionData = () => {
+  return new Promise<{ provinceList: any[]; cityList: any[]; countyList: any[] }>((resolve) => {
+    async function exec() {
+      const bodyProvince = await fetch('/mock/dcascader/china_region_province.json');
+      const provinceList = await bodyProvince.json();
+      const bodyCity = await fetch('/mock/dcascader/china_region_city.json');
+      const cityList = await bodyCity.json();
+      const bodyCounty = await fetch('/mock/dcascader/china_region_county.json');
+      const countyList = await bodyCounty.json();
+      resolve({ provinceList, cityList, countyList });
+    }
+    exec();
+  });
+};
 
-export default function loadingDemo() {
+export default function LoadingDemo() {
+  const [regionData, setRegionData] = useState<{
+    provinceList: any[];
+    cityList: any[];
+    countyList: any[];
+  }>({ provinceList: [], cityList: [], countyList: [] });
   const [loading, setLoading] = useState<boolean | number>(800);
   const onRadioChange = (e) => setLoading(e.target.value);
 
   const getOptionsAsync = (option): Promise<Array<{ value: string; label: string }>> => {
     return new Promise((resolve) => {
+      const { provinceList, cityList, countyList } = regionData;
       let options;
       if (option) {
         const listMap = { province: cityList, city: countyList };
@@ -31,7 +45,7 @@ export default function loadingDemo() {
         }));
         setTimeout(() => {
           resolve(options);
-        }, 1200);
+        }, 3000);
       } else {
         options = provinceList.map((item) => ({
           ...item,
@@ -39,9 +53,7 @@ export default function loadingDemo() {
           value: item.code,
           isLeaf: false,
         }));
-        setTimeout(() => {
-          resolve(options);
-        }, 3000);
+        resolve(options);
       }
     });
   };
@@ -49,6 +61,10 @@ export default function loadingDemo() {
   const onChange = (values, options) => {
     console.log(values, options);
   };
+
+  useEffect(() => {
+    getRegionData().then((res) => setRegionData(res));
+  }, []);
 
   return (
     <>
@@ -61,12 +77,7 @@ export default function loadingDemo() {
           <Radio value={2000}>延时2000毫秒</Radio>
         </Radio.Group>
       </div>
-      <DTreeSelect
-        style={{ width: 200 }}
-        treeData={getOptionsAsync}
-        loading={loading}
-        onChange={onChange}
-      />
+      <DTreeSelect style={{ width: 200 }} treeData={getOptionsAsync} loading={loading} onChange={onChange} />
     </>
   );
 }

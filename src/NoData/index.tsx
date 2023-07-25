@@ -15,7 +15,7 @@ const NoData = (props: NoDataProps) => {
   return (
     <div className={wrapperClass}>
       <img className="not-data-image" src={src} alt="图片加载失败" />
-      <span className="noData-text">{emptyText}</span>
+      <span className="no-data-text">{emptyText}</span>
     </div>
   );
 };

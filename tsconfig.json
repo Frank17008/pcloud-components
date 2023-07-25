@@ -1,24 +1,16 @@
 {
-  "compileOnSave": true,
   "compilerOptions": {
-    "target": "esnext",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "jsx": "react",
+    "strict": true,
+    "noImplicitAny": false,
+    "declaration": true,
+    "allowJs": true,
+    "skipLibCheck": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
-    "types": ["jest"],
-    "strict": true,
-    "skipLibCheck": true,
-    "declaration": true,
-    "outDir": "dist",
-    "noImplicitAny": false,
+    "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": {
-      "@/*": ["src/*"],
-      "@pointcloud/pcloud-components": ["src/"]
-    }
+    "paths": { "@@/*": [".dumi/tmp/*"], "@pointcloud/pcloud-components": ["src"], "@pointcloud/pcloud-components/*": ["src/*", "*"] }
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "./typings/**/*"]
+  "compileOnSave": true,
+  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "scripts/**/*"]
 }

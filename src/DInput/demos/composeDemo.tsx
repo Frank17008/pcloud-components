@@ -6,13 +6,13 @@ import { Radio } from 'antd';
 
 import { DInput } from '@pointcloud/pcloud-components';
 
-export default function composeDemo() {
+export default function ComposeDemo() {
   const [enableCompose, setEnableCompose] = useState(true);
   const [value, setValue] = useState('');
 
   const onRadioChange = (e) => setEnableCompose(e.target.value);
 
-  const onChange = (v, e) => {
+  const onChange = (v) => {
     console.log('文本框内容发生变化:', value);
     setValue(v);
   };
@@ -26,11 +26,7 @@ export default function composeDemo() {
           <Radio value={false}>禁用合成输入</Radio>
         </Radio.Group>
       </div>
-      <DInput
-        style={{ width: 200, marginRight: '12px' }}
-        enableCompose={enableCompose}
-        onChange={onChange}
-      />
+      <DInput style={{ width: 200, marginRight: '12px' }} enableCompose={enableCompose} onChange={onChange} />
       <span>当前值：{value}</span>
     </>
   );

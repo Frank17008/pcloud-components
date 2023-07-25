@@ -4,7 +4,7 @@
 import React from 'react';
 import { DInput } from '@pointcloud/pcloud-components';
 
-export default function basicDemo() {
+export default function BasicDemo() {
   const onChange = (value, e) => {
     console.log(value, '事件对象:', e);
   };

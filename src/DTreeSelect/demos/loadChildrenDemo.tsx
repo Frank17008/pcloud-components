@@ -1,53 +1,47 @@
-/**
- * description: 动态加载子级列表：loadData属性用于开启动态加载，默认使用treeData提供的方法,传入null表示不开启态加载
- */
 import React, { useState } from 'react';
 
 import { Radio } from 'antd';
 
 import { DTreeSelect } from '@pointcloud/pcloud-components';
 
-import provinceList from './mockData/china_region_province.json';
-import cityList from './mockData/china_region_city.json';
-import countyList from './mockData/china_region_county.json';
+const getRegionData = (type: 'province' | 'city' | 'county' = 'province') => {
+  const typeMap = {
+    province: '/mock/dcascader/china_region_province.json',
+    city: '/mock/dcascader/china_region_city.json',
+    county: '/mock/dcascader/china_region_county.json',
+  };
+  return fetch(typeMap[type]).then((body) => body.json());
+};
 
-export default function loadChildrenDemo() {
+export default function LoadChildrenDemo() {
   const [enableRemoteLoadData, setEnableRemoteLoadData] = useState(undefined);
 
   const onRadioChange = (e) => setEnableRemoteLoadData(e.target.value);
 
-  const remoteLoadData = (option) => {
-    return new Promise<Array<{ value: string; label: string }>>((resolve, reject) => {
-      let options;
-      if (option) {
-        const listMap = { province: cityList, city: countyList };
-        const codeMap = { province: 'provinceCode', city: 'cityCode' };
-        const { level, code } = option;
-        const list = listMap[level]?.filter((item) => item[codeMap[level]] === code);
-        options = list?.map((item) => ({
+  const loadDataFn = (option) => {
+    if (option) {
+      const levelMap = { province: 'city', city: 'county' };
+      const codeMap = { province: 'provinceCode', city: 'cityCode' };
+      const { level, code } = option;
+      return getRegionData(levelMap[level]).then((list) => {
+        const targetList = list.filter((item) => item[codeMap[level]] === code);
+        return targetList.map((item) => ({
           ...item,
           value: item.code,
           label: item.name,
           isLeaf: item.level === 'county',
         }));
-      } else {
-        options = provinceList.map((item) => ({
-          ...item,
-          label: item.name,
-          value: item.code,
-          isLeaf: false,
-        }));
-      }
-      resolve(options);
-    });
+      });
+    } else {
+      return getRegionData().then((list) => list.map((item) => ({ ...item, label: item.name, value: item.code, isLeaf: false })));
+    }
   };
 
   const onChange = (values, options) => {
     console.log(values, options);
   };
 
-  const loadDataFn = enableRemoteLoadData === true ? remoteLoadData : null;
-  const loadDataProps = enableRemoteLoadData === undefined ? undefined : { loadData: loadDataFn };
+  const loadDataProps = enableRemoteLoadData !== undefined ? { loadData: enableRemoteLoadData ? loadDataFn : null } : undefined;
 
   return (
     <>
@@ -59,12 +53,7 @@ export default function loadChildrenDemo() {
           <Radio value={false}>关闭远程加载</Radio>
         </Radio.Group>
       </div>
-      <DTreeSelect
-        style={{ width: 200 }}
-        treeData={remoteLoadData}
-        onChange={onChange}
-        {...loadDataProps}
-      />
+      <DTreeSelect style={{ width: 200 }} treeData={loadDataFn} onChange={onChange} {...loadDataProps} />
     </>
   );
 }

@@ -7,21 +7,14 @@ import './styles/index.less';
 function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: LabelValueProps) {
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
   const classname = getPrefixCls('label-value');
-  const wrapperClass = classNames(
-    { [`${prefixCls}-label-value`]: !!prefixCls },
-    classname,
-    className,
-  );
+  const wrapperClass = classNames({ [`${prefixCls}-label-value`]: !!prefixCls }, classname, className);
   return (
     <div className={wrapperClass}>
       <span className={`${defaultPrefixCls}-label`}>
         {label}
         {noColon ? '' : ':'}
       </span>
-      <span
-        title={value}
-        className={`${noWrap ? `${defaultPrefixCls}-value no-wrap` : `${defaultPrefixCls}-value`}`}
-      >
+      <span title={value} className={`${noWrap ? `${defaultPrefixCls}-value no-wrap` : `${defaultPrefixCls}-value`}`}>
         {value || emptyValue || '暂无'}
       </span>
     </div>

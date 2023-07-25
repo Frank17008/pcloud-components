@@ -1,0 +1,113 @@
+{
+  "menus": {
+    "en-US": {
+      "/components": [
+        {
+          "title": "其他",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/config-provider",
+              "title": "ConfigProvider 全局配置",
+              "meta": {}
+            }
+          ]
+        },
+        {
+          "title": "业务组件",
+          "meta": {
+            "__fallback": true
+          },
+          "children": [
+            {
+              "path": "/components/advanced-filter",
+              "title": "AdvancedFilter",
+              "meta": {}
+            },
+            {
+              "path": "/components/dcascader",
+              "title": "DCascader",
+              "meta": {}
+            },
+            {
+              "path": "/components/dinput",
+              "title": "DInput",
+              "meta": {}
+            },
+            {
+              "path": "/components/dselect",
+              "title": "DSelect",
+              "meta": {}
+            },
+            {
+              "path": "/components/dtable",
+              "title": "DTable",
+              "meta": {}
+            },
+            {
+              "path": "/components/dtree-select",
+              "title": "DTreeSelect",
+              "meta": {}
+            },
+            {
+              "path": "/components/error-boundary",
+              "title": "ErrorBoundary",
+              "meta": {}
+            },
+            {
+              "path": "/components/label-value",
+              "title": "LabelValue",
+              "meta": {}
+            },
+            {
+              "path": "/components/lmodal",
+              "title": "LModal",
+              "meta": {}
+            },
+            {
+              "path": "/components/loading",
+              "title": "Loading",
+              "meta": {}
+            },
+            {
+              "path": "/components/no-data",
+              "title": "NoData",
+              "meta": {}
+            }
+          ]
+        }
+      ],
+      "*": [
+        {
+          "path": "/",
+          "title": "Hello pcloud-components!",
+          "meta": {}
+        }
+      ]
+    }
+  },
+  "locales": [
+    {
+      "name": "en-US",
+      "label": "English"
+    }
+  ],
+  "navs": {
+    "en-US": [
+      {
+        "title": "组件",
+        "path": "/components"
+      }
+    ]
+  },
+  "title": "pcloud-components",
+  "logo": "/images/logo.png",
+  "mode": "site",
+  "repository": {
+    "url": "",
+    "branch": "master"
+  },
+  "theme": {}
+}

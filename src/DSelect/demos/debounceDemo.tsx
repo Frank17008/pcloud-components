@@ -8,7 +8,7 @@ import { DefaultOptionType } from 'antd/lib/select';
 
 import { DSelect } from '@pointcloud/pcloud-components';
 
-export default function debounceDemo() {
+export default function DebounceDemo() {
   const options = [
     { label: '选项1', value: 1, type: '640' },
     { label: '选项2', value: 2, type: '640' },
@@ -42,13 +42,7 @@ export default function debounceDemo() {
           <Radio value={2000}>防抖时间2000毫秒</Radio>
         </Radio.Group>
       </div>
-      <DSelect
-        style={{ width: 200 }}
-        options={getOptionsAsync}
-        onChange={onChange}
-        onSearch={getOptionsAsync}
-        debounce={debounce}
-      />
+      <DSelect style={{ width: 200 }} options={getOptionsAsync} onChange={onChange} onSearch={getOptionsAsync} debounce={debounce} />
     </>
   );
 }

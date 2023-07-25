@@ -1,18 +1,22 @@
 @import '../commonStyle/index.less';
+
 .@{prefix}-cascader-dropdown .ant-cascader-menu {
   &::-webkit-scrollbar {
     width: 8px;
     height: 8px;
   }
+
   // 轨道拖动部分的背景颜色
   &::-webkit-scrollbar-thumb {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 50%);
     border-radius: 8px;
   }
+
   // 轨道背景颜色
   &::-webkit-scrollbar-track {
     border-radius: 2px;
   }
+
   // x、y两条轨道的交叉处
   &::-webkit-scrollbar-corner {
     background-color: #f1f1f1;
