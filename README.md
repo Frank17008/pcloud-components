@@ -253,19 +253,19 @@ npm run doctor		// 执行依赖检查
 
 本项目使用 husky 方案来规范 代码的提交,提交代码时请尽量遵循以下约定
 
-| 提交类型 | 类型说明                                                                         |
-| -------- | -------------------------------------------------------------------------------- |
-| feat     | 新增功能                                                                         |
-| fix      | bug 修复                                                                         |
-| docs     | 文档更新                                                                         |
-| style    | 不影响程序逻辑的代码修改(修改空白字符，补全缺失的分号等)                         |
-| refactor | 重构代码(既没有新增功能，也没有修复 bug)                                         |
-| perf     | 性能优化                                                                         |
-| test     | 新增测试用例或是更新现有测试                                                     |
-| build    | 主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交            |
-| ci       | 主要目的是修改项目继续集成流程(例如 Travis，Jenkins，GitLab CI，Circle 等)的提交 |
-| chore    | 不属于以上类型的其他类型(日常事务)                                               |
-| revert   | 回滚某个更早之前的提交                                                           |
+| 提交类型 | 类型说明                                                                     |
+| -------- | ---------------------------------------------------------------------------- |
+| feat     | 新增功能                                                                     |
+| fix      | bug 修复                                                                     |
+| docs     | 文档更新                                                                     |
+| style    | 不影响程序逻辑的代码修改(修改空白字符，补全缺失的分号等)                     |
+| refactor | 重构代码(既没有新增功能，也没有修复 bug)                                     |
+| perf     | 性能优化                                                                     |
+| test     | 新增测试用例或是更新现有测试                                                 |
+| build    | 主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交        |
+| ci       | 主要目的是修改项目集成流程(例如 Travis，Jenkins，GitLab CI，Circle 等)的提交 |
+| chore    | 不属于以上类型的其他类型(日常事务)                                           |
+| revert   | 回滚某个更早之前的提交                                                       |
 
 ```
 git commit -m <type>[optional scope]: <description>	// 提交格式
@@ -303,23 +303,10 @@ git commit -m "fix: 修复bug"	// type后的冒号和空格不可省略，descri
 
    - 检查 `package.json` 中的 NPM 包名及 `publishConfig` 是否符合预期
 
-2. 更新版本号
+2. release 发布
 
-   使用 `npm version` 命令更新版本号，该命令将会自动生成 git tag 及 git commit，并将版本号更新到 package.json 中，例如：
-
-   ```
-   // 升级修订号
-   npm version patch -m "build: 发布%s版本"	// 0.0.1->0.0.2
-
-   // 升级次版本号
-   npm version minor -m "build: 发布%s版本"	// 0.0.1->0.1.0
-
-   // 升级主版本号
-   npm version minor -m "build: 发布%s版本"	// 0.0.1->1.0.0
-   ```
-
-3. 发布
+   使用 release-it 可以根据 [release-it 配置](https://github.com/release-it/release-it/blob/main/config/release-it.json) 自动完成发布前的准备工作，包括：更新版本号、生成 tag 、更新 changelog、git 提交及推送远程仓库、npm 发布等
 
    ```
-   npm publish
+   npm run release
    ```
