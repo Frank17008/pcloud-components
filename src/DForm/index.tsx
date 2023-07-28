@@ -2,12 +2,12 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-02 09:29:11
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-14 13:53:10
+ * @LastEditTime : 2023-07-28 13:57:24
  * @Description  : 基于antd的Form组件
  */
 
-import React, { forwardRef, useMemo, useContext, ReactNode } from 'react';
-import { Form, FormProps, FormInstance } from 'antd';
+import React, { forwardRef, useContext, ReactNode, useState, useEffect, useImperativeHandle } from 'react';
+import { Form, FormProps } from 'antd';
 
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
@@ -26,7 +26,10 @@ type InternalFormProps = {
   layout?: 'inline' | 'horizontal' | 'vertical' | 'inlineVertical';
 };
 
-export type DFormProps = Omit<FormProps, 'children' | 'layout'> & InternalFormProps;
+type DFormProps = Omit<FormProps, 'children' | 'layout'> & InternalFormProps;
+
+// eslint-disable-next-line no-unused-vars
+type DFormRefProps = { setItems: (items: DItemProps[] | ((values: DItemProps[]) => DItemProps[] | Promise<DItemProps[]>)) => void } | undefined;
 
 function getChildren(items, children: DFormProps['children'], _defaultItemProps: DFormProps['defaultItemProps']) {
   let list: ReactNode[] = [];
@@ -43,7 +46,7 @@ function getChildren(items, children: DFormProps['children'], _defaultItemProps:
   return list;
 }
 
-function InternalForm(props: DFormProps, ref: React.Ref<FormInstance<any>>) {
+function InternalForm(props: DFormProps, ref: React.Ref<DFormRefProps>) {
   const { className = '', defaultItemProps, items, children, layout, ...otherProps } = props;
 
   const { getPrefixCls }: any = useContext(ConfigContext);
@@ -52,10 +55,35 @@ function InternalForm(props: DFormProps, ref: React.Ref<FormInstance<any>>) {
 
   const _layout = layout === 'inlineVertical' ? 'inline' : layout;
 
-  const itemChildren = useMemo(() => getChildren(items, children, defaultItemProps), [items, children, defaultItemProps]);
+  const [itemChildren, setItemChildren] = useState(getChildren(items, children, defaultItemProps));
+
+  useEffect(() => {
+    setItemChildren(getChildren(items, children, defaultItemProps));
+  }, [items, children, defaultItemProps]);
+
+  useImperativeHandle(
+    ref,
+    () => ({
+      setItems: (value) => {
+        if (value instanceof Array) {
+          setItemChildren(getChildren(value, null, defaultItemProps));
+        } else if (typeof value === 'function') {
+          const result = value(items || []);
+          if ('then' in result) {
+            result.then((list) => {
+              setItemChildren(getChildren(list, null, defaultItemProps));
+            });
+          } else {
+            setItemChildren(getChildren(result, null, defaultItemProps));
+          }
+        }
+      },
+    }),
+    [items, children, defaultItemProps],
+  );
 
   return (
-    <Form {...otherProps} className={_className} layout={_layout} ref={ref}>
+    <Form {...otherProps} className={_className} layout={_layout}>
       <div className="form-wrapper">{itemChildren}</div>
     </Form>
   );
@@ -64,5 +92,7 @@ function InternalForm(props: DFormProps, ref: React.Ref<FormInstance<any>>) {
 const DForm = forwardRef(InternalForm) as unknown as typeof InternalForm & { Item: typeof DItem };
 
 DForm.Item = DItem;
+
+export { type DFormProps, type DFormRefProps, type DItemProps };
 
 export default DForm;

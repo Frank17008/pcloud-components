@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-12 17:35:10
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-13 17:11:55
+ * @LastEditTime : 2023-07-28 14:00:41
  * @Description  : 根据renderType渲染对应的表单项组件
  */
 
@@ -245,6 +245,9 @@ const renderMap = {
         {label}
       </Divider>
     );
+  },
+  other: (formItemProps: FormItemProps, children: DUploadProps['children']) => {
+    return <Form.Item {...formItemProps}>{children}</Form.Item>;
   },
 };
 
