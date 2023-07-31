@@ -37,7 +37,7 @@ export default function LayoutDemo() {
           <Radio value="inlineVertical">行内垂直</Radio>
         </Radio.Group>
       </div>
-      <DForm style={{ minHeight: 400 }} items={items} layout={layout}>
+      <DForm style={{ minHeight: 200 }} items={items} layout={layout}>
         <DForm.Item>
           <div>
             <Button htmlType="submit" type="primary">

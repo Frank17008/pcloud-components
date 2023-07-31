@@ -24,7 +24,7 @@ export { default as DUpload } from './DUpload';
 export type { DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
 export { default as DTable } from './DTable';
 
-export type { DFormProps } from './DForm';
+export type { DFormProps, DFormRefProps, DItemProps } from './DForm';
 export { default as DForm } from './DForm';
 
 export type { LModalProps } from './LModal/interface';
