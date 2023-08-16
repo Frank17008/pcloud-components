@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-02 09:29:11
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-08-16 16:35:27
+ * @LastEditTime : 2023-08-16 17:44:33
  * @Description  : 基于antd的Form组件
  */
 
@@ -90,7 +90,9 @@ function InternalForm(props: DFormProps, ref: React.Ref<DFormRefProps>) {
   );
 }
 
-const DForm = forwardRef(InternalForm) as unknown as typeof InternalForm & { Item: typeof DItem };
+const DForm = forwardRef(InternalForm) as React.ForwardRefExoticComponent<DFormProps & React.RefAttributes<DFormRefProps>> & {
+  Item: typeof DItem;
+};
 
 DForm.Item = DItem;
 
