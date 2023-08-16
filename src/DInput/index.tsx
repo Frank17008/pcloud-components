@@ -2,10 +2,10 @@
  * @Author       : wangfeihu
  * @Date         : 2023-05-16 10:08:26
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-11 17:14:59
+ * @LastEditTime : 2023-08-16 16:48:52
  * @Description  : 基于antd的Input组件
  */
-import React, { ChangeEvent, useRef, forwardRef, useState, useContext } from 'react';
+import React, { ChangeEvent, useRef, forwardRef, useState, useEffect, useContext } from 'react';
 
 import { Input, InputProps, InputRef } from 'antd';
 
@@ -67,6 +67,8 @@ function InternalInput(props: DInputProps, ref: React.Ref<InputRef>) {
       emitChange(e.target.value, e);
     }
   };
+
+  useEffect(() => setValue(initValue), [initValue]);
 
   return (
     <Input

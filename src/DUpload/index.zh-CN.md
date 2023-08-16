@@ -1,5 +1,5 @@
 ---
-title: Upload
+title: DUpload
 description: 基于 antd 4.24.10 Upload 的二次封装组件
 tocDepth: 2
 nav:
