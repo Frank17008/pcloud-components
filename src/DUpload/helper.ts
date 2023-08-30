@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-16 11:25:57
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-29 18:10:04
+ * @LastEditTime : 2023-08-30 11:26:22
  * @Description  : 辅助方法集合
  */
 
@@ -135,7 +135,8 @@ function imageToBase64(blob: Blob, options?: CompressProps | null): Promise<stri
 function getUploadFile(files: any, maxCount?: number) {
   if (files) {
     const list = files instanceof Array ? files : [files];
-    return maxCount && maxCount > 0 ? list.slice(0, maxCount) : list;
+    const removedCount = list.filter((item) => item?.status === 'removed').length;
+    return maxCount && maxCount > 0 ? list.slice(0, maxCount + removedCount) : list;
   }
   return [];
 }
