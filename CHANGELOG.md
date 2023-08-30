@@ -1,3 +1,10 @@
+## [0.1.7](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.6...v0.1.7) (2023-08-30)
+
+### 🐛 修复 bug
+
+- 修复 DFormbug ([52d3fb9](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/commit/52d3fb92bd4d74ae782ea40b96ccd4c4a265a8e8))
+- 修复 DUpload 组件显示错误的 bug ([52c0698](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/commit/52c06988a55486cad8596cf855b27f7d73303342))
+
 ## [0.1.6](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.5...v0.1.6) (2023-08-16)
 
 ### 📚 文档变更
