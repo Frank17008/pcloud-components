@@ -1,3 +1,9 @@
+## [0.1.8](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.7...v0.1.8) (2023-09-07)
+
+### 🐛 修复 bug
+
+- 修复 Dupload 组件 showUploadList 属性无法覆盖的问题 ([d2896c4](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/commit/d2896c498bd409f9dd7a499a7fff9f5000a3d737))
+
 ## [0.1.7](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.6...v0.1.7) (2023-08-30)
 
 ### 🐛 修复 bug
