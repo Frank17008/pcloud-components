@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-16 09:37:07
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-08-16 16:32:55
+ * @LastEditTime : 2023-09-07 16:33:53
  * @Description  : 基于antd的Upload组件
  */
 
@@ -273,7 +273,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
     return _originNode;
   };
 
-  const _showUploadList = typeof showUploadList === 'boolean' ? showUploadList : { ...showUploadList, showPreviewIcon: true, showDownloadIcon: true };
+  const _showUploadList = typeof showUploadList === 'boolean' ? showUploadList : { showPreviewIcon: true, showDownloadIcon: true, ...showUploadList };
 
   const _finalFileList: any = fileList.filter((item) => item.status !== 'removed');
 
