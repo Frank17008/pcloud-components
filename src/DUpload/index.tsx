@@ -2,7 +2,7 @@
  * @Author       : wangfeihu
  * @Date         : 2023-06-16 09:37:07
  * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-30 16:32:19
+ * @LastEditTime : 2023-09-07 16:33:53
  * @Description  : 基于antd的Upload组件
  */
 
@@ -116,7 +116,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
   const [fileList, setFileList] = useState<DUploadFile[]>([]);
 
   // 缓存的文件列表
-  const listRef = useRef<{ timer: any; list: DUploadFile[] }>({ timer: null, list: [] });
+  const [tempList, setTempList] = useState<any[]>([]);
 
   // 缩略图相关选项
   const _thumbOption = useMemo(() => (thumbOption === null ? thumbOption : helper.getThumbOption(thumbOption)), [thumbOption]);
@@ -126,7 +126,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
     file.thumbUrl = thumbUrl;
     file.id = file.uid;
 
-    const list = [...listRef.current.list];
+    const list = [...tempList];
     setFileList(list);
     if (onChange && needChange) {
       onChange(list, { file: file, fileList: list });
@@ -136,32 +136,33 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
   const customRequestFun = async (requestOption) => {
     const { file } = requestOption;
     // 若超出最大限制则不上传
-    if (listRef.current.list.filter((item) => item?.status !== 'removed').length >= maxCount) return;
+    if (tempList.filter((item) => item?.status !== 'removed').length >= maxCount) return;
 
     // 标记当前文件为新上传的
     file.source = 'upload';
 
     // 用户自定义的上传逻辑
     if (typeof customRequest === 'function') {
-      const list = customRequest(file, listRef.current.list, requestOption);
+      const list = customRequest(file, tempList, requestOption);
       if (list && 'then' in list && typeof list.then === 'function') {
         list.then((list) => {
           if (list) {
             setFileList([...list]);
-            listRef.current.list = [...list];
+            setTempList([...list]);
             onChange?.(list, { file: file, fileList: list });
           }
         });
       } else if (list instanceof Array) {
         if (list) {
           setFileList([...list]);
-          listRef.current.list = [...list];
+          setTempList([...list]);
           onChange?.(list, { file: file, fileList: list });
         }
       }
     } else {
       // 默认的上传逻辑
-      listRef.current.list.push(file);
+      tempList.push(file);
+      setTempList([...tempList]);
 
       if (_thumbOption && typeof _thumbOption.getThumbUrl === 'function') {
         updateFileList(file, 'uploading');
@@ -193,7 +194,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
   const onRemoveFun = (file: DUploadFile) => {
     // 用户自定义的删除逻辑
     if (typeof onRemove === 'function') {
-      const list = onRemove(file, listRef.current.list);
+      const list = onRemove(file, tempList);
       if (list && 'then' in list && typeof list.then === 'function') {
         list.then((list) => {
           if (list) {
@@ -210,13 +211,13 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
     } else {
       // 默认的删除逻辑
       if (file.source === 'upload') {
-        const index = listRef.current.list.findIndex((item) => item.uid === file.uid);
-        if (index >= 0) listRef.current.list.splice(index, 1);
+        const index = fileList.findIndex((item) => item.uid === file.uid);
+        if (index >= 0) fileList.splice(index, 1);
       } else {
         file.status = 'removed';
       }
-      const list = [...listRef.current.list];
-      setFileList(list);
+      const list = [...fileList];
+      setTempList(list);
       onChange?.(list, { file: file, fileList: list });
     }
   };
@@ -272,9 +273,9 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
     return _originNode;
   };
 
-  const _showUploadList = typeof showUploadList === 'boolean' ? showUploadList : { ...showUploadList, showPreviewIcon: true, showDownloadIcon: true };
+  const _showUploadList = typeof showUploadList === 'boolean' ? showUploadList : { showPreviewIcon: true, showDownloadIcon: true, ...showUploadList };
 
-  const _finalFileList: any = listRef.current.list.filter((item) => item.status !== 'removed');
+  const _finalFileList: any = fileList.filter((item) => item.status !== 'removed');
 
   const _props: UploadProps = {
     maxCount,
@@ -295,7 +296,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
 
   useEffect(() => {
     const list = helper.getUploadFile(_fileList || value || defaultFileList, maxCount);
-    listRef.current.list = list;
+    setTempList(list);
     setFileList(list);
   }, [_fileList, value, defaultFileList]);
 

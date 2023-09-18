@@ -21,7 +21,7 @@ export { default as DTreeSelect } from './DTreeSelect';
 export type { DUploadProps, DUploadFile } from './DUpload';
 export { default as DUpload } from './DUpload';
 
-export type { DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
+export type { DColumnType, DTableProps, DTableSourceProps, TableParamsProps } from './DTable';
 export { default as DTable } from './DTable';
 
 export type { DFormProps, DFormRefProps, DItemProps } from './DForm';

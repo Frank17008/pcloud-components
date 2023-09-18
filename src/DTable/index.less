@@ -20,13 +20,14 @@
 
   .ant-table-body {
     position: absolute;
+    overflow-y: auto !important;
     min-width: 100%;
     max-width: 100%;
     min-height: calc(100% - 56px);
     max-height: calc(100% - 56px);
 
-    // 表头显示省略号，但表内单元格不省略
-    .ant-table-tbody > tr > td.ant-table-cell.ant-table-cell-ellipsis {
+    // 表内单元格不省略
+    .ant-table-tbody > tr > td.ant-table-cell.d-table-cell-wrap {
       white-space: initial;
     }
 
