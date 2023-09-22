@@ -56,7 +56,7 @@ const defaultPagination: PaginationProps = {
 // 数据列
 function getColumns(columns: DTableProps['columns'], defaultColumnProps: DTableProps['defaultColumnProps']) {
   return columns?.map((item) => {
-    const _item: DColumnType = { align: 'center', ellipsis: { showTitle: false }, cellEllipsis: true, ...defaultColumnProps, ...item };
+    const _item: DColumnType = { align: 'center', ellipsis: { showTitle: true }, cellEllipsis: true, ...defaultColumnProps, ...item };
     if (_item.cellEllipsis === false) {
       _item.className = _item?.className ? 'd-table-cell-wrap ' + _item.className : 'd-table-cell-wrap';
     }
