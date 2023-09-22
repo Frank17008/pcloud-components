@@ -15,6 +15,7 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | 组件           | 描述         | 链接                                |
 | :------------- | :----------- | :---------------------------------- |
 | AdvancedFilter | 高级搜索组件 | [查看](/components/advanced-filter) |
+| AuthComponent  | 权限组件     | [查看](/components/auth-component)  |
 | ErrorBoundary  | 错误边界     | [查看](/components/error-boundary)  |
 | LabelValue     | 键值对标签   | [查看](/components/label-value)     |
 | LModal         | 模态框组件   | [查看](/components/l-modal)         |
