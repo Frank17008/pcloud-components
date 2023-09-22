@@ -3,7 +3,7 @@ import { AdvancedFilter } from '@pointcloud/pcloud-components';
 import { CaretDownOutlined } from '@ant-design/icons';
 
 export default () => {
-  const formItemConfig = [
+  const formItemConfig: any = [
     {
       label: '姓名',
       type: 'input',
