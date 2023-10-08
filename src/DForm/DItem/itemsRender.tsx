@@ -106,56 +106,56 @@ const renderMap = {
   dSelect: (props: DSelectProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <DSelect placeholder={label ? `请输入${label}` : ''} {...props} />
+        <DSelect placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   select: (props: SelectProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <Select placeholder={label ? `请输入${label}` : ''} {...props} />
+        <Select placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   dCascader: (props: DCascaderProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <DCascader placeholder={label ? `请输入${label}` : ''} {...props} />
+        <DCascader placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   cascader: (props: CascaderProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <Cascader placeholder={label ? `请输入${label}` : ''} {...props} />
+        <Cascader placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   dTreeSelect: (props: DTreeSelectProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <DTreeSelect placeholder={label ? `请输入${label}` : ''} {...props} />
+        <DTreeSelect placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   treeSelect: (props: TreeSelectProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <TreeSelect placeholder={label ? `请输入${label}` : ''} {...props} />
+        <TreeSelect placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   datePicker: (props: DatePickerProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <DatePicker placeholder={label ? `请输入${label}` : ''} {...props} />
+        <DatePicker placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
   timePicker: (props: TimePickerProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
-        <TimePicker placeholder={label ? `请输入${label}` : ''} {...props} />
+        <TimePicker placeholder={label ? `请选择${label}` : ''} {...props} />
       </Form.Item>
     );
   },
