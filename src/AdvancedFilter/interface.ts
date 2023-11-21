@@ -56,6 +56,8 @@ export interface FilterProps extends FormProps {
    */
   icon?: React.ReactNode;
 }
+
+export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
 export interface FormItem {
   /**
    * @description 筛选项label文字
@@ -82,7 +84,6 @@ export interface FormItem {
    */
   format?: string;
 }
-export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
 
 export interface InputProps {
   /**
