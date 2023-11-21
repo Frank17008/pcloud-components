@@ -30,3 +30,5 @@ export { default as DForm } from './DForm';
 
 export type { LModalProps } from './LModal/interface';
 export { default as LModal } from './LModal';
+
+export { default as ColorPicker } from './ColorPicker';
