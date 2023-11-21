@@ -43,3 +43,5 @@ export type {
   CirclePickerType,
   SliderPickerType,
 } from './ColorPicker/interface';
+
+export { default as ScrollNumber } from './ScrollNumber';

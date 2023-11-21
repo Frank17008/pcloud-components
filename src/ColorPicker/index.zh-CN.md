@@ -1,7 +1,7 @@
 ---
 title: ColorPicker
 description: 颜色选择器组件
-keywords: ['颜色选择器']
+keywords: ['颜色', '颜色选择器']
 tocDepth: 2
 demo:
   cols: 2
