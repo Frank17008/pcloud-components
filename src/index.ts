@@ -32,3 +32,14 @@ export type { LModalProps } from './LModal/interface';
 export { default as LModal } from './LModal';
 
 export { default as ColorPicker } from './ColorPicker';
+export type {
+  ColorPickerType,
+  TwitterPickerType,
+  HuePickerType,
+  AlphaPickerType,
+  BlockPickerType,
+  ChromePickerType,
+  CompactPickerType,
+  CirclePickerType,
+  SliderPickerType,
+} from './ColorPicker/interface';
