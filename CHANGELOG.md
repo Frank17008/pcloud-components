@@ -1,6 +1,6 @@
 ## [0.1.12](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.11...v0.1.12) (2023-11-22)
 
-### 🐛 新增功能
+### ✨ 新增功能
 
 - 新增数字滚动组件 `ScrollNumber`
 - 新增颜色选择器组件 `ColorPicker`
@@ -21,7 +21,7 @@
 
 ## [0.1.9](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.8...v0.1.9) (2023-09-22)
 
-### 🐛 新增功能
+### ✨ 新增功能
 
 - 新增权限组件 `AuthComponent`
 
