@@ -1,3 +1,38 @@
+## [0.1.12](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.11...v0.1.12) (2023-11-22)
+
+### 🐛 新增功能
+
+- 新增数字滚动组件 `ScrollNumber`
+- 新增颜色选择器组件 `ColorPicker`
+
+### 📚 文档变更
+
+- 更新所有组件的 API 文档
+
+## [0.1.11](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.9...v0.1.10) (2023-11-08)
+
+### 🐛 修复 bug
+
+- 修复 DForm 组件中选择框的 placeholder 默认值
+
+## [0.1.10](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.11...v0.1.12) (2023-10-23)
+
+- 回退依赖 react\react-dom 版本
+
+## [0.1.9](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.8...v0.1.9) (2023-09-22)
+
+### 🐛 新增功能
+
+- 新增权限组件 `AuthComponent`
+
+### 📚 文档变更
+
+- 更新组件文档 ([e2a4b7](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/commit/7bf1950ffa4ee954afb4d3331c1c944756e2a4b7))
+
+### 🐛 修复 bug
+
+- 列表组件默认 title 展示
+
 ## [0.1.8](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.7...v0.1.8) (2023-09-07)
 
 ### 🐛 修复 bug
