@@ -23,23 +23,18 @@ group:
 
 ## API
 
-|  参数名称  | 说明               |           类型            | 默认值 |
-| :--------: | :----------------- | :-----------------------: | :----: |
-|    left    | 筛选项配置         |     `React.ReactNode`     |        |
-|   right    | 筛选项值变更时触发 |     `React.ReactNode`     |        |
-| inputProps | 点击查询按钮时触发 | [InputProps](#inputprops) |        |
-|  children  | 点击重置按钮时触发 |     `React.ReactNode`     |        |
-|    fRef    | 表单引用 ref 值    |           `any`           |        |
-|    icon    | 筛选文字按钮图标   |     `React.ReactNode`     |        |
-
-### FormProps
-
-|    参数名称    | 说明               |          类型           | 默认值 |
-| :------------: | :----------------- | :---------------------: | :----: |
-| formItemConfig | 筛选项配置         | [FormItem[]](#formitem) |        |
-| onValuesChange | 筛选项值变更时触发 |      `(v) => void`      |        |
-|    onSearch    | 点击查询按钮时触发 |      `(v) => void`      |        |
-|    onReset     | 点击重置按钮时触发 |      `() => void`       |        |
+|    参数名称    | 说明               |           类型            |   默认值   |
+| :------------: | :----------------- | :-----------------------: | :--------: |
+| formItemConfig | 筛选项配置         |  [FormItem[]](#formitem)  | (required) |
+| onValuesChange | 筛选项值变更时触发 |       `(v) => void`       |            |
+|    onSearch    | 点击查询按钮时触发 |       `(v) => void`       |            |
+|    onReset     | 点击重置按钮时触发 |       `() => void`        |            |
+|      left      | 左侧内容区         |     `React.ReactNode`     |            |
+|     right      | 右侧内容区         |     `React.ReactNode`     |            |
+|   inputProps   | input 框的 props   | [InputProps](#inputprops) |            |
+|    children    | children 节点      |     `React.ReactNode`     |            |
+|      fRef      | 表单引用 ref 值    |           `any`           |            |
+|      icon      | 筛选文字按钮图标   |     `React.ReactNode`     |            |
 
 ### FormItem
 

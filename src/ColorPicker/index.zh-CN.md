@@ -42,7 +42,7 @@ group:
 
 | 参数名称         | 说明               | 类型                                                      | 默认值 |
 | ---------------- | ------------------ | --------------------------------------------------------- | ------ |
-| color            | 组件的颜色状态值   | `string` \| [Hlsa](#Hlsa) \| [Rgba](#Rgba) \| `undefined` | ——     |
+| color            | 组件的颜色状态值   | `string` \| [Hlsa](#hlsa) \| [Rgba](#rgba) \| `undefined` | ——     |
 | onChange         | 颜色值变化时触发   | `(v) => void`                                             | ——     |
 | onChangeComplete | 颜色变化完成时触发 | `(v:string) => void`                                      | ——     |
 
