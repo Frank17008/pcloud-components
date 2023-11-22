@@ -32,6 +32,6 @@ const ScrollNumber = (props: ICountUpProps) => {
   );
 };
 
-export { useCountUp };
-export type CountUpProps = ICountUpProps;
+ScrollNumber.useCountUp = useCountUp;
+export type ScrollNumberProps = ICountUpProps;
 export default ScrollNumber;

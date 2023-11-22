@@ -45,3 +45,4 @@ export type {
 } from './ColorPicker/interface';
 
 export { default as ScrollNumber } from './ScrollNumber';
+export type { ScrollNumberProps } from './ScrollNumber';
