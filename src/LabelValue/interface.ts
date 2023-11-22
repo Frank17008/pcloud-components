@@ -6,7 +6,7 @@ export interface LabelValueProps {
   /**
    * @description 文字标签值
    */
-  value?: string | undefined;
+  value?: string | undefined | null;
   /**
    * @description 文字标签值为空时的值
    * @default -

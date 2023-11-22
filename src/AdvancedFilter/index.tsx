@@ -26,9 +26,11 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
   };
   const handleSearch = (values: any) => {
     const value = inputRef?.current?.input?.value;
+    // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     onSearch && onSearch({ ...values, ...{ [inputProps.name]: value } });
   };
   const inputSearch = (v: string) => {
+    // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     inputProps?.inputSearch && inputProps.inputSearch({ [inputProps.name]: v });
   };
   return (
@@ -51,6 +53,7 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
                 placeholder={inputProps?.placeholder}
                 onChange={(e) => {
                   setInputValue(e.target.value);
+                  // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
                   onValuesChange && onValuesChange(e.target.value);
                 }}
                 onSearch={inputSearch}

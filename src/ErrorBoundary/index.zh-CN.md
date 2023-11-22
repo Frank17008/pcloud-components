@@ -19,3 +19,10 @@ const Test = () => {
 };
 export default Test;
 ```
+
+## API
+
+| 参数名称  | 说明         | 类型     | 默认值               |
+| --------- | ------------ | -------- | -------------------- |
+| className | 容器样式类名 | `string` | `pui-error-boundary` |
+| err       | 错误信息     | `any`    | ——                   |

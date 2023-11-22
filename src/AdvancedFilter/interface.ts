@@ -1,5 +1,32 @@
 import React from 'react';
 
+export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
+export interface FormItem {
+  /**
+   * @description 筛选项label文字
+   */
+  label?: string;
+  /**
+   * @description 筛选项字段名
+   */
+  name: string;
+  /**
+   * @description 筛选项类型
+   */
+  type: FormItemType;
+  /**
+   * @description 筛选项placeholder
+   */
+  placeholder?: string;
+  /**
+   * @description 筛选项的配置项(select|treeSelect时可用)
+   */
+  options?: any[];
+  /**
+   * @description 筛选项的格式化配置(rangePicker|datePicker时可用)
+   */
+  format?: string;
+}
 export interface FormProps {
   /**
    * @description 筛选项配置
@@ -28,7 +55,23 @@ export interface FProps extends FormProps {
   /**
    * @description 筛选项表单的Ref
    */
+
   formRef?: any;
+}
+
+export interface InputProps {
+  /**
+   * @description input检索框placeholder
+   */
+  placeholder?: string;
+  /**
+   * @description input检索框字段名
+   */
+  name: string;
+  /**
+   * @description input检索框回车时或点击检索图标时触发
+   */
+  inputSearch?: (v: any) => void;
 }
 export interface FilterProps extends FormProps {
   /**
@@ -55,47 +98,4 @@ export interface FilterProps extends FormProps {
    * @description 筛选文字按钮图标
    */
   icon?: React.ReactNode;
-}
-
-export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
-export interface FormItem {
-  /**
-   * @description 筛选项label文字
-   */
-  label?: string;
-  /**
-   * @description 筛选项字段名
-   */
-  name: string;
-  /**
-   * @description 筛选项类型
-   */
-  type: FormItemType;
-  /**
-   * @description 筛选项placeholder
-   */
-  placeholder?: string;
-  /**
-   * @description 筛选项的配置项(select|treeSelect时可用)
-   */
-  options?: any[];
-  /**
-   * @description 筛选项的格式化配置(rangePicker|datePicker时可用)
-   */
-  format?: string;
-}
-
-export interface InputProps {
-  /**
-   * @description input检索框placeholder
-   */
-  placeholder?: string;
-  /**
-   * @description input检索框字段名
-   */
-  name: string;
-  /**
-   * @description input检索框回车时或点击检索图标时触发
-   */
-  inputSearch?: (v: any) => void;
 }

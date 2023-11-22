@@ -27,4 +27,9 @@ export default () => (
 );
 ```
 
-<API id="ConfigProvider" />
+## API
+
+| 参数名称  | 说明             | 类型              | 默认值 |
+| --------- | ---------------- | ----------------- | ------ |
+| prefixCls | 全局样式类名前缀 | `string`          | `pui`  |
+| children  | children 节点    | `React.ReactNode` | ——     |

@@ -61,6 +61,7 @@ export interface HuePickerProps extends ComponentProps {
   pointer?: React.ReactNode;
   /**
    * 方向
+   * @default horizontal
    */
   direction?: 'horizontal' | 'vertical';
 }

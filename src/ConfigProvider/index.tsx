@@ -1,5 +1,5 @@
 import React, { createContext } from 'react';
-import { ConfigProviderProps, OtherProps } from './interface';
+import { ConfigProviderProps } from './interface';
 
 export const defaultPrefixCls = 'pui';
 

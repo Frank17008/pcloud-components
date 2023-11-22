@@ -13,6 +13,17 @@ export default (props: FProps) => {
     setFieldsValue: form.setFieldsValue,
     form,
   }));
+  const formatTime = (v: any) => {
+    const fieldName = Object.keys(v)[0];
+    const config = formItemConfig.find((item) => item.name === fieldName);
+    if (config?.type === 'datePicker') {
+      v[fieldName] = v[fieldName]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss');
+    }
+    if (config?.type === 'rangePicker') {
+      v[fieldName] = [v[fieldName][0]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss'), v[fieldName][1]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss')];
+    }
+    return v;
+  };
   const search = () => {
     let values = form.getFieldsValue();
     Object.keys(values).forEach((item) => {
@@ -28,17 +39,7 @@ export default (props: FProps) => {
     const value = formatTime(v);
     onValuesChange && onValuesChange(value);
   };
-  const formatTime = (v: any) => {
-    const fieldName = Object.keys(v)[0];
-    const config = formItemConfig.find((item) => item.name === fieldName);
-    if (config?.type === 'datePicker') {
-      v[fieldName] = v[fieldName]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss');
-    }
-    if (config?.type === 'rangePicker') {
-      v[fieldName] = [v[fieldName][0]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss'), v[fieldName][1]?.format(config?.format || 'YYYY-MM-DD HH:mm:ss')];
-    }
-    return v;
-  };
+
   const reset = () => {
     form.resetFields();
     onReset && onReset();

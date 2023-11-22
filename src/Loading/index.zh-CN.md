@@ -25,8 +25,8 @@ group:
 
 ## API
 
-|    Name     | Description       |                            Type                            |     返回值     |                            Default                             |
-| :---------: | :---------------- | :--------------------------------------------------------: | :------------: | :------------------------------------------------------------: |
-|    open     | 打开方法          | ({tip?:string,container?:ReactInstance}) => React.ReactDOM | React.ReactDOM | tip 默认值：数据请求中...<br />container 默认值：document.body |
-|    close    | 关闭方法          |                          Function                          |       --       |                               --                               |
-| getInstance | 获取 loading 实例 |                          Function                          | React.ReactDOM |                               --                               |
+|  参数名称   | 说明              |                             类型                             |      返回值      |                             默认值                             |
+| :---------: | :---------------- | :----------------------------------------------------------: | :--------------: | :------------------------------------------------------------: |
+|    open     | 打开方法          | `({tip?:string,container?:ReactInstance}) => React.ReactDOM` | `React.ReactDOM` | tip 默认值：数据请求中...<br />container 默认值：document.body |
+|    close    | 关闭方法          |                          `Function`                          |        --        |                               --                               |
+| getInstance | 获取 loading 实例 |                          `Function`                          | `React.ReactDOM` |                               --                               |
