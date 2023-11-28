@@ -92,9 +92,20 @@ function InternalForm(props: DFormProps, ref: React.Ref<DFormRefProps>) {
 
 const DForm = forwardRef(InternalForm) as React.ForwardRefExoticComponent<DFormProps & React.RefAttributes<DFormRefProps>> & {
   Item: typeof DItem;
+  useForm: typeof Form.useForm;
+  useFormInstance: typeof Form.useFormInstance;
+  useWatch: typeof Form.useWatch;
+  List: typeof Form.List;
+  ErrorList: typeof Form.ErrorList;
 };
 
 DForm.Item = DItem;
+DForm.List = Form.List;
+DForm.ErrorList = Form.ErrorList;
+DForm.useForm = Form.useForm;
+DForm.useFormInstance = Form.useFormInstance;
+DForm.useWatch = Form.useWatch;
+DForm.useForm = Form.useForm;
 
 export { type DFormProps, type DFormRefProps, type DItemProps };
 
