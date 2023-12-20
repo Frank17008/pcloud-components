@@ -15,6 +15,8 @@ type DUploadFile = Omit<UploadFile, 'uid'> & {
   uid?: string | number;
   /** 文件来源 upload:文件对话框,remote:已上传的文件对象 */
   source?: 'upload' | 'remote';
+  /** 文件状态 */
+  status?: 'error' | 'success' | 'done' | 'uploading' | 'removed';
 };
 
 /** 转换base64时的参数 */

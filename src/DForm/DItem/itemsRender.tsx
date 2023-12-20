@@ -1,8 +1,8 @@
 /*
  * @Author       : wangfeihu
  * @Date         : 2023-06-12 17:35:10
- * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-08-16 16:54:13
+ * @LastEditors  : frank
+ * @LastEditTime : 2023-12-20 15:40:13
  * @Description  : 根据renderType渲染对应的表单项组件
  */
 
@@ -29,6 +29,7 @@ import {
   Mentions,
   Radio,
   RadioProps,
+  RadioGroupProps,
   Rate,
   RateProps,
   Select,
@@ -50,7 +51,7 @@ import { ReactNode } from 'react';
 
 import { RangePickerProps } from 'antd/lib/date-picker';
 import { PasswordProps, TextAreaProps } from 'antd/lib/input';
-
+import { CheckboxGroupProps } from 'antd/lib/checkbox/Group';
 import DCascader, { DCascaderProps } from '../../DCascader';
 import DInput, { DInputProps } from '../../DInput';
 import DSelect, { DSelectProps } from '../../DSelect';
@@ -180,10 +181,24 @@ const renderMap = {
       </Form.Item>
     );
   },
+  checkboxGroup: (props: CheckboxGroupProps, formItemProps: FormItemProps) => {
+    return (
+      <Form.Item {...formItemProps}>
+        <Checkbox.Group {...props} />
+      </Form.Item>
+    );
+  },
   radio: (props: RadioProps, formItemProps: FormItemProps, label: DItemProps['label']) => {
     return (
       <Form.Item {...formItemProps}>
         <Radio {...props}>{label}</Radio>
+      </Form.Item>
+    );
+  },
+  radioGroup: (props: RadioGroupProps, formItemProps: FormItemProps) => {
+    return (
+      <Form.Item {...formItemProps}>
+        <Radio.Group {...props} />
       </Form.Item>
     );
   },
