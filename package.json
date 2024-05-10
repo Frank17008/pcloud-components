@@ -1,6 +1,6 @@
 {
   "name": "@pointcloud/pcloud-components",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "private": false,
   "description": "pointcloud react 组件库",
   "keywords": [
@@ -90,7 +90,7 @@
     "react-dom": "^17.0.2"
   },
   "engines": {
-    "node": "14.x || 16.x"
+    "node": "16.20.0"
   },
   "publishConfig": {
     "access": "public",

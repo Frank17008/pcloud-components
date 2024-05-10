@@ -26,10 +26,12 @@ import {
   ButtonProps,
   DividerProps,
   FormItemProps,
+  RadioGroupProps,
 } from 'antd';
 
 import { PasswordProps, TextAreaProps } from 'antd/lib/input';
 import { RangePickerProps } from 'antd/lib/date-picker';
+import { CheckboxGroupProps } from 'antd/lib/checkbox';
 
 import { DInputProps } from '../../DInput';
 import { DSelectProps } from '../../DSelect';
@@ -37,7 +39,7 @@ import { DCascaderProps } from '../../DCascader';
 import { DTreeSelectProps } from '../../DTreeSelect';
 import { DUploadProps } from '../../DUpload';
 
-type DItemBaseProps = {
+export type DItemBaseProps = {
   /** label标签文本,同antd Form.Item的label,只能是string */
   label?: string;
   /** name标签文本,同antd Form.Item的name */
@@ -104,7 +106,9 @@ export type DItemProps =
   | RangePickerItemProps
   | MentionItemProps
   | CheckboxItemProps
+  | CheckboxGroupProps
   | RadioItemProps
+  | RadioGroupProps
   | RateItemProps
   | SliderItemProps
   | SwitchItemProps

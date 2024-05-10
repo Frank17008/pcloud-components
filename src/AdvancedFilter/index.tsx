@@ -17,13 +17,16 @@ const AdvancedFilter: React.FC<FilterProps> = (props) => {
   const [inputValue, setInputValue] = useState<string>('');
   const inputRef = useRef<any>(null);
   const formRef = useRef<any>(null);
-  useImperativeHandle(fRef, () => {
-    return { resetFields, form: formRef.current?.form };
-  });
+
   const resetFields = () => {
     setInputValue('');
     formRef?.current?.resetFields();
   };
+
+  useImperativeHandle(fRef, () => {
+    return { resetFields, form: formRef.current?.form };
+  });
+
   const handleSearch = (values: any) => {
     const value = inputRef?.current?.input?.value;
     // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
