@@ -1,3 +1,15 @@
+## [0.1.14](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.12...v0.1.14) (2024-05-14)
+
+### 🐛 修复 bug
+
+- 为 DForm 组件补充 ts 类型 ([2351e79](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/2351e79c81cace1ddd4d76661d87f81d1b913520))
+- 组件 DForm 补充 hooks ([a43a1e8](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a43a1e81f45e5cd8e6d15c40ad8134204e858940))
+- 组件 DForm 支持 checkboxGroup 和 radioGroup 类型 ([94b54a2](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/94b54a2a08edc3daf86cd585edff0d37e422ca57))
+
+### 📚 文档变更
+
+- 修改 changelog ([7b7b128](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/7b7b128f951942e03c9d71fc8ff17a260afa5b21))
+
 ## [0.1.12](https://192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.11...v0.1.12) (2023-11-22)
 
 ### ✨ 新增功能

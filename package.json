@@ -1,6 +1,6 @@
 {
   "name": "@pointcloud/pcloud-components",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "private": false,
   "description": "pointcloud react 组件库",
   "keywords": [
