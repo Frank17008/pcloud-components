@@ -5,7 +5,7 @@
  * @LastEditTime : 2023-08-16 16:45:15
  * @Description  : 基于antd的Table组件
  */
-import React, { forwardRef, useEffect, useRef, useState, useContext } from 'react';
+import React, { forwardRef, useEffect, useRef, useState, useContext, useMemo } from 'react';
 
 import { message, PaginationProps, Table, TableProps } from 'antd';
 import { ColumnType } from 'antd/lib/table';
@@ -127,7 +127,10 @@ function InternalTable(props: DTableProps, ref: React.Ref<HTMLDivElement>) {
   const _className = `${getPrefixCls('table')} ${className || ''} ${_pagination ? 'height-on-page' : ''}`;
 
   // loading 默认延迟 600ms
-  const _loading: DTableProps['loading'] = typeof loading === 'boolean' ? { spinning: loading, delay: 600 } : { delay: 600, spinning: false, ...loading };
+  const _loading: DTableProps['loading'] = useMemo(
+    () => (typeof loading === 'boolean' ? { spinning: loading, delay: 500 } : { delay: 500, spinning: false, ...loading }),
+    [loading],
+  );
 
   // 加载数据
   const loadData = (params?: TableParamsProps) => {
@@ -188,7 +191,7 @@ function InternalTable(props: DTableProps, ref: React.Ref<HTMLDivElement>) {
       dataSource={tableSource.records}
       pagination={_tablePagination}
       scroll={_scroll}
-      loading={{ ..._loading, spinning: tableSource.loading }}
+      loading={dataSource ? _loading : { ..._loading, spinning: tableSource.loading }}
     />
   );
 }
