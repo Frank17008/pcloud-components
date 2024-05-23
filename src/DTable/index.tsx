@@ -157,7 +157,7 @@ function InternalTable(props: DTableProps, ref: React.Ref<HTMLDivElement>) {
     } else if (dataSource) {
       const total = (_pagination && _pagination.total) || dataSource.length;
       setTableParams({ ...getTablePage(_pagination), ...params });
-      setTableSource({ total, loading: false, records: dataSource });
+      setTableSource({ total, loading: !!loading, records: dataSource });
     }
   };
 
