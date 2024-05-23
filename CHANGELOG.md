@@ -1,3 +1,9 @@
+## [0.1.16](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.15...v0.1.16) (2024-05-23)
+
+### 🐛 修复 bug
+
+- 修改 Dtable 组件 loading 的 bug ([1d7aa82](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/1d7aa821df391cf2779d2da39141cb9a5f0760c3))
+
 ## [0.1.15](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.14...v0.1.15) (2024-05-23)
 
 ### 🐛 修复 bug
