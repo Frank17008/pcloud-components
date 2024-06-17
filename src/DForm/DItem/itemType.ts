@@ -77,7 +77,9 @@ type TimePickerItemProps = { renderType?: 'timePicker' } & DItemBaseProps & Time
 type RangePickerItemProps = { renderType?: 'rangePicker' } & DItemBaseProps & RangePickerProps;
 type MentionItemProps = { renderType?: 'mentions' } & DItemBaseProps & MentionProps;
 type CheckboxItemProps = { renderType?: 'checkbox' } & DItemBaseProps & CheckboxProps;
+type DCheckboxGroupProps = { renderType?: 'checkboxGroup' } & DItemBaseProps & CheckboxGroupProps;
 type RadioItemProps = { renderType?: 'radio' } & DItemBaseProps & RadioProps;
+type DRadioGorupProps = { renderType?: 'radioGroup' } & DItemBaseProps & RadioGroupProps;
 type RateItemProps = { renderType?: 'rate' } & DItemBaseProps & RateProps;
 type SliderItemProps = { renderType?: 'slider' } & DItemBaseProps & SliderSingleProps;
 type SwitchItemProps = { renderType?: 'switch' } & DItemBaseProps & SwitchProps;
@@ -107,8 +109,10 @@ export type DItemProps =
   | MentionItemProps
   | CheckboxItemProps
   | CheckboxGroupProps
+  | DCheckboxGroupProps
   | RadioItemProps
   | RadioGroupProps
+  | DRadioGorupProps
   | RateItemProps
   | SliderItemProps
   | SwitchItemProps
