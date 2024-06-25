@@ -1,3 +1,12 @@
+## [0.1.17](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.16...v0.1.17) (2024-06-25)
+
+### 🐛 修复 bug
+
+- 替换 LModal 组件名称,扩展 DModal.delete 及其他方法 ([503c6bf](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/503c6bf34348dbd44d103cad7d4508924b8800de))
+- 替换 nginx docker 镜像版本 ([3f8970f](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/3f8970fc3fb1dc182bb43b2fe48de88ed6cc389a))
+- 为 DForm 组件补充类型定义 ([45e7d75](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/45e7d75008dc5fac88653a149dcabf3b24004c57))
+- 修改 classname ([939a128](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/939a1283754f1618e3af23238bf304c7c3fa5d95))
+
 ## [0.1.16](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.15...v0.1.16) (2024-05-23)
 
 ### 🐛 修复 bug
