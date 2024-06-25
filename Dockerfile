@@ -1,4 +1,4 @@
-FROM nginx:stable-alpine-perl
+FROM nginx:1.24.0
 
 WORKDIR /usr/src/app/
 
