@@ -18,7 +18,7 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | AuthComponent  | 权限组件       | [查看](/components/auth-component)  |
 | ErrorBoundary  | 错误边界       | [查看](/components/error-boundary)  |
 | LabelValue     | 键值对标签     | [查看](/components/label-value)     |
-| LModal         | 模态框组件     | [查看](/components/l-modal)         |
+| DModal         | 模态框组件     | [查看](/components/d-modal)         |
 | Loading        | 加载中         | [查看](/components/loading)         |
 | NoData         | 暂无数据       | [查看](/components/no-data)         |
 | DCascader      | 级联选择组件   | [查看](/components/d-cascader)      |
