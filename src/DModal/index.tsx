@@ -65,7 +65,7 @@ DModal.delete = ({ content, onOk, onCancel, zIndex }: DeleteModalProps) => {
     closable: true,
     okText: '确定',
     cancelText: '取消',
-    className: 'py-modal-wrapper',
+    className: 'pui-modal-container',
     onOk,
     onCancel,
     zIndex,
