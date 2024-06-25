@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LModal } from '@pointcloud/pcloud-components';
+import { DModal } from '@pointcloud/pcloud-components';
 import { Button, Input, InputNumber } from 'antd';
 
 function Demo3() {
@@ -33,9 +33,9 @@ function Demo3() {
           height: <Input value={style.height} onChange={onChangeHeight} />
         </span>
       </div>
-      <LModal visible={data.visible} onCancel={onClose} style={style} mode="relative">
+      <DModal visible={data.visible} onCancel={onClose} style={style} mode="relative">
         <div>111</div>
-      </LModal>
+      </DModal>
     </div>
   );
 }

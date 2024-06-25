@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LModal } from '@pointcloud/pcloud-components';
+import { DModal } from '@pointcloud/pcloud-components';
 import { Button } from 'antd';
 
 function Demo2() {
@@ -15,9 +15,9 @@ function Demo2() {
   return (
     <div style={{ width: '100%', height: '300px' }}>
       <Button onClick={onOPen}>open</Button>
-      <LModal open={data.visible} onCancel={onClose} mode="relative">
+      <DModal open={data.visible} onCancel={onClose} mode="relative">
         <div>111</div>
-      </LModal>
+      </DModal>
     </div>
   );
 }

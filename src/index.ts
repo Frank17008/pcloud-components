@@ -28,8 +28,8 @@ export { default as DTable } from './DTable';
 export type { DFormProps, DFormRefProps, DItemProps } from './DForm';
 export { default as DForm } from './DForm';
 
-export type { LModalProps } from './LModal/interface';
-export { default as LModal } from './LModal';
+export type { DModalProps } from './DModal/interface';
+export { default as DModal } from './DModal';
 
 export { default as ColorPicker } from './ColorPicker';
 export type {
