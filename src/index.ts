@@ -1,4 +1,6 @@
 export { default as LabelValue } from './LabelValue';
+export type { LabelValueProps } from './LabelValue';
+
 export { default as AdvancedFilter } from './AdvancedFilter';
 export { default as AuthComponent } from './AuthComponent';
 export type { FProps } from './AdvancedFilter/interface';

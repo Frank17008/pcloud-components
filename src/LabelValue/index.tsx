@@ -1,10 +1,12 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
-import { LabelValueProps } from './interface';
+import { LabelValueProps as ILabelValueProps } from './interface';
 import { ConfigContext, defaultPrefixCls } from '../ConfigProvider';
 import './styles/index.less';
 
-function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: LabelValueProps) {
+export type LabelValueProps = ILabelValueProps;
+
+function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: ILabelValueProps) {
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
   const classname = getPrefixCls('label-value');
   const wrapperClass = classNames({ [`${prefixCls}-label-value`]: !!prefixCls }, classname, className);
