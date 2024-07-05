@@ -1,3 +1,15 @@
+## [0.1.18](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.17...v0.1.18) (2024-07-05)
+
+### 🐛 修复 bug
+
+- 对外暴露 LabelValue 接口定义 ([0e2e562](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/0e2e562542a584b1c974d5a887b31d8f31cd75cf))
+- 修复 DForm 组件 bug;DForm 组件支持栅格布局; ([d8f3243](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/d8f3243540c2481ce25345663b249bc7d0c55ae9))
+
+### 📚 文档变更
+
+- 修改文档 ([4b7792f](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/4b7792fba88a92bee268804a3b7ae6744ff35b1d))
+- 修改 readme 文档 ([28911cd](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/28911cdd0bc7a3faf6342e43fc7a67ec920b4f9c))
+
 ## [0.1.17](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.16...v0.1.17) (2024-06-25)
 
 ### 🐛 修复 bug
