@@ -1,11 +1,13 @@
 # pcloud-components
 
 pcloud-components 是一套基于 Antd v4.24.10 + React v17.0.0 开发的业务组件库。
+该项目已经发布到 Npm 仓库，可以直接使用, 点击[pcloud-components 地址](https://www.npmjs.com/package/@pointcloud/pcloud-components)访问。
 
 ## 项目初始化
 
 ```
 // 拉取项目代码
+示例:
 git clone ssh://git@192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components.git
 
 // 安装依赖
