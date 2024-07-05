@@ -7,13 +7,14 @@ const items: DFormProps['items'] = [
     name: 'username',
     label: '用户名',
     renderType: 'input',
-    formItemProps: { rules: [{ required: true }] },
+    formItemProps: { rules: [{ required: true }], grid: { span: 6, offset: 4 } },
   },
-  { name: 'password', label: '密码', renderType: 'password' },
+  { name: 'password', label: '密码', renderType: 'password', formItemProps: { rules: [{ required: true }], grid: { span: 12 } } },
   {
     name: 'sex',
     label: '性别',
     renderType: 'select',
+    formItemProps: { rules: [{ required: true }], grid: { span: 12 } },
     options: [
       { label: '男', value: '1' },
       { label: '女', value: '2' },
@@ -35,6 +36,7 @@ export default function LayoutDemo() {
           <Radio value="vertical">垂直</Radio>
           <Radio value="inline">行内</Radio>
           <Radio value="inlineVertical">行内垂直</Radio>
+          <Radio value="grid">栅格布局</Radio>
         </Radio.Group>
       </div>
       <DForm style={{ minHeight: 200 }} items={items} layout={layout}>

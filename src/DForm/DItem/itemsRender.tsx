@@ -223,10 +223,10 @@ const renderMap = {
       </Form.Item>
     );
   },
-  transfer: (props: TransferProps<any>, formItemProps: FormItemProps, render: TransferProps<any>['render']) => {
+  transfer: (props: TransferProps<any>, formItemProps: FormItemProps, label: DItemBaseProps['label'], render: TransferProps<any>['render']) => {
     return (
       <Form.Item {...formItemProps}>
-        <Transfer render={render} {...props} />
+        <Transfer render={render} {...props}></Transfer>
       </Form.Item>
     );
   },

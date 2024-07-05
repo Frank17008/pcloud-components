@@ -27,6 +27,7 @@ import {
   DividerProps,
   FormItemProps,
   RadioGroupProps,
+  ColProps,
 } from 'antd';
 
 import { PasswordProps, TextAreaProps } from 'antd/lib/input';
@@ -45,7 +46,7 @@ export type DItemBaseProps = {
   /** name标签文本,同antd Form.Item的name */
   name?: string;
   /** Form.Item 的其他属性 */
-  formItemProps?: FormItemProps;
+  formItemProps?: FormItemProps & { grid?: Omit<ColProps, 'prefixCls'> };
 };
 
 /** 自定义渲染的DItem */

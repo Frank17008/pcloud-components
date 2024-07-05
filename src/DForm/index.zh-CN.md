@@ -39,7 +39,7 @@ group:
 
 ## 布局方式
 
-<code src="./demos/layoutDemo.tsx" title="布局方式" description="layout属性在原来的基础上新增了行内垂直布局方式inlineVertical"></code>
+<code src="./demos/layoutDemo.tsx" title="布局方式" description="新增了行内垂直布局方式inlineVertical和grid栅格布局方式"></code>
 
 ## 动态设置字段
 
