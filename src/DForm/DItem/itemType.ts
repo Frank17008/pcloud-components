@@ -44,7 +44,7 @@ export type DItemBaseProps = {
   /** label标签文本,同antd Form.Item的label,只能是string */
   label?: string;
   /** name标签文本,同antd Form.Item的name */
-  name?: string;
+  name?: string | number | (string | number)[];
   /** Form.Item 的其他属性 */
   formItemProps?: FormItemProps & { grid?: Omit<ColProps, 'prefixCls'> };
 };
