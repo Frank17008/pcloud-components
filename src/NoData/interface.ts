@@ -1,4 +1,4 @@
-export interface NoDataProps {
+export interface INoDataProps {
   /**
    * @description 无数据时的文字描述
    * @default 暂无结果
@@ -10,3 +10,5 @@ export interface NoDataProps {
    */
   src?: string;
 }
+
+export type NoDataProps = INoDataProps;

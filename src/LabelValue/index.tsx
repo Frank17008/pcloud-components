@@ -1,10 +1,8 @@
 import React, { useContext } from 'react';
 import classNames from 'classnames';
-import { LabelValueProps as ILabelValueProps } from './interface';
+import { ILabelValueProps } from './interface';
 import { ConfigContext, defaultPrefixCls } from '../ConfigProvider';
 import './styles/index.less';
-
-export type LabelValueProps = ILabelValueProps;
 
 function LabelValue({ label, value, emptyValue, className, noWrap, noColon }: ILabelValueProps) {
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);

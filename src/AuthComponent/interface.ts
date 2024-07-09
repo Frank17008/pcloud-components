@@ -1,6 +1,6 @@
 import React from 'react';
 
-export interface AuthComponentProps {
+export interface IAuthComponentProps {
   /**
    * @description 权限值
    */
@@ -22,3 +22,5 @@ export interface AuthComponentProps {
    */
   children?: React.ReactNode;
 }
+
+export type AuthComponentProps = IAuthComponentProps;

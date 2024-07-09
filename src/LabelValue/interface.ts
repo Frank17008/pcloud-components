@@ -1,4 +1,4 @@
-export interface LabelValueProps {
+export interface ILabelValueProps {
   /**
    * @description 文字标签
    */
@@ -27,3 +27,5 @@ export interface LabelValueProps {
    */
   noColon?: boolean;
 }
+
+export type LabelValueProps = ILabelValueProps;

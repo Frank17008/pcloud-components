@@ -1,5 +1,5 @@
 import { useMemo } from 'react';
-import { AuthComponentProps } from './interface';
+import { IAuthComponentProps } from './interface';
 
 // 查找指定元素
 function deepFind(node, fn) {
@@ -20,7 +20,7 @@ function isAuth(fieldValue: string | number | boolean, fieldName = 'code', authL
   return !!target;
 }
 
-const AuthComponent = ({ value, noAuthContent, children, authList, fieldName }: AuthComponentProps) => {
+const AuthComponent = ({ value, noAuthContent, children, authList, fieldName }: IAuthComponentProps) => {
   const auth = useMemo(() => (!value ? true : isAuth(value, fieldName, authList)), [value]);
   return <>{!auth ? noAuthContent : children}</>;
 };

@@ -1,4 +1,4 @@
-import React, { ReactInstance, ReactNode, useContext, useEffect, useRef, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import ReactDOM from 'react-dom';
 import { Spin } from 'antd';
 import classNames from 'classnames';
@@ -6,7 +6,6 @@ import { ConfigContext } from '../ConfigProvider';
 import { LoadingInstanceProps } from './interface';
 import './styles/index.less';
 
-let parentElement;
 function Loading(props: LoadingInstanceProps) {
   const { tip = '数据请求中...' } = props;
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);

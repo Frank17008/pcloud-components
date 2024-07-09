@@ -14,3 +14,5 @@ export interface DeleteModalProps {
   onCancel?: (...args: any[]) => any;
   zIndex?: number;
 }
+
+// export type DModalProps = DModalProps;

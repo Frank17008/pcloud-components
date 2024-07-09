@@ -10,4 +10,4 @@ export interface ConfigProviderProps {
   children?: React.ReactNode;
 }
 
-export type OtherProps = Omit<ConfigProviderProps, 'chidlren'>;
+export type OtherProps = Omit<ConfigProviderProps, 'children'>;

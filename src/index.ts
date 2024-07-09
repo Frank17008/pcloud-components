@@ -1,13 +1,20 @@
 export { default as LabelValue } from './LabelValue';
-export type { LabelValueProps } from './LabelValue';
+export type { LabelValueProps } from './LabelValue/interface';
 
 export { default as AdvancedFilter } from './AdvancedFilter';
+export type { AdvancedFilterProps, FormFilterProps, FotmItemProps, InputSearchProps } from './AdvancedFilter/interface';
+
 export { default as AuthComponent } from './AuthComponent';
-export type { FProps } from './AdvancedFilter/interface';
+export type { AuthComponentProps } from './AuthComponent/interface';
+
 export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as ConfigProvider } from './ConfigProvider';
+
 export { default as Loading } from './Loading';
+export type { LoadingProps } from './Loading/interface';
+
 export { default as NoData } from './NoData';
+export type { NoDataProps } from './NoData/interface';
 
 export type { DInputProps } from './DInput';
 export { default as DInput } from './DInput';
@@ -30,8 +37,8 @@ export { default as DTable } from './DTable';
 export type { DFormProps, DFormRefProps, DItemProps } from './DForm';
 export { default as DForm } from './DForm';
 
-export type { DModalProps } from './DModal/interface';
 export { default as DModal } from './DModal';
+export type { DModalProps } from './DModal/interface';
 
 export { default as ColorPicker } from './ColorPicker';
 export type {

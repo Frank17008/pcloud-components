@@ -1,5 +1,5 @@
 import Loading from './loading';
-import { LoadingProps, LoadingInstanceProps } from './interface';
+import { ILoadingProps, LoadingInstanceProps } from './interface';
 
 let loadingInstance: any = null;
 const getLoadingInstance = (params) => {
@@ -7,7 +7,7 @@ const getLoadingInstance = (params) => {
   return loadingInstance;
 };
 export default {
-  open(params?: LoadingInstanceProps): LoadingProps {
+  open(params?: LoadingInstanceProps): ILoadingProps {
     return getLoadingInstance(params);
   },
   close(): void {
@@ -16,7 +16,7 @@ export default {
       loadingInstance = null;
     }
   },
-  getInstance(): LoadingProps {
+  getInstance(): ILoadingProps {
     return loadingInstance;
   },
 };

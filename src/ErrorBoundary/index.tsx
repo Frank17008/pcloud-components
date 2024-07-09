@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import './index.less';
 import { ConfigContext } from '../ConfigProvider';
 
-function ErrorBoundary<T>({ err }: { err?: T }) {
+function ErrorBoundary({ err }: { err?: any }) {
   const { prefixCls, getPrefixCls }: any = React.useContext(ConfigContext);
   const classname = getPrefixCls('error-boundary');
   const wrapperClass = classNames({ [`${prefixCls}-error-boundary`]: !!prefixCls }, classname);

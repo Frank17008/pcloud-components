@@ -1,6 +1,7 @@
 import React from 'react';
 
 export type FormItemType = 'input' | 'inputNumber' | 'radio' | 'select' | 'checkbox' | 'datePicker' | 'rangePicker' | 'switch' | 'treeSelect';
+
 export interface FormItem {
   /**
    * @description 筛选项label文字
@@ -39,7 +40,7 @@ export interface FormProps {
   /**
    * @description 点击查询按钮时触发
    */
-  onSearch?: (v) => void;
+  onSearch?: (v: any) => void;
   /**
    * @description 点击重置按钮时触发
    */
@@ -99,3 +100,8 @@ export interface FilterProps extends FormProps {
    */
   icon?: React.ReactNode;
 }
+
+export type AdvancedFilterProps = FilterProps;
+export type FormFilterProps = FProps;
+export type FotmItemProps = FormItem;
+export type InputSearchProps = InputProps;

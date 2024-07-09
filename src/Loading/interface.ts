@@ -1,5 +1,5 @@
 import { SpinProps } from 'antd';
-import React, { ReactInstance, ReactNode } from 'react';
+import React, { ReactInstance } from 'react';
 
 export interface LoadingInstanceProps extends SpinProps {
   /**
@@ -10,8 +10,10 @@ export interface LoadingInstanceProps extends SpinProps {
   container?: ReactInstance | undefined;
 }
 
-export interface LoadingProps {
+export interface ILoadingProps {
   open: (param: LoadingInstanceProps) => React.ReactDOM;
   close: () => void;
   getInstance: () => React.ReactDOM;
 }
+
+export type LoadingProps = ILoadingProps;
