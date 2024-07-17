@@ -1,5 +1,7 @@
 # pcloud-components
 
+![node version](<https://img.shields.io/badge/node-v16.20.0-brightgreen?logo=nodedotjs&color=rgb(0%2C126%2C298)>) ![antd version](<https://img.shields.io/badge/ant%20design-v4.24.10-rgb(144%2C190%2C8)?style=flat&logo=antdesign>) ![docs](https://img.shields.io/badge/docs%20by-dumi-brightgreen?style=flat&color=%230081ff) ![counts](<https://img.shields.io/badge/components%20count-17-rgb(202%2C17%2C5)?style=flat&logo=webcomponentsdotorg>) ![license](<https://img.shields.io/badge/license-MIT-rgb(144%2C190%2C8)?style=flat>)
+
 pcloud-components 是一套基于 Antd v4.24.10 + React v17.0.0 开发的业务组件库。
 该项目已经发布到 Npm 仓库，可以直接使用, 点击[pcloud-components 地址](https://www.npmjs.com/package/@pointcloud/pcloud-components)访问。
 
