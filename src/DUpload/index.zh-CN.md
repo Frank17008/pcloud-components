@@ -86,7 +86,7 @@ function imageToBase64(blob: Blob, compress?: CompressProps | null): Promise<str
 ##### 用法示例
 
 ```jsx {0} | pure
-import { DUpload } from 'antd-plus-ui';
+import { DUpload } from '@pointcloud/pcloud-components';
 const { imageToBase64 } = DUpload;
 
 imageToBase64(file, { width: 300, height: 200, quality: 0.7 }).then((url) => {
