@@ -57,6 +57,7 @@ DModal.success = Modal.success;
 DModal.error = Modal.error;
 DModal.warning = Modal.warning;
 DModal.confirm = Modal.confirm;
+DModal.destroyAll = Modal.destroyAll;
 DModal.delete = ({ content, onOk, onCancel, zIndex }: DeleteModalProps) => {
   return DModal.confirm({
     title: '删除提示',
