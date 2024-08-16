@@ -55,3 +55,6 @@ export type {
 
 export { default as ScrollNumber } from './ScrollNumber';
 export type { ScrollNumberProps } from './ScrollNumber';
+
+export type { WordCloudProps } from './WordCloud';
+export { default as WordCloud } from './WordCloud';

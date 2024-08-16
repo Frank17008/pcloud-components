@@ -30,3 +30,4 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | DUpload        | 上传组件       | [查看](/components/d-upload)        |
 | ColorPicker    | 颜色选择器组件 | [查看](/components/color-picker)    |
 | ScrollNumber   | 数字滚动组件   | [查看](/components/scroll-number)   |
+| WordCloud      | 词云组件       | [查看](/components/word-cloud)      |
