@@ -40,6 +40,8 @@ export { default as DForm } from './DForm';
 export { default as DModal } from './DModal';
 export type { DModalProps } from './DModal/interface';
 
+export { default as ModalForm } from './ModalForm';
+
 export { default as ColorPicker } from './ColorPicker';
 export type {
   ColorPickerType,
