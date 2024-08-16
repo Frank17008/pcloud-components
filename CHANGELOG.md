@@ -1,3 +1,26 @@
+## [0.1.19](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.18...v0.1.19) (2024-08-16)
+
+### ✨ 新功能
+
+- 新增组合组件 ModalForm ([26cdd6e](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/26cdd6e93c2dca65c41c19fb8ce8781a8f7a5013))
+- 新增 WordCloud 词云组件 ([59db545](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/59db545d56ee5e03503e98d3b2dabd033c9c215f))
+
+### 🐛 修复 bug
+
+- 完善组件 ts 类型定义 ([a2e9316](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a2e9316c10525dcdf35a1afa5c876fdc0df406a3))
+- 修复 DItemBaseProps 类型定义，扩展 name 属性类型 ([8602f36](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/8602f36b2a9063d47b662985f56818458186cefb))
+- 修改 DMoal 组件 demo ([646f596](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/646f596be3114f74d040067942bdcfc6b0ce1d83))
+- 组件 DModal 继承 destroyAll 方法 ([af1609d](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/af1609d5d3ae7773c29942160e158ad29dde6ea9))
+
+### 📚 文档变更
+
+- 更新 README 文档 ([ab8450b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/ab8450b2b95898530fe2f105ee0010aac70c0eb1))
+- 修改组件文档 ([8552475](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/8552475b232192499cd3d064d45c4e25eba5fd32))
+- 修改 DForm 组件文档 ([7f5bb11](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/7f5bb11a557d36095b8adac99583980e436d8176))
+- 修改 DUpload 组件文档 ([a778572](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a778572fee272bb22ba1b5bcd79d315b54320745))
+- 修改 WordCloud 组件文档 ([a6be421](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a6be421a188727bc1b22c96aaf29dbebc97b5e18))
+- update docs ([db31c5c](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/db31c5c259668f50546ccdfc29261514e9337761))
+
 ## [0.1.18](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.17...v0.1.18) (2024-07-05)
 
 ### 🐛 修复 bug
