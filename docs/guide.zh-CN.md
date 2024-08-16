@@ -18,4 +18,4 @@ group:
 
 ## 问题反馈
 
-如果在使用过程中发现任何问题、或者有改善建议，欢迎在 [**Gitlab Issues**](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/issues) 进行反馈
+如果在使用过程中发现任何问题、或者有改善建议，欢迎在 [**Gitlab Issues**](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/issues) 进行反馈, 或者发送邮件至`405267330@qq.com`。

@@ -1,10 +1,10 @@
 import { DForm, DFormProps, DModal, DModalProps } from '@pointcloud/pcloud-components';
 
-export interface ModalFormProps {
+export type ModalFormProps = {
   modalProps: DModalProps & { width?: number };
   formProps: DFormProps;
   children?: React.ReactNode;
-}
+};
 
 export default (props: ModalFormProps) => {
   const { modalProps = {}, formProps, children } = props;
