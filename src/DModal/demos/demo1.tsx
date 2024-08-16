@@ -4,6 +4,7 @@ import { Button } from 'antd';
 
 function Demo1() {
   const [data, setData] = useState({ visible: false });
+
   const onOPen = () => {
     data.visible = true;
     setData({ ...data });
@@ -15,7 +16,7 @@ function Demo1() {
   return (
     <div>
       <Button onClick={onOPen}>open</Button>
-      <DModal visible={data.visible} onCancel={onClose} style={{ width: '100%', height: '50%' }}>
+      <DModal open={data.visible} onCancel={onClose} style={{ width: '100%', height: '50%' }}>
         <div>111</div>
       </DModal>
     </div>
