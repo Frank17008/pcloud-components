@@ -8,7 +8,7 @@
 
 module.exports = {
   npm: {
-    publish: false,
+    publish: true,
   },
   git: {
     // changelog: false,
