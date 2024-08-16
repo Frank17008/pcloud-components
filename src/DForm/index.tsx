@@ -120,7 +120,6 @@ DForm.ErrorList = Form.ErrorList;
 DForm.useForm = Form.useForm;
 DForm.useFormInstance = Form.useFormInstance;
 DForm.useWatch = Form.useWatch;
-DForm.useForm = Form.useForm;
 
 export { type DFormProps, type DFormRefProps, type DItemProps };
 

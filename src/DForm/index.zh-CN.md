@@ -15,7 +15,7 @@ group:
 - 支持表单元素自定义渲染
 - 支持 items 和 children 两种添加表单元素方式
 - 支持表单元素的默认默认属性设置
-- 支持 inlineVertical 布局方式
+- 支持 inlineVertical 和 Grid 布局方式
 
 ## 基础用法
 

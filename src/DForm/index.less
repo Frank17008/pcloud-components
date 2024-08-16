@@ -1,11 +1,19 @@
 @import '../commonStyle/index.less';
 
 .@{prefix}-form {
-  .form-wrapper > * {
+  .form-wrapper > .ant-form-item {
     min-height: 32px;
     margin-right: 0;
     margin-bottom: 24px;
-    padding-right: 16px;
+  }
+
+  .form-wrapper > .ant-form-item:last-child {
+    margin-bottom: 0;
+  }
+
+  .ant-input-number,
+  .ant-picker {
+    width: 100%;
   }
 }
 
@@ -19,6 +27,10 @@
   flex-wrap: wrap;
   align-items: flex-end;
   height: min-content;
+
+  > .ant-form-item {
+    padding-right: 16px;
+  }
 }
 
 .@{prefix}-form.ant-form-inline.inlineVertical {
