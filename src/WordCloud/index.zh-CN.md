@@ -1,7 +1,7 @@
 ---
 title: WordCloud
 description: 词云组件
-keywords: ['词云', 'Cloud']
+keywords: ['词云', 'Cloud', 'WordCloud']
 demo:
   cols: 2
 tocDepth: 2
@@ -15,6 +15,8 @@ group:
 ## 组件特性
 
 - svg 渲染
+- 词组数据支持自定义颜色
+- 支持鼠标事件
 
 ## 基础使用
 
