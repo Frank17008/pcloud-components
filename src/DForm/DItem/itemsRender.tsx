@@ -260,7 +260,7 @@ const renderMap = {
       </Divider>
     );
   },
-  other: (formItemProps: FormItemProps, children: DUploadProps['children']) => {
+  other: (formItemProps: FormItemProps, children: ReactNode) => {
     return <Form.Item {...formItemProps}>{children}</Form.Item>;
   },
 };
