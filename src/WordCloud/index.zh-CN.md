@@ -32,15 +32,15 @@ group:
 
 ## API
 
-| 参数名称  | 说明         | 类型                                       | 默认值                                |
-| --------- | ------------ | ------------------------------------------ | ------------------------------------- |
-| className | 样式类名     | string                                     |                                       |
-| words     | 词组数据     | `Array<{text:string;value:string number}>` |                                       |
-| minSize   | 画布最小尺寸 | number[]                                   | [300,300]                             |
-| size      | 画布尺寸     | number[]                                   |                                       |
-| maxWords  | 最大单词量   | number                                     | 100                                   |
-| callbacks | 事件回调     | [Callbacks](#Callbacks)                    | 参照[Callbacks](#Callbacks)中的默认值 |
-| options   | 其他配置     | [Options](#Options)                        | 参照[Options](#Options)中的默认值     |
+| 参数名称  | 说明         | 类型                                        | 默认值                                |
+| --------- | ------------ | ------------------------------------------- | ------------------------------------- |
+| className | 样式类名     | string                                      |                                       |
+| words     | 词组数据     | `Array<{text:string;value:string\|number}>` |                                       |
+| minSize   | 画布最小尺寸 | number[]                                    | [300,300]                             |
+| size      | 画布尺寸     | number[]                                    |                                       |
+| maxWords  | 最大单词量   | number                                      | 100                                   |
+| callbacks | 事件回调     | [Callbacks](#Callbacks)                     | 参照[Callbacks](#Callbacks)中的默认值 |
+| options   | 其他配置     | [Options](#Options)                         | 参照[Options](#Options)中的默认值     |
 
 ### Callbacks
 
