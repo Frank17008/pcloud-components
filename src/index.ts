@@ -61,3 +61,6 @@ export type { ScrollNumberProps } from './ScrollNumber';
 
 export type { WordCloudProps } from './WordCloud';
 export { default as WordCloud } from './WordCloud';
+
+export type { InfiniteScrollListProps } from './InfiniteScrollList';
+export { default as InfiniteScrollList } from './InfiniteScrollList';
