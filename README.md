@@ -299,6 +299,13 @@ git commit -m "fix: 修复bug"	// type后的冒号和空格不可省略，descri
    // npm unlink --no-save package && npm install	// 调试完成后解除链接
    ```
 
+3. docker 推送镜像
+
+   ```
+   // 推送镜像之前需要先登录,并修改package.json-->scripts中对应docker的配置
+   npm run push
+   ```
+
 ##### 发布项目
 
 1. 前置工作
