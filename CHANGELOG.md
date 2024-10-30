@@ -1,3 +1,25 @@
+## [0.1.20](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.19...v0.1.20) (2024-10-30)
+
+### ✨ 新功能
+
+- 新增图文卡片组件 ([56e6cd0](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/56e6cd07742885ddb3161911e959295c08dd04b5))
+- 新增无限滚动列表组件 InfiniteScrollList ([5383bef](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/5383bef60ba5ce805ae141cc7edb40b398eec2ad))
+
+### 🐛 修复 bug
+
+- 修改配置 ([3e1b58e](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/3e1b58ecb71bf1ae471f10eb2969cdbffa0c5355))
+- 修改组件 DItem 参数类型 ([28f8af1](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/28f8af15fed39230d5753075fc99dfbba0fdb6cc))
+- 修改 DForm 组件样式 ([4854d4d](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/4854d4def07f2bbc26297b724609348b449f0ad9))
+
+### 📚 文档变更
+
+- 文档更新 ([370c9e6](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/370c9e6ca1c732b0274f1eee3dabdf2a859cc82f))
+- 修改词云组件 API 说明文档 ([685c820](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/685c8209e7363a3614859f5c614d7ff347cf1030))
+
+### ⚡️ 性能优化
+
+- 新增 docker 构建命令及配置 ([f839df1](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/f839df12ac7aee40a6530a5d9760e459664138eb))
+
 ## [0.1.19](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.18...v0.1.19) (2024-08-16)
 
 ### ✨ 新功能
