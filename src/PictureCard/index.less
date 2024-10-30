@@ -1,0 +1,28 @@
+@import '../commonStyle/index.less';
+
+.@{prefix}-picture-card {
+  display: inline-block;
+  padding: 10px;
+  transition: box-shadow 0.3s linear;
+
+  .info {
+    margin-top: 10px;
+  }
+
+  &-bordered {
+    border: 1px solid rgba(0, 0, 0, 6%);
+  }
+
+  &-hoverable {
+    &:hover {
+      cursor: pointer;
+      border-color: transparent;
+      box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 16%), 0 3px 6px rgba(0, 0, 0, 12%), 0 5px 12px 4px rgba(0, 0, 0, 9%);
+    }
+  }
+
+  &.horizontal {
+    display: flex;
+    justify-content: space-around;
+  }
+}
