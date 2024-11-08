@@ -72,33 +72,42 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
   const classname = getPrefixCls('infinite-scroll-wrapper');
   const wrapperClass = classNames({ [`${prefixCls}-infinite-scroll-wrapper`]: !!prefixCls }, classname, className);
 
+  const pageParamsRef = useRef({ current: 1, size: 10, ...initialParams });
+  const loadingRef = useRef<boolean>(false);
   const scrollRef = useRef<HTMLDivElement>(null);
   const [listData, setListData] = useState<{ total: number; data: any[] }>({ total: 0, data: [] });
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [pageParams, setPageParams] = useState<PageParams<T>>({ current: 1, size: 10, ...initialParams });
 
   const handleLoadMore = useCallback(async () => {
-    if (isLoading) return;
-    setIsLoading(true);
+    if (loadingRef.current) return;
+    loadingRef.current = true;
     try {
-      const { data } = await loadMore({ ...pageParams });
+      const { data } = await loadMore({ ...pageParamsRef.current });
       const { total, records } = data;
-      if (records?.length > 0 && listData?.data?.length < total) {
-        setPageParams((prevParams) => ({ ...prevParams, current: prevParams.current + 1 }));
+      // 初始参数重置时不拼接数据
+      if (pageParamsRef.current.current === 1) {
+        setListData({ total: total, data: total > 0 ? [...records] : [] });
+      } else {
+        setListData((prevData) => ({ total, data: total > 0 ? [...prevData.data, ...(records || [])] : [] }));
       }
-      setListData((prevData) => ({ total, data: total > 0 ? [...prevData.data, ...(records || [])] : [] }));
-      setIsLoading(false);
+      loadingRef.current = false;
     } catch (error) {
-      setIsLoading(false);
+      loadingRef.current = false;
+      setListData({ total: 0, data: [] });
     } finally {
-      setIsLoading(false);
+      loadingRef.current = false;
     }
-  }, [loadMore, isLoading, pageParams]);
+  }, [loadMore]);
 
   useEffect(() => {
-    if (Reflect.ownKeys(initialParams).length > 0 && pageParams.current !== 1) {
+    if (listData.total > 0 && listData.data.length < listData.total) {
+      pageParamsRef.current = { ...pageParamsRef.current, current: pageParamsRef.current.current + 1 };
+    }
+  }, [listData]);
+
+  useEffect(() => {
+    if (Reflect.ownKeys(initialParams).length > 0) {
       scrollRef?.current?.scrollTo({ top: 0, behavior: 'smooth' });
-      setPageParams({ current: 1, ...initialParams });
+      pageParamsRef.current = { current: 1, size: 10, ...initialParams };
     }
     handleLoadMore();
   }, [initialParams]);
@@ -106,11 +115,11 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
   return (
     <div id={containerId} className="scroll-container" ref={scrollRef} style={{ height: containerHeight, overflowY: 'auto' }}>
       <InfiniteScroll
-        className={`${wrapperClass} ${className} `}
+        className={`${wrapperClass} ${className}`}
         scrollableTarget={containerId}
-        dataLength={listData?.data?.length}
+        dataLength={listData.data?.length}
         next={handleLoadMore}
-        hasMore={listData?.data?.length < listData?.total}
+        hasMore={listData.data?.length < listData.total}
         loader={
           <div style={{ textAlign: 'center' }}>
             <Spin tip="拼命加载中..." />
