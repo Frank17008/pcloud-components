@@ -12,26 +12,26 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 
 目前提供的组件如下 ：
 
-| 组件               | 描述             | 链接                                    |
-| :----------------- | :--------------- | :-------------------------------------- |
-| AdvancedFilter     | 高级搜索组件     | [查看](/components/advanced-filter)     |
-| AuthComponent      | 权限组件         | [查看](/components/auth-component)      |
-| ColorPicker        | 颜色选择器       | [查看](/components/color-picker)        |
-| ConfigProvider     | 全局注册组件     | [查看](/components/config-provider)     |
-| DCascader          | 级联选择组件     | [查看](/components/d-cascader)          |
-| DForm              | 表单组件         | [查看](/components/d-form)              |
-| DInput             | 输入组件         | [查看](/components/d-input)             |
-| DModal             | 模态框组件       | [查看](/components/d-modal)             |
-| DSelect            | 下拉选择组件     | [查看](/components/d-select)            |
-| DTable             | 表格组件         | [查看](/components/d-table)             |
-| DTreeSelect        | 树型选择组件     | [查看](/components/d-tree-select)       |
-| DUpload            | 上传组件         | [查看](/components/d-upload)            |
-| ErrorBoundary      | 错误边界         | [查看](/components/error-boundary)      |
-| InfiniteScrollList | 无限滚动列表组件 | [查看](/components/infinitescroll-list) |
-| LabelValue         | 键值对标签       | [查看](/components/label-value)         |
-| Loading            | 加载中           | [查看](/components/loading)             |
-| ModalForm          | 表单弹窗组件     | [查看](/components/modal-form)          |
-| NoData             | 暂无数据         | [查看](/components/no-data)             |
-| PictureCard        | 图文卡片组件     | [查看](/components/picture-card)        |
-| ScrollNumber       | 数字滚动组件     | [查看](/components/scroll-number)       |
-| WordCloud          | 词云组件         | [查看](/components/word-cloud)          |
+| 组件               | 描述             | 链接                                     |
+| :----------------- | :--------------- | :--------------------------------------- |
+| AdvancedFilter     | 高级搜索组件     | [查看](/components/advanced-filter)      |
+| AuthComponent      | 权限组件         | [查看](/components/auth-component)       |
+| ColorPicker        | 颜色选择器       | [查看](/components/color-picker)         |
+| ConfigProvider     | 全局注册组件     | [查看](/components/config-provider)      |
+| DCascader          | 级联选择组件     | [查看](/components/d-cascader)           |
+| DForm              | 表单组件         | [查看](/components/d-form)               |
+| DInput             | 输入组件         | [查看](/components/d-input)              |
+| DModal             | 模态框组件       | [查看](/components/d-modal)              |
+| DSelect            | 下拉选择组件     | [查看](/components/d-select)             |
+| DTable             | 表格组件         | [查看](/components/d-table)              |
+| DTreeSelect        | 树型选择组件     | [查看](/components/d-tree-select)        |
+| DUpload            | 上传组件         | [查看](/components/d-upload)             |
+| ErrorBoundary      | 错误边界         | [查看](/components/error-boundary)       |
+| InfiniteScrollList | 无限滚动列表组件 | [查看](/components/infinite-scroll-list) |
+| LabelValue         | 键值对标签       | [查看](/components/label-value)          |
+| Loading            | 加载中           | [查看](/components/loading)              |
+| ModalForm          | 表单弹窗组件     | [查看](/components/modal-form)           |
+| NoData             | 暂无数据         | [查看](/components/no-data)              |
+| PictureCard        | 图文卡片组件     | [查看](/components/picture-card)         |
+| ScrollNumber       | 数字滚动组件     | [查看](/components/scroll-number)        |
+| WordCloud          | 词云组件         | [查看](/components/word-cloud)           |
