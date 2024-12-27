@@ -1,21 +1,31 @@
+import React from 'react';
+
 export interface ILabelValueProps {
   /**
    * @description 文字标签
    */
-  label: string | undefined;
+  label: string | React.ReactNode;
   /**
    * @description 文字标签值
    */
-  value?: string | undefined;
+  value?: string | React.ReactNode;
+  /**
+   * @description 格式化value值
+   */
+  formatter?: (v?) => string | React.ReactNode;
   /**
    * @description 文字标签值为空时的值
    * @default -
    */
-  emptyValue?: string | undefined;
+  emptyValue?: string | React.ReactNode;
   /**
    * @description 类名
    */
   className?: string;
+  /**
+   * @description 样式
+   */
+  style?: React.CSSProperties;
   /**
    * @description 是否不换行
    * @default false
