@@ -9,8 +9,12 @@
     "esModuleInterop": true,
     "jsx": "react-jsx",
     "baseUrl": "./",
-    "paths": { "@@/*": [".dumi/tmp/*"], "@pointcloud/pcloud-components": ["src"], "@pointcloud/pcloud-components/*": ["src/*", "*"] }
+    "paths": {
+      "@@/*": [".dumi/tmp/*"],
+      "@pointcloud/pcloud-components": ["src"],
+      "@pointcloud/pcloud-components/*": ["src/*", "*"]
+    }
   },
   "compileOnSave": true,
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*", "scripts/**/*"]
+  "include": [".dumirc.ts", "src/**/*", "scripts/**/*"]
 }
