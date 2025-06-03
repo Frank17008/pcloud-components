@@ -9,9 +9,9 @@
 import React, { forwardRef, useContext, ReactNode, useState, useEffect, useImperativeHandle } from 'react';
 import { Form, FormProps, Row, Col } from 'antd';
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
-
 import helper from './helper';
-import DItem, { DItemProps } from './DItem';
+import DItem from './DItem';
+import type { DItemProps } from './DItem';
 import './index.less';
 
 type InternalFormProps = {
