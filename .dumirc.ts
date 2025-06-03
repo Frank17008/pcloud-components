@@ -5,6 +5,7 @@ export default defineConfig({
   resolve: { docDirs: ['docs'] },
   outputPath: 'docs-dist',
   favicons: ['/images/favicon.png'],
+  logo: '/images/favicon.png',
   locales: [
     { id: 'zh-CN', name: '中文', suffix: '' },
     { id: 'en-US', name: 'English', suffix: '-en' },
