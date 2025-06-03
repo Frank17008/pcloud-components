@@ -16,5 +16,5 @@
     }
   },
   "compileOnSave": true,
-  "include": [".dumirc.ts", "src/**/*", "scripts/**/*"]
+  "include": [".dumirc.ts", "src/**/*"]
 }
