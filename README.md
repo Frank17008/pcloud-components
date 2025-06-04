@@ -1,8 +1,8 @@
 # pcloud-components
 
-![node version](<https://img.shields.io/badge/node-v16.20.0-brightgreen?logo=nodedotjs&color=rgb(0%2C126%2C298)>) ![antd version](<https://img.shields.io/badge/ant%20design-v4.24.10-rgb(144%2C190%2C8)?style=flat&logo=antdesign>) ![docs](https://img.shields.io/badge/docs%20by-dumi-brightgreen?style=flat&color=%230081ff) ![counts](<https://img.shields.io/badge/components%20count-20-rgb(202%2C17%2C5)?style=flat&logo=webcomponentsdotorg>) ![license](<https://img.shields.io/badge/license-MIT-rgb(144%2C190%2C8)?style=flat>)
+![node version](<https://img.shields.io/badge/node-v16.20.0-brightgreen?logo=nodedotjs&color=rgb(0%2C126%2C298)>) ![react version](https://img.shields.io/badge/react-v18.20.0-brightgreen?style=flat&logo=react) ![antd version](<https://img.shields.io/badge/ant%20design-v4.24.10-rgb(144%2C190%2C8)?style=flat&logo=antdesign>) ![docs](https://img.shields.io/badge/docs%20by-dumi-brightgreen?style=flat&color=%230081ff) ![counts](<https://img.shields.io/badge/components%20count-22-rgb(202%2C17%2C5)?style=flat&logo=webcomponentsdotorg>) ![license](<https://img.shields.io/badge/license-MIT-rgb(144%2C190%2C8)?style=flat>)
 
-pcloud-components 是一套基于 Antd v4.24.x+ React v17.x 开发的业务组件库。
+pcloud-components 是一套基于 Antd v4.24.x+ React v18.2 开发的业务组件库。
 该项目已经发布到 Npm 仓库，可以直接使用, 点击[pcloud-components 地址](https://www.npmjs.com/package/@pointcloud/pcloud-components)访问。
 
 ## 项目初始化
@@ -14,10 +14,23 @@ git clone ssh://git@192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-
 
 // 安装依赖
 cd pcloud-components
+
 npm install
+  or
+pnpm install
+  or
+yarn install
 
 // 启动项目
 npm start  or npm run dev
+pnpm start or pnpm  dev
+```
+
+## 推荐环境
+
+```
+node >= 16.20.0
+pnpm >= 8.15.9
 ```
 
 ## 项目结构
@@ -25,7 +38,7 @@ npm start  or npm run dev
 ```
 📁pcloud-components
 ├─ 📁.dumi						# api站点相关目录，例如全局样式、全局脚本、站点主题、自定义组件等
-│ 	├─ 📁theme						# 自定义主题
+│ 	├─ 📁tmp						# dumi运行时目录
 │ 	└─ 📄global.less				# 全局样式
 ├─ 📁.husky						# 代码提交相关配置
 ├─ 📁docker						# docker部署相关文件
@@ -46,6 +59,7 @@ npm start  or npm run dev
 ├─ 📄.dumirc.ts					# dumi 的配置文件
 ├─ 📄.fatherrc.ts				# father 的配置文件，用于组件库打包
 ├─ 📄.eslintrc.js				# eslint插件配置
+├─ 📄.release-it.js     # release-it配置
 ├─ 📄.prettierrc.js				# prettier插件配置
 ├─ 📄.stylelintrc				# stylelint插件配置
 └─ 📄tsconfig.json				# ts相关配置

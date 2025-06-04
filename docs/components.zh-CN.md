@@ -33,5 +33,6 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | ModalForm          | 表单弹窗组件     | [查看](/components/modal-form)           |
 | NoData             | 暂无数据         | [查看](/components/no-data)              |
 | PictureCard        | 图文卡片组件     | [查看](/components/picture-card)         |
+| RndDrag            | 拖拽组件         | [查看](/components/rnd-drag)             |
 | ScrollNumber       | 数字滚动组件     | [查看](/components/scroll-number)        |
 | WordCloud          | 词云组件         | [查看](/components/word-cloud)           |
