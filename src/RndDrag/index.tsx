@@ -9,7 +9,7 @@ const RndDrag = (props: Props) => {
   const wrapperClass = classNames({ [`${prefixCls}-rnd-drag`]: !!prefixCls }, classname, className);
 
   return (
-    <Rnd className={wrapperClass} bounds="parent" enableUserSelectHack={false} {...rest}>
+    <Rnd className={wrapperClass} bounds="parent" {...rest}>
       {children}
     </Rnd>
   );
