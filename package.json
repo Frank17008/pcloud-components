@@ -66,6 +66,7 @@
     "react-color": "^2.19.3",
     "react-countup": "^6.5.0",
     "react-infinite-scroll-component": "^6.1.0",
+    "react-rnd": "^10.5.2",
     "react-wordcloud": "^1.2.7"
   },
   "devDependencies": {
@@ -94,7 +95,9 @@
     "react-dom": "^17.0.2"
   },
   "engines": {
-    "node": ">=16.20.0"
+    "node": ">=16.20.0",
+    "npm": ">=8.19.4",
+    "pnpm": ">=8.15.9"
   },
   "publishConfig": {
     "access": "public",
