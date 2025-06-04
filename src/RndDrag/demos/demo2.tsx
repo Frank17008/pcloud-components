@@ -38,7 +38,7 @@ function Demo2() {
   return (
     <>
       <Radio.Group value={bounds} options={options} onChange={onChange} style={{ marginBottom: '10px' }}></Radio.Group>
-      <div id="box1" style={{ width: '450px', height: '450px', background: '#c8c8c8' }}>
+      <div id="box1" style={{ width: '450px', height: '450px', background: '#c8c8c8', userSelect: 'none' }}>
         我的id是box1
         <div className="box2" style={box2Style}>
           我的class是box2
