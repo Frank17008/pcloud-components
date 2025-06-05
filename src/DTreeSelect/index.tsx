@@ -1,19 +1,7 @@
-/*
- * @Author       : wangfeihu
- * @Date         : 2023-05-22 10:38:17
- * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-30 16:24:47
- * @Description  : 基于antd的TreeSelect组件
- */
-
 import React, { useRef, forwardRef, useState, useEffect, useMemo, useContext } from 'react';
-
 import { TreeSelect, TreeSelectProps } from 'antd';
 import { DefaultOptionType } from 'antd/lib/select';
-import { BaseSelectRef } from 'rc-select/lib/BaseSelect';
-
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
-
 import './index.less';
 
 export type DTreeSelectProps = Omit<TreeSelectProps, 'treeData' | 'loadData' | 'loading'> & {
@@ -58,7 +46,7 @@ function getDelayTime(value?: boolean | number, defaultValue = 800) {
   }
 }
 
-function InternalTreeSelect(props: DTreeSelectProps, ref: React.Ref<BaseSelectRef>) {
+function InternalTreeSelect(props: DTreeSelectProps, ref: any) {
   const { className = '', popupClassName, treeData: initOptions, fieldNames, loadData, onLoadData, loading: initLoading, ...otherProps } = props;
 
   const { getPrefixCls }: any = useContext(ConfigContext);
@@ -181,5 +169,5 @@ function InternalTreeSelect(props: DTreeSelectProps, ref: React.Ref<BaseSelectRe
   );
 }
 
-const DTreeSelect = forwardRef(InternalTreeSelect);
+const DTreeSelect: React.ForwardRefExoticComponent<DTreeSelectProps & React.RefAttributes<any>> = forwardRef(InternalTreeSelect);
 export default DTreeSelect;
