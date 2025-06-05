@@ -1,3 +1,25 @@
+## [0.1.21](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/V0.1.20...0.1.21) (2025-06-05)
+
+### ✨ 新功能
+
+- **components:** add RndDrag component ([9dfbb98](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/9dfbb98ab32049a2c0e41fefd8504ba59ea677b9))
+- dumi 升级至 2.4.13 版本 ([b3550e5](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/b3550e5dcc87bf134fe363a38066725075bbfe9c))
+- **Loading:** add delay prop for loading effect ([450a3be](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/450a3be508bcd16053b9e847e8579428cb7a76ef))
+
+### 🐛 修复 bug
+
+- 更新 nginx 配置，调整上传文件大小限制，添加安全头部信息 ([bacfe50](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/bacfe509f5ea7975b5fb6025194f2d397e076cdf))
+- 配置导航栏上 l 站点 ogo ([e557cec](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/e557cec237050c481b768829f3aff8fb5f993d67))
+- 修复 DItemProps 类型导入错误 ([be52146](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/be52146114ff7bca22d0acc2448136b06ef4e1d9))
+- 修改 Loading 组件 ([34d49bf](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/34d49bff7b8f9bdb5ecc771f3947010a5e43b839))
+- remove unnecessary scripts directory from tsconfig include ([0887666](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/0887666cdb289f92c8e4d9746525bbdbf180d74f))
+
+### 📚 文档变更
+
+- **dumi:** update site config and add theme settings ([927cbbe](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/927cbbe08d2d65df4e764c6e097dcaccd5c70ff3))
+- **README:** 更新 readme ([d8ee998](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/d8ee9987bbf77f6dfb76c35d0ee32efdf093e090))
+- **README:** update README.md ([4648bbe](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/4648bbedc89365fca8fef7078901067f04c39b8d))
+
 ## [0.1.20](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.19...v0.1.20) (2024-10-30)
 
 ### ✨ 新功能
