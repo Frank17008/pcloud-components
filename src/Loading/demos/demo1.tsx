@@ -1,4 +1,3 @@
-import React, { useRef } from 'react';
 import { Button } from 'antd';
 import { Loading } from '@pointcloud/pcloud-components';
 
