@@ -1,11 +1,3 @@
-/*
- * @Author       : wangfeihu
- * @Date         : 2023-07-26 16:00:29
- * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-26 17:49:48
- * @Description  : release it 配置,主要管理git发布流程
- */
-
 module.exports = {
   npm: {
     publish: true,
@@ -13,6 +5,7 @@ module.exports = {
   git: {
     // changelog: false,
     // push: false,
+    tagName: 'v${version}',
     commitMessage: 'chore: release v${version}',
   },
   plugins: {
