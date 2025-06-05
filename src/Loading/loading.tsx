@@ -1,7 +1,7 @@
-import React, { useContext, useEffect } from 'react';
-import ReactDOM from 'react-dom';
 import { Spin } from 'antd';
 import classNames from 'classnames';
+import { useContext, useEffect } from 'react';
+import ReactDOM from 'react-dom';
 import { ConfigContext } from '../ConfigProvider';
 import { LoadingInstanceProps } from './interface';
 import './styles/index.less';
@@ -22,7 +22,7 @@ function Loading(props: LoadingInstanceProps) {
     <div className={wrapperClass}>
       <div className="mask" />
       <div className="loading">
-        <Spin tip={tip} />
+        <Spin {...props} />
       </div>
     </div>
   );
