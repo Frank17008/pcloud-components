@@ -6,7 +6,7 @@ export interface ConfigProviderProps {
    * @default pui
    */
   prefixCls?: string;
-  getPrefixCls?: (componentName: string, customPrefix?: string) => string;
+  getPrefixCls?: (_componentName: string, _customPrefix?: string) => string;
   children?: React.ReactNode;
 }
 

@@ -21,8 +21,12 @@ export default () => {
     onWordClick: (v) => {
       console.log(v);
     },
-    onWordMouseOut: (v) => {},
-    onWordMouseOver: (v) => {},
+    onWordMouseOut: (v) => {
+      console.log(v);
+    },
+    onWordMouseOver: (v) => {
+      console.log(v);
+    },
     getWordTooltip: (word) => `${word.text} (${word.value}) [${word.value > 50 ? '高风险' : '低风险'}]`,
   };
   return <WordCloud words={words} callbacks={callbacks} />;

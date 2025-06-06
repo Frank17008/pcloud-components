@@ -21,13 +21,13 @@ export default function SearchDemo() {
   const onRadioChange = (e) => setEnableRemoteSearch(e.target.value);
 
   const getOptionsAsync = () => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<DefaultOptionType[]>((resolve) => {
       resolve(options);
     });
   };
 
   const remoteSearch = (value?) => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<DefaultOptionType[]>((resolve) => {
       const list = value ? options.filter((item) => item.label.includes(value)) : options;
       setTimeout(() => resolve(list), 1200);
     });

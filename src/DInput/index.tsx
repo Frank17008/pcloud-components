@@ -11,6 +11,17 @@ import { Input, InputProps, InputRef } from 'antd';
 
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
+// 获取防抖超时时间，debounce: 默认800ms，false或0表示不开启
+function getDebounceTime(debounce?: boolean | number, defaultValue = 800) {
+  if (debounce === true) {
+    return defaultValue;
+  } else if (debounce === false) {
+    return 0;
+  } else {
+    return typeof debounce === 'number' ? debounce : defaultValue;
+  }
+}
+
 export type DInputProps = Omit<InputProps, 'onChange'> & {
   /** 输入框内容变化时的回调 */
   // eslint-disable-next-line no-unused-vars
@@ -56,14 +67,14 @@ function InternalInput(props: DInputProps, ref: React.Ref<InputRef>) {
   // 监听合成输入开始事件(执行用户事件并置合成标记为true)
   const _onCompositionStart = (e) => {
     onCompositionStart?.(e);
-    enableCompose && setComposeFlag(true);
+    setComposeFlag?.(true);
   };
 
   // 监听合成输入结束事件(执行用户事件并置合成标记为false,同时触发用户onChange事件)
   const _onCompositionEnd = (e) => {
     onCompositionEnd?.(e);
     if (enableCompose) {
-      setComposeFlag(false);
+      setComposeFlag?.(false);
       emitChange(e.target.value, e);
     }
   };
@@ -81,17 +92,6 @@ function InternalInput(props: DInputProps, ref: React.Ref<InputRef>) {
       onCompositionEnd={_onCompositionEnd}
     />
   );
-}
-
-// 获取防抖超时时间，debounce: 默认800ms，false或0表示不开启
-function getDebounceTime(debounce?: boolean | number, defaultValue = 800) {
-  if (debounce === true) {
-    return defaultValue;
-  } else if (debounce === false) {
-    return 0;
-  } else {
-    return typeof debounce === 'number' ? debounce : defaultValue;
-  }
 }
 
 const DInput = forwardRef(InternalInput);

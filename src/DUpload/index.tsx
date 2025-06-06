@@ -6,7 +6,7 @@
  * @Description  : 基于antd的Upload组件
  */
 
-import React, { forwardRef, ReactElement, ReactNode, useEffect, useMemo, useRef, useState, useContext } from 'react';
+import React, { forwardRef, ReactElement, ReactNode, useEffect, useMemo, useState, useContext } from 'react';
 import { Upload, UploadProps } from 'antd';
 import { UploadChangeParam } from 'antd/lib/upload';
 

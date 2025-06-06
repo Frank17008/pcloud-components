@@ -12,7 +12,7 @@ export interface ILabelValueProps {
   /**
    * @description 格式化value值
    */
-  formatter?: (v?) => string | React.ReactNode;
+  formatter?: (_v?: string | React.ReactNode) => string | React.ReactNode;
   /**
    * @description 文字标签值为空时的值
    * @default -

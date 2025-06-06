@@ -6,7 +6,7 @@ const CompactDemo = () => {
   const onChangeComplete = (e) => {
     setColor(e.rgb);
   };
-  const onChange = (v) => {};
+  const onChange = () => {};
   return <ColorPicker.CompactPicker color={color} onChange={onChange} onChangeComplete={onChangeComplete} />;
 };
 

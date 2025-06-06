@@ -21,7 +21,7 @@ export default function DebounceDemo() {
   const onRadioChange = (e) => setDebounce(e.target.value);
 
   const getOptionsAsync = (value?) => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<DefaultOptionType[]>((resolve) => {
       const list = value ? options.filter((item) => item.label.includes(value)) : options;
       resolve(list);
     });

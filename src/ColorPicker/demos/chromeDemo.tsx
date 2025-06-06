@@ -6,7 +6,7 @@ const ChromeDemo = () => {
   const onChangeComplete = (e) => {
     setColor(e.rgb);
   };
-  const onChange = (v) => {};
+  const onChange = () => {};
   return <ColorPicker.ChromePicker color={color} onChange={onChange} onChangeComplete={onChangeComplete} />;
 };
 

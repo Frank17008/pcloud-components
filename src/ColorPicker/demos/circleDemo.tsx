@@ -6,7 +6,7 @@ const CircleDemo = () => {
   const onChangeComplete = (e) => {
     setColor(e.rgb);
   };
-  const onChange = (v) => {};
+  const onChange = () => {};
   return <ColorPicker.CirclePicker color={color} onChange={onChange} onChangeComplete={onChangeComplete} />;
 };
 
