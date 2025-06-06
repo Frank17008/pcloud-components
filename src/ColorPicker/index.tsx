@@ -51,7 +51,7 @@ const ColorPicker = (props: ColorPickerProps) => {
     // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     onChange && onChange(e);
   };
-  const handleChangeComplete = (v) => {
+  const handleChangeComplete = () => {
     const _color = color?.a ? `rgba(${color?.r},${color?.g},${color?.b},${color?.a})` : initColor;
     // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     onChangeComplete && onChangeComplete(_color);

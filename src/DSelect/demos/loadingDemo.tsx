@@ -20,13 +20,13 @@ export default function LoadingDemo() {
   const onRadioChange = (e) => setLoading(e.target.value);
 
   const getOptionsAsync = () => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<DefaultOptionType[]>((resolve) => {
       resolve(options);
     });
   };
 
   const remoteSearch = (value?) => {
-    return new Promise<DefaultOptionType[]>((resolve, reject) => {
+    return new Promise<DefaultOptionType[]>((resolve) => {
       const list = value ? options.filter((item) => item.label.includes(value)) : options;
       const delayTime = typeof loading === 'number' ? 2200 : 1200;
       setTimeout(() => resolve(list), delayTime);

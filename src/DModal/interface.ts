@@ -10,9 +10,7 @@ export interface DModalProps extends IModalProps {
 
 export interface DeleteModalProps {
   content?: React.ReactNode;
-  onOk?: (...args: any[]) => any;
-  onCancel?: (...args: any[]) => any;
+  onOk?: <T>(..._args: T[]) => T;
+  onCancel?: <T>(..._args: T[]) => T;
   zIndex?: number;
 }
-
-// export type DModalProps = DModalProps;

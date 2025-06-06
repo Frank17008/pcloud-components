@@ -10,12 +10,12 @@ interface ComponentProps {
    * 颜色值变化时触发
    * @param v 色值对象
    */
-  onChange?: (v) => void;
+  onChange?: (_v?: string) => void;
   /**
    * 颜色变化完成时触发
    * @param v 颜色值 rgba
    */
-  onChangeComplete?: (v) => void;
+  onChangeComplete?: (_v?: string) => void;
 }
 
 export interface ColorPickerProps extends ComponentProps {
@@ -34,7 +34,7 @@ export interface ColorPickerProps extends ComponentProps {
   /**
    * 点击确定时的回调函数
    */
-  onConfirm: (v) => void;
+  onConfirm: (_v: string) => void;
 }
 
 export interface TwitterPickerProps extends ComponentProps {

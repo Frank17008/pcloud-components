@@ -6,7 +6,7 @@ const TwitterDemo = () => {
   const onChangeComplete = (e) => {
     setColor(e.rgb);
   };
-  const onChange = (v) => {};
+  const onChange = () => {};
   return <ColorPicker.TwitterPicker color={color} onChange={onChange} onChangeComplete={onChangeComplete} />;
 };
 

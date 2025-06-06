@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { DModal } from '@pointcloud/pcloud-components';
-import { Button, Input, InputNumber } from 'antd';
+import { Button, Input } from 'antd';
 
 function Demo3() {
   const [data, setData] = useState({ visible: false });

@@ -33,16 +33,16 @@ export default (props: FProps) => {
         values = { ...values, ...formatTime({ [item]: values[item] }) };
       }
     });
-    onSearch && onSearch(values);
+    onSearch?.(values);
   };
   const valuesChange = (v: any) => {
     const value = formatTime(v);
-    onValuesChange && onValuesChange(value);
+    onValuesChange?.(value);
   };
 
   const reset = () => {
     form.resetFields();
-    onReset && onReset();
+    onReset?.();
   };
   const renderComponent = (type: string, item: FormItem) => {
     switch (type) {

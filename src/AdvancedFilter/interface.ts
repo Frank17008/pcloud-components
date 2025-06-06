@@ -36,11 +36,11 @@ export interface FormProps {
   /**
    * @description 筛选项值变更时触发
    */
-  onValuesChange?: (v: any) => void;
+  onValuesChange?: (_values: any) => void;
   /**
    * @description 点击查询按钮时触发
    */
-  onSearch?: (v: any) => void;
+  onSearch?: (_v: any) => void;
   /**
    * @description 点击重置按钮时触发
    */
@@ -72,7 +72,7 @@ export interface InputProps {
   /**
    * @description input检索框回车时或点击检索图标时触发
    */
-  inputSearch?: (v: any) => void;
+  inputSearch?: (_v: any) => void;
 }
 export interface FilterProps extends FormProps {
   /**

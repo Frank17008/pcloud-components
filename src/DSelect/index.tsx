@@ -1,16 +1,6 @@
-/*
- * @Author       : wangfeihu
- * @Date         : 2023-05-17 08:41:25
- * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-07-11 15:44:04
- * @Description  : 基于antd的Select组件
- */
 import React, { forwardRef, useEffect, useRef, useState, useMemo, useContext } from 'react';
-
 import { Select, SelectProps } from 'antd';
 import { DefaultOptionType } from 'antd/lib/select';
-import { BaseSelectRef } from 'rc-select/lib/BaseSelect';
-
 import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 
 export type DSelectProps = Omit<SelectProps, 'options' | 'onSearch' | 'loading'> & {
@@ -25,7 +15,26 @@ export type DSelectProps = Omit<SelectProps, 'options' | 'onSearch' | 'loading'>
   debounce?: boolean | number;
 };
 
-function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
+// 获取延时时间，默认800ms，true代表默认时间,false代表0
+function getDelayTime(value?: boolean | number, defaultValue = 800) {
+  if (value === true) {
+    return defaultValue;
+  } else if (value === false) {
+    return 0;
+  } else {
+    return typeof value === 'number' ? Number(value) || 0 : defaultValue;
+  }
+}
+
+// 获取默认本地搜索方法
+function getFilterOption(showSearch, filterOption, fieldNames) {
+  if (filterOption) {
+    return filterOption;
+  } else {
+    return showSearch && ((value, option) => option[fieldNames.label]?.includes(value));
+  }
+}
+function InternalSelect(props: DSelectProps, ref: React.Ref<any>) {
   const {
     className = '',
     popupClassName = '',
@@ -66,22 +75,9 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
   const _filterOption = getFilterOption(!_showSearch, filterOption, _fieldNames);
 
   const getOptions = useMemo(
-    () => (typeof initOptions === 'function' ? initOptions : (params?: any): Promise<DefaultOptionType[] | any[]> => Promise.resolve(initOptions || [])),
+    () => (typeof initOptions === 'function' ? initOptions : (): Promise<DefaultOptionType[] | any[]> => Promise.resolve(initOptions || [])),
     [initOptions],
   );
-
-  const _onSearch = (value) => {
-    if (onSearch) {
-      if (_debounce > 0) {
-        clearTimeout(debounceRef.current);
-        debounceRef.current = setTimeout(() => {
-          updateOptions(onSearch, value);
-        }, _debounce);
-      } else {
-        updateOptions(onSearch, value);
-      }
-    }
-  };
 
   const updateOptions = (fun: DSelectProps['onSearch'], value?: string) => {
     // 设置加载中状态
@@ -89,7 +85,9 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
       loadingRef.current.status = 'loading';
       clearTimeout(loadingRef.current.timer);
       loadingRef.current.timer = setTimeout(() => {
-        loadingRef.current.status === 'loading' && setLoading(true);
+        if (loadingRef.current.status === 'loading') {
+          setLoading(true);
+        }
       }, _loadingState);
     }
 
@@ -114,6 +112,19 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
       });
   };
 
+  const _onSearch = (value) => {
+    if (onSearch) {
+      if (_debounce > 0) {
+        clearTimeout(debounceRef.current);
+        debounceRef.current = setTimeout(() => {
+          updateOptions(onSearch, value);
+        }, _debounce);
+      } else {
+        updateOptions(onSearch, value);
+      }
+    }
+  };
+
   // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(() => updateOptions(getOptions, searchValue), [getOptions, searchValue]);
 
@@ -133,26 +144,6 @@ function InternalSelect(props: DSelectProps, ref: React.Ref<BaseSelectRef>) {
       options={options}
     />
   );
-}
-
-// 获取延时时间，默认800ms，true代表默认时间,false代表0
-function getDelayTime(value?: boolean | number, defaultValue = 800) {
-  if (value === true) {
-    return defaultValue;
-  } else if (value === false) {
-    return 0;
-  } else {
-    return typeof value === 'number' ? Number(value) || 0 : defaultValue;
-  }
-}
-
-// 获取默认本地搜索方法
-function getFilterOption(showSearch, filterOption, fieldNames) {
-  if (filterOption) {
-    return filterOption;
-  } else {
-    return showSearch && ((value, option) => option[fieldNames.label]?.includes(value));
-  }
 }
 
 const DSelect = forwardRef(InternalSelect);

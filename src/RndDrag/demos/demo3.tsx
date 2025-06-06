@@ -1,6 +1,6 @@
 import type { FC } from 'react';
 import { useState } from 'react';
-import { RndDrag, RndDragProps } from '@pointcloud/pcloud-components';
+import { RndDrag } from '@pointcloud/pcloud-components';
 import type { Position, DraggableData } from '@pointcloud/pcloud-components/RndDrag';
 
 interface configState {

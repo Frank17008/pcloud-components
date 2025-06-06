@@ -52,8 +52,6 @@ interface ISLProps<T, P> {
   visibilityHeight?: number;
 }
 
-type PageParams<T> = T & { current: number; size: number };
-
 const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
   const {
     loadMore,
