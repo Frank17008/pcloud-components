@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Form, InputNumber } from 'antd';
+import { Button, Form, Checkbox } from 'antd';
 import { DForm, DFormProps, DInput } from '@pointcloud/pcloud-components';
 
 const items: DFormProps['items'] = [
@@ -34,7 +34,17 @@ const items: DFormProps['items'] = [
     formItemProps: { rules: [{ required: true }] },
     render: (props, formItemProps) => (
       <Form.Item {...formItemProps}>
-        <InputNumber {...props} />
+        {/* <InputNumber {...props} /> */}
+        <Checkbox.Group
+          onChange={(checkedValues) => {
+            console.log('选中的值:', checkedValues);
+          }}
+          options={[
+            { label: '选项122222', value: '1' },
+            { label: '选项233333', value: '2' },
+          ]}
+          {...props}
+        />
       </Form.Item>
     ),
   },
