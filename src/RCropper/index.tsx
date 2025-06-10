@@ -1,14 +1,9 @@
-/* eslint-disable @typescript-eslint/no-unused-expressions */
 import React, { forwardRef, useEffect, useImperativeHandle, useRef } from 'react';
-import Cropper from 'cropperjs';
-import { RCropperProps, RCropperSelection, RCropperGrid, RCropperCanvas } from './interface';
+import Cropper, { toKebabCase } from 'cropperjs';
+import { RCropperElement, RCropperProps, RCropperSelection, RCropperGrid, RCropperCanvas } from './interface';
 
 const isNonEmptyObject = (obj: unknown): obj is Record<string, unknown> => {
   return typeof obj === 'object' && obj !== null && !Array.isArray(obj) && Object.keys(obj).length > 0;
-};
-
-const camelToKebab = (key: string): string => {
-  return key.replace(/([a-z])([A-Z])/g, '$1-$2').toLowerCase();
 };
 
 /**
@@ -21,7 +16,7 @@ const setElementAttribute = (element: Element | null | undefined, attrName: stri
   if (!element) return;
   // 处理布尔值
   if (typeof value === 'boolean') {
-    // eslint-disable-next-line no-unused-expressions
+    // eslint-disable-next-line no-unused-expressions, @typescript-eslint/no-unused-expressions
     value ? element.setAttribute(attrName, '') : element.removeAttribute(attrName);
   } else if (value === null || value === undefined) {
     element.removeAttribute(attrName);
@@ -35,43 +30,31 @@ const RCropper = forwardRef((props: RCropperProps, ref: React.Ref<unknown>) => {
   const cropperRef = useRef<HTMLImageElement>(null);
   const cropperInstanceRef = useRef<Cropper | null>(null);
 
-  const setGrid = (_grid: RCropperGrid) => {
-    if (cropperInstanceRef.current) {
-      const selectionDom = cropperInstanceRef.current.getCropperSelection();
-      const gridDom = selectionDom?.querySelector('cropper-grid');
-      Object.keys(_grid).forEach((key) => {
-        const kebabKey = camelToKebab(key);
-        if (_grid[key] !== undefined) {
-          setElementAttribute(gridDom, kebabKey, _grid[key]);
+  const setCropperElementAttributes = (elementGetter: (_cropper: Cropper) => RCropperElement, props: Record<string, unknown>, nextTick = false) => {
+    if (cropperInstanceRef.current && isNonEmptyObject(props)) {
+      const element = elementGetter(cropperInstanceRef.current);
+      Object.keys(props).forEach((key) => {
+        const kebabKey = toKebabCase(key);
+        if (props[key] !== undefined) {
+          const setAttr = () => setElementAttribute(element, kebabKey, props[key]);
+          if (nextTick) {
+            element?.$nextTick?.(setAttr);
+          } else {
+            setAttr();
+          }
         }
       });
     }
+  };
+
+  const setGrid = (_grid: RCropperGrid) => {
+    setCropperElementAttributes((cropper) => cropper.getCropperSelection()?.querySelector('cropper-grid') as RCropperElement, _grid);
   };
   const setSelection = (_selection: RCropperSelection) => {
-    if (cropperInstanceRef.current) {
-      const selectionDom = cropperInstanceRef.current.getCropperSelection();
-      Object.keys(_selection).forEach((key) => {
-        const kebabKey = camelToKebab(key);
-        if (_selection[key] !== undefined) {
-          selectionDom?.$nextTick(() => {
-            setElementAttribute(selectionDom, kebabKey, _selection[key]);
-          });
-        }
-      });
-    }
+    setCropperElementAttributes((cropper) => cropper.getCropperSelection(), _selection, true);
   };
   const setCanvas = (_canvas: RCropperCanvas) => {
-    if (cropperInstanceRef.current && _canvas) {
-      const canvasDom = cropperInstanceRef.current.getCropperCanvas();
-      Object.keys(_canvas).forEach((key) => {
-        if (_canvas[key] !== undefined) {
-          const kebabKey = camelToKebab(key);
-          canvasDom?.$nextTick(() => {
-            setElementAttribute(canvasDom, kebabKey, _canvas[key]);
-          });
-        }
-      });
-    }
+    setCropperElementAttributes((cropper) => cropper.getCropperCanvas(), _canvas, true);
   };
   const setDragMode = (_dragMode: RCropperProps['dragMode']) => {
     if (cropperInstanceRef.current) {

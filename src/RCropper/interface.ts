@@ -1,4 +1,4 @@
-import type { CropperGrid, CropperSelection, CropperImage, CropperCanvas } from 'cropperjs';
+import type { CropperGrid, CropperSelection, CropperImage, CropperCanvas, CropperHandle } from 'cropperjs';
 
 export type RCropperGrid = Partial<Pick<CropperGrid, 'rows' | 'columns'>>;
 
@@ -42,3 +42,5 @@ export interface RCropperProps {
    */
   canvas?: RCropperCanvas;
 }
+
+export type RCropperElement = CropperCanvas | CropperGrid | CropperSelection | CropperImage | CropperHandle | null;
