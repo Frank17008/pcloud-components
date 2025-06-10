@@ -70,3 +70,5 @@ export { default as InfiniteScrollList } from './InfiniteScrollList';
 
 export { default as RndDrag } from './RndDrag';
 export type { RndDragProps, DraggableData, Position, Grid, RndDragCallback, RndDragEvent, RndResizeStartCallback, HandleStyles } from './RndDrag';
+
+export { default as RCropper } from './RCropper';
