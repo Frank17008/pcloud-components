@@ -176,7 +176,7 @@ const renderMap = {
   },
   checkbox: (props: CheckboxProps, formItemProps: FormItemProps, label: DItemBaseProps['label']) => {
     return (
-      <Form.Item {...formItemProps}>
+      <Form.Item {...formItemProps} valuePropName="checked">
         <Checkbox {...props}>{label}</Checkbox>
       </Form.Item>
     );
@@ -190,7 +190,7 @@ const renderMap = {
   },
   radio: (props: RadioProps, formItemProps: FormItemProps, label: DItemBaseProps['label']) => {
     return (
-      <Form.Item {...formItemProps}>
+      <Form.Item {...formItemProps} valuePropName="checked">
         <Radio {...props}>{label}</Radio>
       </Form.Item>
     );
