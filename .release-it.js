@@ -2,9 +2,13 @@ module.exports = {
   npm: {
     publish: true,
   },
+  gitlab: {
+    release: true,
+  },
   git: {
-    // changelog: false,
-    // push: false,
+    push: true,
+    requireBranch: 'main',
+    tag: true,
     tagName: 'v${version}',
     commitMessage: 'chore: release v${version}',
   },
