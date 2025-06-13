@@ -28,6 +28,7 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | DUpload            | 上传组件         | [查看](/components/d-upload)             |
 | ErrorBoundary      | 错误边界         | [查看](/components/error-boundary)       |
 | InfiniteScrollList | 无限滚动列表组件 | [查看](/components/infinite-scroll-list) |
+| IPAddress          | IP 地址输入组件  | [查看](/components/ip-address)           |
 | LabelValue         | 键值对标签       | [查看](/components/label-value)          |
 | Loading            | 加载中           | [查看](/components/loading)              |
 | ModalForm          | 表单弹窗组件     | [查看](/components/modal-form)           |

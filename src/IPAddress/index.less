@@ -1,0 +1,63 @@
+@import '../commonStyle/index.less';
+
+.@{prefix}-ip-address {
+  border: 1px solid #d9d9d9;
+  border-radius: 2px;
+  transition: all 0.3s;
+
+  &.small {
+    height: 24px;
+  }
+
+  &.large {
+    padding: 6.5px 10px;
+  }
+
+  &.middle {
+    padding: 4px 10px;
+  }
+
+  &.disabled {
+    color: rgba(0, 0, 0, 25%);
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
+
+    &:hover {
+      border-color: #d9d9d9;
+    }
+  }
+
+  &:hover {
+    border-color: #4d90ff;
+  }
+
+  &:focus-within {
+    border-color: #40a9ff;
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 20%);
+  }
+
+  input {
+    border: none;
+    background: none;
+    text-align: center;
+    outline: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-variant: tabular-nums;
+    font-feature-settings: 'tnum';
+    position: relative;
+    display: inline-block;
+    color: #000000d9;
+    font-size: 14px;
+    line-height: 1.5715;
+  }
+
+  input[disabled] {
+    cursor: not-allowed;
+    color: inherit;
+  }
+}
