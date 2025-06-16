@@ -75,3 +75,6 @@ export { default as RCropper } from './RCropper';
 
 export { default as IPAddress } from './IPAddress';
 export type { IPAddressProps } from './IPAddress';
+
+export { default as IconFont } from './IconFont';
+export type { IconFontProps } from './IconFont';
