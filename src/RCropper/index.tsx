@@ -26,7 +26,7 @@ const setElementAttribute = (element: Element | null | undefined, attrName: stri
 };
 
 const RCropper = forwardRef((props: RCropperProps, ref: React.Ref<unknown>) => {
-  const { src, alt = 'image', className, style, grid, canvas, selection, dragMode } = props;
+  const { src, alt = 'image', className, style, grid, canvas, selection, dragMode, onCrop } = props;
   const cropperRef = useRef<HTMLImageElement>(null);
   const cropperInstanceRef = useRef<Cropper | null>(null);
 
@@ -63,6 +63,15 @@ const RCropper = forwardRef((props: RCropperProps, ref: React.Ref<unknown>) => {
       handleDom?.setAttribute('action', _dragMode || 'crop');
     }
   };
+
+  const handleCrop = async () => {
+    if (cropperInstanceRef.current) {
+      const cropperCanvas = cropperInstanceRef.current.getCropperCanvas();
+      const canvasEl = await cropperCanvas?.$toCanvas();
+      const img = canvasEl?.toDataURL();
+      onCrop?.(img);
+    }
+  };
   // initialize cropper options
   const initializeOptions = () => {
     if (isNonEmptyObject(grid)) setGrid(grid);
@@ -70,7 +79,10 @@ const RCropper = forwardRef((props: RCropperProps, ref: React.Ref<unknown>) => {
     if (isNonEmptyObject(selection)) setSelection(selection);
     if (dragMode) setDragMode(dragMode);
   };
-  useImperativeHandle(ref, () => ({ cropper: cropperInstanceRef.current }));
+  useImperativeHandle(ref, () => ({
+    cropper: cropperInstanceRef.current,
+    handleCrop,
+  }));
   // handle dragMode
   useEffect(() => {
     if (dragMode) {
@@ -106,15 +118,19 @@ const RCropper = forwardRef((props: RCropperProps, ref: React.Ref<unknown>) => {
       const cropperCanvas = cropperInstanceRef.current.getCropperCanvas();
       cropperCanvas?.$addStyles(`:host { height: 100%; }`);
       img?.$ready(() => {
+        img.setAttribute('crossOrigin', 'Anonymous');
         initializeOptions();
       });
     }
   }, []);
 
   return (
-    <div className={className} style={style}>
-      <img ref={cropperRef} src={src} alt={alt} />
-    </div>
+    <>
+      <div className={className} style={style}>
+        <img ref={cropperRef} src={src} alt={alt} />
+      </div>
+      <div onClick={handleCrop}>ok</div>
+    </>
   );
 });
 

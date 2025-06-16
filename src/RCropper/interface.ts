@@ -10,7 +10,10 @@ export type RCropperImage = Partial<Pick<CropperImage, 'rotatable' | 'scalable' 
 
 export type RCropperCanvas = Partial<Pick<CropperCanvas, 'scaleStep' | 'disabled'>>;
 
-export interface RCropperProps {
+export interface RCropperEvents {
+  onCrop?(_src: string | undefined): void;
+}
+export interface RCropperProps extends RCropperEvents {
   /**
    * 图片的源地址
    * @description 可以是本地图片路径或网络图片URL
