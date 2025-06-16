@@ -1,9 +1,9 @@
 import { Spin } from 'antd';
 import classNames from 'classnames';
-import { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useRef, useState } from 'react';
 import ReactDOM from 'react-dom';
 import { ConfigContext } from '../ConfigProvider';
-import { LoadingInstanceProps } from './interface';
+import { ILoadingInstance, LoadingInstanceProps } from './interface';
 import './styles/index.less';
 
 function Loading(props: LoadingInstanceProps) {
@@ -12,6 +12,7 @@ function Loading(props: LoadingInstanceProps) {
   const classname = getPrefixCls('loading');
   const wrapperClass = classNames({ [`${prefixCls}-loading`]: !!prefixCls }, classname);
   const [visible, setVisible] = useState<boolean>(false);
+  const timer = useRef<NodeJS.Timeout>();
 
   useEffect(() => {
     document.body.style.overflow = 'hidden';
@@ -21,9 +22,9 @@ function Loading(props: LoadingInstanceProps) {
   }, []);
 
   useEffect(() => {
-    const timer = setTimeout(() => setVisible(true), delay || 0);
+    timer.current = setTimeout(() => setVisible(true), delay || 0);
     return () => {
-      clearTimeout(timer);
+      clearTimeout(timer.current);
     };
   }, [delay]);
   if (!visible) return <></>;
@@ -39,10 +40,11 @@ function Loading(props: LoadingInstanceProps) {
   );
 }
 
-Loading.newInstance = function newNotificationInstance(args: LoadingInstanceProps) {
+Loading.newInstance = function newNotificationInstance(args?: LoadingInstanceProps): ILoadingInstance {
   const { container, ...otherProps } = args || {};
 
   const div = document.createElement('div');
+
   // eslint-disable-next-line react/no-find-dom-node
   const element: any = ReactDOM.findDOMNode(container);
   if (element) {

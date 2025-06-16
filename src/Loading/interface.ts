@@ -15,10 +15,14 @@ export interface LoadingInstanceProps extends Omit<SpinProps, 'delay'> {
   delay?: number;
 }
 
+export interface ILoadingInstance {
+  destroy: () => void;
+}
+
 export interface ILoadingProps {
-  open: (_param: LoadingInstanceProps) => React.ReactNode;
+  open: (_params: LoadingInstanceProps) => ILoadingInstance;
+  getInstance: () => ILoadingInstance | null;
   close: () => void;
-  getInstance: () => React.ReactNode;
 }
 
 export type LoadingProps = ILoadingProps;

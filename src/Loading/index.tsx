@@ -1,24 +1,26 @@
 import Loading from './loading';
-import { ILoadingProps, LoadingInstanceProps } from './interface';
+import { LoadingInstanceProps, ILoadingInstance } from './interface';
+import { useLoading } from './hooks/useLoading';
 
-let loadingInstance: any = null;
-const getLoadingInstance = (params) => {
-  loadingInstance = loadingInstance || Loading.newInstance(params);
-  return loadingInstance;
-};
+let loadingInstance: ILoadingInstance | null = null;
+
 export default {
-  open(params?: LoadingInstanceProps): ILoadingProps {
-    return getLoadingInstance(params);
+  open(params?: LoadingInstanceProps): ILoadingInstance {
+    if (!loadingInstance) {
+      loadingInstance = Loading.newInstance(params);
+    }
+    return loadingInstance;
   },
   close(): void {
     if (loadingInstance) {
-      loadingInstance?.destroy();
-      loadingInstance = null;
+      const currentInstance = loadingInstance;
+      loadingInstance = null; // 先清空引用
+      currentInstance.destroy(); // 再销毁
     }
   },
-  getInstance(): ILoadingProps {
+  getInstance(): ILoadingInstance | null {
     return loadingInstance;
   },
 };
 
-export { Loading };
+export { Loading, useLoading };
