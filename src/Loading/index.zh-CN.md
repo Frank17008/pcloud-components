@@ -23,6 +23,10 @@ group:
 
 <code src="./demos/demo3.tsx" ></code>
 
+## hooks 用法
+
+<code src="./demos/demo4.tsx" ></code>
+
 ## API
 
 |  参数名称   | 说明              |                             类型                             |      返回值      |                             默认值                             |

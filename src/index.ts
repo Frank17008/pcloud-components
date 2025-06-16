@@ -13,7 +13,7 @@ export { default as ConfigProvider } from './ConfigProvider';
 export { default as PictureCard } from './PictureCard';
 export type { PictureCardProps } from './PictureCard';
 
-export { default as Loading } from './Loading';
+export { default as Loading, useLoading } from './Loading';
 export type { LoadingProps } from './Loading/interface';
 
 export { default as NoData } from './NoData';
