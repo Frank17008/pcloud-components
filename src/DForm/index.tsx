@@ -35,7 +35,7 @@ function getChildren(items, children: DFormProps['children'], _defaultItemProps:
   if (items instanceof Array && items.length > 0) {
     if (layout === 'grid') {
       list.push(
-        <Row>
+        <Row key="row">
           {items.map((item: DItemProps, index) => {
             const _item = helper.merge(_defaultItemProps, item);
             const _gridProps = _item?.formItemProps?.grid || {};
