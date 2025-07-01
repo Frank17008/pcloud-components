@@ -1,7 +1,6 @@
 import { ReactComponent as CropIcon } from './svgIcons/crop.svg';
 import { ReactComponent as FlipHIcon } from './svgIcons/flip_h.svg';
 import { ReactComponent as FlipVIcon } from './svgIcons/flip_v.svg';
-import { ReactComponent as MoveIcon } from './svgIcons/move.svg';
 import { ReactComponent as OkIcon } from './svgIcons/ok.svg';
 import { ReactComponent as ResetIcon } from './svgIcons/reset.svg';
 import { ReactComponent as RotateLeftIcon } from './svgIcons/rotate_l.svg';

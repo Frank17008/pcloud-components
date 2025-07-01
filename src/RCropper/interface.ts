@@ -1,3 +1,4 @@
+import type Cropper from 'cropperjs';
 import type { CropperGrid, CropperSelection, CropperImage, CropperCanvas, CropperHandle } from 'cropperjs';
 
 export type RCropperGrid = Partial<Pick<CropperGrid, 'rows' | 'columns'>>;
@@ -22,6 +23,25 @@ export interface RCropperEvents {
   onReset?(imgData: number[] | undefined): void;
   // eslint-disable-next-line no-unused-vars
   onCancelCrop?(selectionData: { x: number; y: number; width: number; height: number }): void;
+}
+
+export interface RCropperActionHandlers {
+  handleCrop: () => Promise<void>;
+  handleZoomIn: () => void;
+  handleZoomOut: () => void;
+  handleRotateLeft: () => void;
+  handleRotateRight: () => void;
+  handleFlipX: () => void;
+  handleFlipY: () => void;
+  handleReset: () => void;
+  handleCancelCrop: () => void;
+}
+
+export interface RCropperRef {
+  cropper: Cropper | null;
+  image: CropperImage | null;
+  canvas: CropperCanvas | null;
+  selection: CropperSelection | null;
 }
 export interface RCropperProps extends RCropperEvents {
   /**

@@ -72,6 +72,17 @@ export { default as RndDrag } from './RndDrag';
 export type { RndDragProps, DraggableData, Position, Grid, RndDragCallback, RndDragEvent, RndResizeStartCallback, HandleStyles } from './RndDrag';
 
 export { default as RCropper } from './RCropper';
+export type {
+  RCropperProps,
+  RCropperEvents,
+  RCropperElement,
+  RCropperRef,
+  RCropperImage,
+  RCropperCanvas,
+  RCropperSelection,
+  RCropperGrid,
+  RCropperActionHandlers,
+} from './RCropper/interface';
 
 export { default as IPAddress } from './IPAddress';
 export type { IPAddressProps } from './IPAddress';
