@@ -5,6 +5,9 @@ import { Radio } from 'antd';
 const src = 'https://img1.baa.bitautotech.com/dzusergroupfiles/2024/11/06/e2a4e9bb9e854429bed46ba1e343b47a.jpg';
 export default () => {
   const [dragMode, setDragMode] = useState<'crop' | 'move' | 'none'>('crop');
+  const onCrop = (base64: string | undefined, file?: File) => {
+    console.log(base64, file);
+  };
   return (
     <>
       模式:&nbsp;&nbsp;
@@ -13,7 +16,7 @@ export default () => {
         <Radio.Button value="move">移动(move)</Radio.Button>
         <Radio.Button value="none">无(none)</Radio.Button>
       </Radio.Group>
-      <RCropper style={{ height: 300 }} dragMode={dragMode} src={src} />
+      <RCropper style={{ height: 300 }} dragMode={dragMode} src={src} onCrop={onCrop} />
     </>
   );
 };

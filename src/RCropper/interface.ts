@@ -11,7 +11,17 @@ export type RCropperImage = Partial<Pick<CropperImage, 'rotatable' | 'scalable' 
 export type RCropperCanvas = Partial<Pick<CropperCanvas, 'scaleStep' | 'disabled'>>;
 
 export interface RCropperEvents {
-  onCrop?(_src: string | undefined): void;
+  onCrop?(_src: string | undefined, _file?: File): void;
+  // eslint-disable-next-line no-unused-vars
+  onZoom?(imgData: number[] | undefined): void;
+  // eslint-disable-next-line no-unused-vars
+  onRotate?(imgData: number[] | undefined): void;
+  // eslint-disable-next-line no-unused-vars
+  onFlip?(imgData: number[] | undefined): void;
+  // eslint-disable-next-line no-unused-vars
+  onReset?(imgData: number[] | undefined): void;
+  // eslint-disable-next-line no-unused-vars
+  onCancelCrop?(selectionData: { x: number; y: number; width: number; height: number }): void;
 }
 export interface RCropperProps extends RCropperEvents {
   /**
