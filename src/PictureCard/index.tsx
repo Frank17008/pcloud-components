@@ -5,7 +5,7 @@ import { ConfigContext } from '@pointcloud/pcloud-components/ConfigProvider';
 import { Image, ImageProps } from 'antd';
 import './index.less';
 
-interface IPictureCardProps extends Omit<ImageProps, 'src' | 'width'> {
+interface IPictureCardProps extends Omit<ImageProps, 'src' | 'width' | 'content'> {
   className?: string;
   layout?: 'vertical' | 'horizontal';
   src: ImageProps['src'] | ImageProps['src'][];
