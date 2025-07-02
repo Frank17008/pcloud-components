@@ -170,7 +170,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
           const base64Url = await _thumbOption.getThumbUrl(file, _thumbOption);
           updateFileList(file, 'done', false, base64Url);
         } catch (err) {
-          _thumbOption.onError?.(err);
+          _thumbOption.onError?.(err as Error);
           updateFileList(file, 'done', false);
         }
       }
@@ -182,7 +182,7 @@ function InternalUpload(props: DUploadProps, ref: React.Ref<unknown>) {
           const base64Url = await helper.imageToBase64(file, _compress);
           updateFileList(file, 'done', false, base64Url);
         } catch (err) {
-          _thumbOption.onError?.(err);
+          _thumbOption.onError?.(err as Error);
           updateFileList(file, 'done', false);
         }
       } else {
