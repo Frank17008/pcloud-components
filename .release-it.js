@@ -9,6 +9,9 @@ module.exports = {
     tagName: 'v${version}',
     commitMessage: 'chore: release v${version}',
   },
+  hooks: {
+    'after:bump': 'npm run build',
+  },
   plugins: {
     '@release-it/conventional-changelog': {
       infile: 'CHANGELOG.md',
