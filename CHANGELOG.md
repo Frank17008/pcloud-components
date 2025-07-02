@@ -1,3 +1,66 @@
+## [0.1.23](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.20...v0.1.23) (2025-07-02)
+
+### ✨ 新功能
+
+- 新增 RCropper 图片裁剪组件 ([05f3462](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/05f3462492702cf0fdbac34098e59def9d91452b))
+- **components:** 添加 IconFont 字体图标组件 ([65bbe70](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/65bbe7024f20b4618c394542f925ae6971b0d14e))
+- **components:** 新增 IPAddress 组件 ([25a6c0b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/25a6c0b37610529f114579035d93f045f7bd5635))
+- **Loading:** 添加 useLoading hook 并更新相关文档 ([200acd2](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/200acd2d8d2de155f66d184caa152c535bbcfd20))
+- **rcropper:** 优化组件功能和交互 ([0dc87f6](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/0dc87f675168b9ef13e14bbba5df9f86ccf7e3a3))
+
+### 🐛 修复 bug
+
+- 升级 father ([68c48da](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/68c48da85c3ad2ce9859ed289d738c8df5200bdd))
+- 修改 release-it.js 配置 ([d0c0e4a](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/d0c0e4af02d545e31663f8a839fc3de8f0ca65a7))
+- 组件 DForm 的 custom 渲染模式 demo 修改 ([fa3e13a](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/fa3e13a0ac006f86ee6f14642a3165d7ccf6980f))
+- **DForm:** 修复 DForm 组件中 Checkbox 和 Radio 获取不到变化值 bug ([f4077b5](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/f4077b5316bf5605450b03d7fe22ef5707e19b03))
+- **DForm:** 修复 grid 布局下的 row 缺失 key ([78da2a4](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/78da2a4a1ad77289787e5ca416bb855287959234))
+- **PictureCard:** 修复接口类型定义 ([a17c648](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a17c648bc12ebf0899eab971a2cc4edd2df685b0))
+- **RCropper:** 对外暴露图片裁剪结果 ([007fae5](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/007fae54afa5c546f55fa59edc7080e88493fcf3))
+
+### 📚 文档变更
+
+- **components:** 更新组件文档列表 ([7b54a40](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/7b54a404c5bd7a295a722e9e25f07d52df3832f2))
+- **RCropper:** 补充完善 API 文档 ([51ada9c](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/51ada9cd41c6019eef2d91f0d90b915553ab44b8))
+
+### ⚡️ 性能优化
+
+- **RCropper:** 优化组件性能,完善 ts 类型 ([c2f590c](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/c2f590c160a92bfa9b879362786aab7d504c302f))
+
+## [0.1.21](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.20...v0.1.23) (2025-06-05)
+
+### ✨ 新功能
+
+- **components:** add RndDrag component ([dce1fca](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/dce1fca209d46809946490ae3134121c4a414ecc))
+- dumi 升级至 2.4.13 版本 ([1c5de23](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/1c5de23817d430388bb8c61a6d83c66902441f03))
+- **Loading:** add delay prop for loading effect ([8f25835](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/8f258358afdf5aed65560a08e455086cf12ef194))
+
+### 🐛 修复 bug
+
+- 更新 nginx 配置，调整上传文件大小限制，添加安全头部信息 ([92a7d4b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/92a7d4bca791d1080cababe79e6394507e99c32d))
+- 配置导航栏上 l 站点 ogo ([fc26075](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/fc2607515969e82a71157df968099c8d7f4b9a83))
+- 修复 DItemProps 类型导入错误 ([440b165](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/440b165c954cbd2463fdc974075d7efaeecfc10b))
+- 修改 Loading 组件 ([770b2c9](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/770b2c9f67813f8211400addd09c452a8b61642f))
+- remove unnecessary scripts directory from tsconfig include ([7e51532](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/7e515329d90b1cf40f016632b9ec7eb1fb35a77e))
+
+### 📚 文档变更
+
+- **dumi:** update site config and add theme settings ([890fdba](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/890fdba0b36c5d498419fa96791d0e5e0f4f9f97))
+- **README:** 更新 readme ([54419a0](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/54419a0e6e4b0281af5b34ffe83b8521dabd2170))
+- **README:** update README.md ([01efdd7](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/01efdd7e1bdf2e5029803d9d252adcf5df766d52))
+
+## [0.1.20](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.20...v0.1.23) (2024-12-27)
+
+### 🐛 修复 bug
+
+- 修复 InfiniteScrollList 组件参数化加载分页不变化问题 ([a724923](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a724923c1592195d6fb3bbff7fdc6f7fc8a4c01b))
+- 修改 DForm 组件不同布局下的样式 ([a129634](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/a12963430aa8f2ce94cdd46da76aea7a886725a6))
+- 组件 LabelValue 支持 formatter，补充 demo ([97a0750](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/97a075056baa3d321d631cfd3bd67978e168087e))
+
+### 📚 文档变更
+
+- 更新无限滚动列表组件文档地址 ([e9d1412](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/e9d14128344958bc99e6102ed7b3cc9c55cfd0e4))
+
 ## [0.1.21](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/V0.1.20...0.1.21) (2025-06-05)
 
 ### ✨ 新功能
