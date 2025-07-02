@@ -12,7 +12,17 @@ export default defineConfig({
           options[0].patterns[0].filter = () => false;
           return options;
         });
+        memo.module.rules.delete('svg');
+        memo.module
+          .rule('svg')
+          .test(/\.svg$/)
+          .use('@svgr/webpack')
+          .loader('@svgr/webpack')
+          .options({
+            svgo: true,
+          });
       }
+
       return memo;
     },
   },
