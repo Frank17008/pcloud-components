@@ -5,23 +5,23 @@ export default defineConfig({
   esm: { output: 'dist/esm' },
   umd: {
     output: 'dist/umd',
-    // chainWebpack: (memo) => {
-    // if (process.env.NODE_ENV === 'production') {
-    // memo.plugin('copy').tap((options) => {
-    //   options[0].patterns[0].filter = () => false;
-    //   return options;
-    // });
-    // memo.module.rules.delete('svg');
-    // memo.module
-    //   .rule('svg')
-    //   .test(/\.svg$/)
-    //   .use('@svgr/webpack')
-    //   .loader('@svgr/webpack')
-    //   .options({
-    //     svgo: true,
-    //   });
-    // }
-    // return memo;
-    // },
+    chainWebpack: (memo) => {
+      if (process.env.NODE_ENV === 'production') {
+        memo.plugin('copy').tap((options) => {
+          options[0].patterns[0].filter = () => false;
+          return options;
+        });
+        // memo.module.rules.delete('svg');
+        // memo.module
+        //   .rule('svg')
+        //   .test(/\.svg$/)
+        //   .use('@svgr/webpack')
+        //   .loader('@svgr/webpack')
+        //   .options({
+        //     svgo: true,
+        //   });
+      }
+      return memo;
+    },
   },
 });
