@@ -2,9 +2,6 @@ module.exports = {
   npm: {
     publish: true,
   },
-  gitlab: {
-    release: true,
-  },
   git: {
     push: true,
     requireBranch: 'main',
