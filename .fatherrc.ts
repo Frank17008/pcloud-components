@@ -3,16 +3,6 @@ import { defineConfig } from 'father';
 export default defineConfig({
   // more father config: https://github.com/umijs/father/blob/master/docs/config.md
   esm: { output: 'dist/esm' },
-  extraBabelPlugins: [
-    [
-      'inline-react-svg',
-      {
-        svgo: {
-          plugins: [{ name: 'preset-default', params: { overrides: { removeViewBox: false } } }, 'removeDimensions', 'convertStyleToAttrs'],
-        },
-      },
-    ],
-  ],
   umd: {
     output: 'dist/umd',
     // 生产环境打包时不打包public文件夹
