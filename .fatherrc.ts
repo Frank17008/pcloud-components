@@ -3,6 +3,16 @@ import { defineConfig } from 'father';
 export default defineConfig({
   // more father config: https://github.com/umijs/father/blob/master/docs/config.md
   esm: { output: 'dist/esm' },
+  extraBabelPlugins: [
+    [
+      'inline-react-svg',
+      {
+        svgo: {
+          plugins: [{ name: 'preset-default', params: { overrides: { removeViewBox: false } } }, 'removeDimensions', 'convertStyleToAttrs'],
+        },
+      },
+    ],
+  ],
   umd: {
     output: 'dist/umd',
     // 生产环境打包时不打包public文件夹
@@ -12,15 +22,15 @@ export default defineConfig({
           options[0].patterns[0].filter = () => false;
           return options;
         });
-        memo.module.rules.delete('svg');
-        memo.module
-          .rule('svg')
-          .test(/\.svg$/)
-          .use('@svgr/webpack')
-          .loader('@svgr/webpack')
-          .options({
-            svgo: true,
-          });
+        // memo.module.rules.delete('svg');
+        // memo.module
+        //   .rule('svg')
+        //   .test(/\.svg$/)
+        //   .use('@svgr/webpack')
+        //   .loader('@svgr/webpack')
+        //   .options({
+        //     svgo: true,
+        //   });
       }
 
       return memo;

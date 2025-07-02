@@ -61,6 +61,9 @@ devDependencies:
   '@umijs/lint':
     specifier: ^4.0.0
     version: 4.4.11(eslint@8.57.1)(stylelint@14.16.1)(typescript@5.8.3)
+  babel-plugin-inline-react-svg:
+    specifier: ^2.0.2
+    version: 2.0.2(@babel/core@7.27.4)
   dumi:
     specifier: ^2.4.13
     version: 2.4.21(@babel/core@7.27.4)(@types/node@20.5.1)(@types/react@17.0.87)(eslint@8.57.1)(prettier@2.7.1)(react-dom@17.0.2)(react@17.0.2)(stylelint@14.16.1)(typescript@5.8.3)(webpack@5.99.9)
@@ -523,7 +526,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.27.7
-    dev: false
 
   /@babel/plugin-bugfix-firefox-class-in-computed-class-key@7.27.1(@babel/core@7.27.4):
     resolution: {integrity: sha512-QPG3C9cCVRQLxAVwmefEmwdTanECuUBMQZ/ym5kiw3XKCGA7qkuQLcjWWHcrD/GKbn/WmJwaezfuuAOcyKlRPA==}
@@ -1670,7 +1672,6 @@ packages:
     dependencies:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
-    dev: false
 
   /@bloomberg/record-tuple-polyfill@0.0.4:
     resolution: {integrity: sha512-h0OYmPR3A5Dfbetra/GzxBAzQk8sH7LhRkRUTdagX6nrtlUgJGYCTv4bBK33jsTQw9HDd8PE2x1Ma+iRKEDUsw==}
@@ -5644,6 +5645,20 @@ packages:
     resolution: {integrity: sha512-jZVI+s9Zg3IqA/kdi0i6UDCybUI3aSBLnglhYbSSjKlV7yF1F/5LWv8MakQmvYpnbJDS6fcBL2KzHSxNCMtWSQ==}
     dependencies:
       object.assign: 4.1.7
+    dev: true
+
+  /babel-plugin-inline-react-svg@2.0.2(@babel/core@7.27.4):
+    resolution: {integrity: sha512-iM9obPpCcdPE1EJE+UF+tni7CZ4q/OvdDm/TeBBHAYAEOqDcFd7fdnmym6OYAQMYfEpUnRYUYx2KxSUyo4cQxQ==}
+    engines: {node: '>=10.13'}
+    peerDependencies:
+      '@babel/core': ^7.0.0
+    dependencies:
+      '@babel/core': 7.27.4
+      '@babel/helper-plugin-utils': 7.27.1
+      '@babel/parser': 7.27.7
+      lodash.isplainobject: 4.0.6
+      resolve: 2.0.0-next.5
+      svgo: 2.8.0
     dev: true
 
   /babel-plugin-istanbul@6.1.1:
