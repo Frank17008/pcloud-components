@@ -89,3 +89,6 @@ export type { IPAddressProps } from './IPAddress';
 
 export { default as IconFont } from './IconFont';
 export type { IconFontProps } from './IconFont';
+
+export { default as AspectRatio } from './AspectRatio';
+export type { AspectRatioProps } from './AspectRatio';
