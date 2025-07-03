@@ -23,9 +23,6 @@ dependencies:
   cropperjs:
     specifier: ^2.0.0
     version: 2.0.0
-  lodash:
-    specifier: 4.17.21
-    version: 4.17.21
   react-color:
     specifier: ^2.19.3
     version: 2.19.3(react@17.0.2)

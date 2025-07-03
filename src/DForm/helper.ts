@@ -1,14 +1,3 @@
-/*
- * @Author       : wangfeihu
- * @Date         : 2023-06-07 15:08:06
- * @LastEditors  : wangfeihu
- * @LastEditTime : 2023-06-12 17:35:15
- * @Description  : 合并两个对象中的所有字段
- */
-
-import mergeWith from 'lodash/mergeWith';
-import cloneDeep from 'lodash/cloneDeep';
-
 const TYPES = {
   OPTION_TYPE_PRIMARY: 'primary',
   OPTION_TYPE_OBJECT: 'object',
@@ -47,9 +36,43 @@ const defaultCustomizer = (objValue, srcValue) => {
   }
 };
 
+export function cloneDeep<T>(value: T): T {
+  if (value === null || typeof value !== 'object') return value;
+  if (Array.isArray(value)) return value.map(cloneDeep) as unknown as T;
+  const result: any = {};
+  for (const key in value) {
+    if (Object.prototype.hasOwnProperty.call(value, key)) {
+      result[key] = cloneDeep((value as any)[key]);
+    }
+  }
+  return result;
+}
+
+export function mergeWith<T, S>(object: T, source: S, customizer?: (_objValue: any, _srcValue: any, _key: string | number) => any): T & S {
+  const result: any = cloneDeep(object);
+  for (const key in source) {
+    if (Object.prototype.hasOwnProperty.call(source, key)) {
+      const objValue = (result as any)[key];
+      const srcValue = (source as any)[key];
+      if (customizer) {
+        const customized = customizer(objValue, srcValue, key);
+        if (customized !== undefined) {
+          result[key] = customized;
+          continue;
+        }
+      }
+      if (objValue && srcValue && typeof objValue === 'object' && typeof srcValue === 'object' && !Array.isArray(objValue) && !Array.isArray(srcValue)) {
+        result[key] = mergeWith(objValue, srcValue, customizer);
+      } else {
+        result[key] = cloneDeep(srcValue);
+      }
+    }
+  }
+  return result;
+}
+
 /** 合并对象 */
 function merge(object, sources, customizer = defaultCustomizer) {
   return mergeWith(cloneDeep(object), sources, customizer);
 }
-
 export default { merge };

@@ -32,12 +32,13 @@ type DFormRefProps = { setItems: (items: DItemProps[] | ((values: DItemProps[]) 
 
 function getChildren(items, children: DFormProps['children'], _defaultItemProps: DFormProps['defaultItemProps'], layout: InternalFormProps['layout']) {
   let list: ReactNode[] = [];
+  const hasPropsValue = _defaultItemProps && Object.keys(_defaultItemProps)?.length > 0;
   if (items instanceof Array && items.length > 0) {
     if (layout === 'grid') {
       list.push(
         <Row key="row">
           {items.map((item: DItemProps, index) => {
-            const _item = helper.merge(_defaultItemProps, item);
+            const _item = hasPropsValue ? helper.merge(_defaultItemProps, item) : item;
             const _gridProps = _item?.formItemProps?.grid || {};
             return (
               <Col key={item?.name || index} {..._gridProps}>
@@ -49,14 +50,14 @@ function getChildren(items, children: DFormProps['children'], _defaultItemProps:
       );
     } else {
       list = items.map((item: DItemProps, index) => {
-        const _item = helper.merge(_defaultItemProps, item);
+        const _item = hasPropsValue ? helper.merge(_defaultItemProps, item) : item;
         return <DItem key={item?.name || index} {..._item} />;
       });
     }
   }
   if (children) {
     const childrenList = children instanceof Array ? children : [children];
-    const _childrenList = childrenList.map((item) => ({ ...item, props: helper.merge(_defaultItemProps, item.props) }));
+    const _childrenList = childrenList.map((item) => ({ ...item, props: hasPropsValue ? helper.merge(_defaultItemProps, item.props) : item.props }));
     list = list.concat(_childrenList);
   }
   return list;
