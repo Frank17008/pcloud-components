@@ -9,7 +9,7 @@ export default defineConfig({
   themeConfig: {
     name: 'pcloud-components',
     logo: '/images/favicon.png',
-    editLink: true,
+    // editLink: true,
     footer:
       '<p>© 2023-present <a href="http://www.pcgi.com.cn" target="_blank">PointCloud</a>. All rights reserved.</p><p>Powered by <a href="https://d.umijs.org" target="_blank">Dumi</a>.</p><p>Author: Frank Dong</p>',
     socialLinks: {
