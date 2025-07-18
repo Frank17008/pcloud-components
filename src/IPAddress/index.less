@@ -61,4 +61,16 @@
     cursor: not-allowed;
     color: inherit;
   }
+
+  input[type='number'] {
+    appearance: textfield; /* 移除Firefox的特殊样式 */
+    appearance: textfield; /* 移除Chrome和Safari的特殊样式 */
+  }
+
+  /* 移除上下箭头 */
+  input[type='number']::-webkit-outer-spin-button,
+  input[type='number']::-webkit-inner-spin-button {
+    appearance: none;
+    margin: 0;
+  }
 }

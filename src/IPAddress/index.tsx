@@ -49,7 +49,7 @@ const getInitialAddress = (type: 'IPv4' | 'IPv6', value?: string): IPSection[] =
     const normalized = normalizeIPv6(value);
     return normalized.split(':').map((i) => ({ value: i }));
   } else {
-    const parts = value.split('.').map((i) => ({ value: i }));
+    const parts = value.split('.').map((i) => ({ value: i.replace(/\D/g, '') }));
     while (parts.length < 4) parts.push({ value: '' });
     return parts.slice(0, 4);
   }
@@ -195,7 +195,7 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
           <input
             id={`ip-address-input-${idx}`}
             ref={(el) => (refs.current[idx] = el)}
-            type="text"
+            type={type === 'IPv4' ? 'number' : 'text'}
             value={item.value || undefined}
             readOnly={readOnly}
             disabled={disabled}
