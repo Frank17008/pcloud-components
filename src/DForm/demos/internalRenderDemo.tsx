@@ -35,6 +35,15 @@ const items: DFormProps['items'] = [
     renderType: 'autoComplete',
     options: selectOptions,
   },
+  {
+    name: 'ipAddress',
+    label: 'IP地址',
+    renderType: 'ipAddress',
+    type: 'IPv4',
+    // 默认ip地址样式不填满父容器
+    style: { width: '100%', display: 'flex', justifyContent: 'space-around' },
+    inputProps: { style: { width: '100%' } },
+  },
   { name: '', label: '下拉类组件', renderType: 'divider', orientation: 'center' },
   { name: 'dSelect', label: 'dSelect选择器', renderType: 'dSelect', options: selectOptions },
   { name: 'select', label: 'select选择器', renderType: 'select', options: selectOptions },
@@ -133,5 +142,5 @@ const items: DFormProps['items'] = [
 ];
 
 export default function InternalRenderDemo() {
-  return <DForm items={items} layout="vertical" />;
+  return <DForm items={items} layout="vertical" onFinish={(values) => console.log(values)} />;
 }

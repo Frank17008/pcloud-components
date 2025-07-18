@@ -39,6 +39,7 @@ import { DSelectProps } from '../../DSelect';
 import { DCascaderProps } from '../../DCascader';
 import { DTreeSelectProps } from '../../DTreeSelect';
 import { DUploadProps } from '../../DUpload';
+import { IPAddressProps } from '../../IPAddress';
 
 export type DItemBaseProps = {
   /** label标签文本,同antd Form.Item的label,只能是string */
@@ -62,6 +63,7 @@ type CustomItemProps = DItemBaseProps &
   };
 
 type DInputItemProps = { renderType?: 'dInput' } & DItemBaseProps & DInputProps;
+type DIpAddressProps = { renderType?: 'ipAddress' } & DItemBaseProps & IPAddressProps;
 type InputItemProps = { renderType?: 'input' } & DItemBaseProps & InputProps;
 type TextAreaItemProps = { renderType?: 'textArea' } & DItemBaseProps & TextAreaProps;
 type PasswordItemProps = { renderType?: 'password' } & DItemBaseProps & PasswordProps;
@@ -93,6 +95,7 @@ type DividerItemProps = { renderType?: 'divider' } & DItemBaseProps & DividerPro
 export type DItemProps =
   | CustomItemProps
   | DInputItemProps
+  | DIpAddressProps
   | InputItemProps
   | TextAreaItemProps
   | PasswordItemProps

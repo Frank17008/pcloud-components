@@ -57,7 +57,7 @@ import DInput, { DInputProps } from '../../DInput';
 import DSelect, { DSelectProps } from '../../DSelect';
 import DTreeSelect, { DTreeSelectProps } from '../../DTreeSelect';
 import DUpload, { DUploadProps } from '../../DUpload';
-
+import IPAddress, { IPAddressProps } from '../../IPAddress';
 import { DItemBaseProps } from './itemType';
 
 const renderMap = {
@@ -93,6 +93,13 @@ const renderMap = {
     return (
       <Form.Item {...formItemProps}>
         <InputNumber placeholder={label ? `请输入${label}` : ''} {...props} />
+      </Form.Item>
+    );
+  },
+  ipAddress: (props: IPAddressProps, formItemProps: FormItemProps) => {
+    return (
+      <Form.Item {...formItemProps}>
+        <IPAddress {...props} />
       </Form.Item>
     );
   },
