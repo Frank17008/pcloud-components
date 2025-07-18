@@ -19,10 +19,7 @@ export interface IPAddressProps {
   disabled?: boolean;
   size?: 'small' | 'middle' | 'large';
   style?: React.CSSProperties;
-  inputProps?: {
-    style?: React.CSSProperties;
-    [key: string]: any;
-  };
+  inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
   autoComplete?: boolean;
   normalize?: boolean;
 }
@@ -67,7 +64,7 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
     readOnly,
     disabled,
     size = 'middle',
-    style,
+    style = {},
     inputProps,
     autoComplete = true,
     normalize = true,
@@ -88,7 +85,7 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
 
   const getValue = useCallback(
     (addr: IPSection[]): string => {
-      const vals = addr.map((item) => item.value || '0');
+      const vals = addr.map((item) => item.value);
       const splitSymbol = type === 'IPv6' ? ':' : '.';
 
       if (type !== 'IPv6') return vals.join(splitSymbol);
@@ -153,7 +150,6 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
         }
       }
       if (nv.length > maxLen) nv = nv.slice(0, maxLen);
-
       const next = address.map((item, i) => (i === idx ? { value: nv } : item));
       setAddress(next);
       if (onChange) {
@@ -193,16 +189,14 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
   };
 
   return (
-    <div
-      className={`${wrapperClass} ${className} ${size} ${disabled ? 'disabled' : ''} ${readOnly ? 'readonly' : ''}`}
-      style={{ display: 'inline-block', alignItems: 'center', ...style }}
-    >
+    <div className={`${wrapperClass} ${className} ${size} ${disabled ? 'disabled' : ''} ${readOnly ? 'readonly' : ''}`} style={style}>
       {address.map((item, idx) => (
         <React.Fragment key={idx}>
           <input
+            id={`ip-address-input-${idx}`}
             ref={(el) => (refs.current[idx] = el)}
             type="text"
-            value={item.value}
+            value={item.value || undefined}
             readOnly={readOnly}
             disabled={disabled}
             maxLength={type === 'IPv6' ? 4 : 3}
