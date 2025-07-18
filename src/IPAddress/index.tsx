@@ -152,13 +152,7 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
           nv = '255';
         }
       }
-
       if (nv.length > maxLen) nv = nv.slice(0, maxLen);
-
-      // 自动聚焦下一个输入框
-      if (autoComplete && type === 'IPv6' && nv.length === maxLen && idx < (type === 'IPv6' ? 7 : 3)) {
-        refs.current[idx + 1]?.focus();
-      }
 
       const next = address.map((item, i) => (i === idx ? { value: nv } : item));
       setAddress(next);
@@ -168,15 +162,23 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
     },
     [address, autoComplete, getValue, onChange, type],
   );
-
+  // 自动聚焦下一个输入框
   const handleKeyUp = useCallback(
-    (idx: number, value: string): void => {
+    (idx: number, value: string, event: React.KeyboardEvent<HTMLInputElement>): void => {
+      if (event.key === 'Backspace') return;
       if (autoComplete && ((type === 'IPv4' && value.length === 3 && idx < 3) || (type === 'IPv6' && value.length === 4 && idx < 7))) {
         refs.current[idx + 1]?.focus();
       }
     },
     [type, autoComplete],
   );
+
+  const handleKeyDown = useCallback((idx: number, value: string, event: React.KeyboardEvent<HTMLInputElement>): void => {
+    if (event.key === 'Backspace' && value === '' && idx > 0) {
+      event.preventDefault();
+      refs.current[idx - 1]?.focus();
+    }
+  }, []);
 
   const handleFocus = (idx: number, value: string) => {
     onFocus?.(value, idx);
@@ -187,7 +189,7 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
 
   const renderDelimiter = (): React.ReactNode => {
     if (delimiter) return <span>{delimiter}</span>;
-    return type === 'IPv6' ? <span style={{ margin: '0 2px', color: '#00000040' }}>:</span> : <span style={{ margin: '0 2px', color: '#00000040' }}>·</span>;
+    return type === 'IPv6' ? <span style={{ margin: '0 2px', color: '#00000060' }}>:</span> : <span style={{ margin: '0 2px', color: '#00000060' }}>·</span>;
   };
 
   return (
@@ -212,7 +214,8 @@ const IPAddress: React.FC<IPAddressProps> = (props) => {
               ...inputProps?.style,
             }}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) => handleInput(idx, e.target.value)}
-            onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyUp(idx, (e.target as HTMLInputElement).value)}
+            onKeyUp={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyUp(idx, item.value, e)}
+            onKeyDown={(e: React.KeyboardEvent<HTMLInputElement>) => handleKeyDown(idx, item.value, e)}
             onFocus={(e: React.FocusEvent<HTMLInputElement>) => handleFocus(idx, e.target.value)}
             onBlur={(e: React.FocusEvent<HTMLInputElement>) => handleBlur(idx, e.target.value)}
             {...inputProps}
