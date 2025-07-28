@@ -50,6 +50,15 @@ interface ISLProps<T, P> {
    * @default 200
    */
   visibilityHeight?: number;
+  /**
+   * @description 是否显示 BackTop
+   * @default false
+   */
+  showBackTop?: boolean;
+  /**
+   * @description 列表底部提示
+   */
+  endMessage?: React.ReactNode;
 }
 
 const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
@@ -63,6 +72,8 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
     grid,
     scrollThreshold = '100px',
     visibilityHeight = 200,
+    showBackTop = true,
+    endMessage,
     renderItem,
   } = props;
 
@@ -111,9 +122,10 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
   }, [initialParams]);
 
   return (
-    <div id={containerId} className="scroll-container" ref={scrollRef} style={{ height: containerHeight, overflowY: 'auto' }}>
+    <div id={containerId} className="scroll-container" ref={scrollRef} style={{ height: containerHeight }}>
       <InfiniteScroll
         className={`${wrapperClass} ${className}`}
+        style={{ overflow: 'initial' }}
         scrollableTarget={containerId}
         dataLength={listData.data?.length}
         next={handleLoadMore}
@@ -123,7 +135,7 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
             <Spin tip="拼命加载中..." />
           </div>
         }
-        endMessage={listData?.total > 0 && <Divider plain>已经到底部了</Divider>}
+        endMessage={endMessage || (listData?.total > 0 && <Divider plain>已经到底部了</Divider>)}
         scrollThreshold={scrollThreshold}
         inverse={false}
       >
@@ -133,9 +145,11 @@ const InfiniteScrollList = <T, P>(props: ISLProps<T, P>) => {
           renderItem={(item: P, index: number) => <List.Item key={item[itemKey]}>{renderItem(item, index)}</List.Item>}
         />
       </InfiniteScroll>
-      <BackTop className="backtop" target={() => scrollRef?.current || document.body} visibilityHeight={visibilityHeight}>
-        <div className="up">回到顶部</div>
-      </BackTop>
+      {showBackTop && (
+        <BackTop className="backtop" target={() => scrollRef?.current || document.body} visibilityHeight={visibilityHeight}>
+          <div className="up">回到顶部</div>
+        </BackTop>
+      )}
     </div>
   );
 };
