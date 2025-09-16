@@ -1,3 +1,9 @@
+## [0.1.25](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.24...v0.1.25) (2025-09-16)
+
+### ✨ 新功能
+
+- **components:** 新增 SignaturePad 电子签名组件 ([0cfce40](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/0cfce40cf679f35a32d3e78466ca40a92cc175df))
+
 ## [0.1.24](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.23...v0.1.24) (2025-09-16)
 
 ### ✨ 新功能
