@@ -28,11 +28,9 @@ export interface SignaturePadProps extends React.HTMLAttributes<HTMLDivElement> 
   /** 是否显示工具栏 */
   showToolbar?: boolean;
   /** 签名完成回调 */
-  onDone?: (dataUrl: string) => void;
+  onDone?: (_dataUrl: string) => void;
   /** 默认的签名图片（base64或图片URL） */
   defaultValue?: string;
-  /** @deprecated 请使用 className 替代 */
-  prefixCls?: string;
 }
 
 const SignaturePad = forwardRef<SignaturePadHandle, SignaturePadProps>(
