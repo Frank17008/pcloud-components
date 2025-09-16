@@ -1,33 +1,44 @@
-import { WordCloud } from '@pointcloud/pcloud-components';
+import { WordCloud, type WordCloudProps } from '@pointcloud/pcloud-components';
 
 export default () => {
-  const words = [
-    { text: 'New York', value: 2 },
-    { text: 'Los Angeles', value: 44 },
-    { text: 'Chicago', value: 14 },
-    { text: 'Houston', value: 23 },
-    { text: 'Phoenix', value: 67 },
-    { text: 'Philadelphia', value: 98 },
-    { text: 'San Antonio', value: 59 },
-    { text: 'San Diego', value: 66 },
-    { text: 'Dallas', value: 23 },
-    { text: 'San Jose', value: 11 },
-    { text: 'Austin', value: 11 },
-    { text: 'Jacksonville', value: 41 },
-    { text: 'Tucson', value: 24 },
+  const words: WordCloudProps['list'] = [
+    ['New York', 12],
+    ['Los Angeles', 12],
+    ['Chicago', 22],
+    ['Houston', 22],
+    ['Phoenix', 22],
+    ['Philadelphia', 22],
+    ['San Antonio', 22],
+    ['San Diego', 22],
+    ['Dallas', 22],
+    ['San Jose', 22],
+    ['Austin', 22],
+    ['Jacksonville', 22],
+    ['San Francisco', 22],
+    ['Columbus', 22],
+    ['Charlotte', 26],
+    ['Indianapolis', 22],
+    ['Fort Worth', 24],
+    ['Seattle', 22],
+    ['Denver', 22],
+    ['Washington', 22],
+    ['Boston', 22],
+    ['El Paso', 21],
+    ['Detroit', 22],
+    ['Nashville', 22],
+    ['Portland', 22],
+    ['Oklahoma City', 22],
+    ['Las Vegas', 22],
+    ['Colorado Springs', 11],
+    ['Omaha', 12],
+    ['Raleigh', 22],
+    ['Miami', 22],
+    ['Oakland', 13],
   ];
-  const callbacks = {
-    getWordColor: (word) => (word.value > 50 ? '#2d87f9' : 'red'),
-    onWordClick: (v) => {
-      console.log(v);
-    },
-    onWordMouseOut: (v) => {
-      console.log(v);
-    },
-    onWordMouseOver: (v) => {
-      console.log(v);
-    },
-    getWordTooltip: (word) => `${word.text} (${word.value}) [${word.value > 50 ? '高风险' : '低风险'}]`,
+
+  const onClick = (item, diemension, event) => {
+    console.info('点击事件触发了==>', item, diemension, event);
   };
-  return <WordCloud words={words} callbacks={callbacks} />;
+
+  return <WordCloud list={words} tooltip={false} onClick={onClick} />;
 };
