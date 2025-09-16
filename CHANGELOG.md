@@ -1,3 +1,20 @@
+## [0.1.24](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.23...v0.1.24) (2025-09-16)
+
+### ✨ 新功能
+
+- **components:** 新增 AspectRatio 组件,保持固定宽高比 ([d6deee8](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/d6deee8d552ccdbc7059f15cd59cec519c188a27))
+- **DForm:** 组件 DForm 内置支持 IpAddress 组件 ([269d4df](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/269d4df2ffacd19beac2780a61aef2cc1f649007))
+- **IPAddress:** 优化 IPv4 地址输入 ([d63750b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/d63750b782e47fc10212cf5849240518d689a97f))
+- **IPAddress:** 优化 IPv6 地址输入体验并调整分隔符样式 ([af91994](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/af919940009f404c0c083c079bd09110a9fea7f4))
+
+### 🐛 修复 bug
+
+- **RCropper:** 替换图标为 svg ([539d8d6](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/539d8d641704822a072eea23b56635d4e2d252e4))
+
+### 📚 文档变更
+
+- **RCropper:** 补充组件特性说明 ([feac14c](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/feac14ce9097d7704d85038bd972e66b60352573))
+
 ## [0.1.23](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.20...v0.1.23) (2025-07-02)
 
 ### ✨ 新功能
