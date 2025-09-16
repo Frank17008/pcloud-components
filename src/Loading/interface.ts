@@ -1,5 +1,5 @@
 import { SpinProps } from 'antd';
-import React, { ReactInstance } from 'react';
+import { ReactInstance } from 'react';
 
 export interface LoadingInstanceProps extends Omit<SpinProps, 'delay'> {
   /**
