@@ -1,0 +1,47 @@
+@import '../../commonStyle/index.less';
+
+.@{prefix}-signature-pad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+
+  &-canvas {
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+  }
+
+  &-toolbar {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    text-align: center;
+  }
+
+  &-button {
+    min-width: 64px;
+    height: 32px;
+    padding: 4px 16px;
+    border: 1px solid #1677ff;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #1677ff;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: #f0f5ff;
+    }
+
+    &:last-child {
+      background-color: #1677ff;
+      color: #fff;
+
+      &:hover {
+        background-color: #4096ff;
+      }
+    }
+  }
+}

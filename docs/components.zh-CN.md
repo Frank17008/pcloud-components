@@ -38,4 +38,5 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | RCropper           | 图文卡片组件     | [查看](/components/r-cropper)            |
 | RndDrag            | 拖拽组件         | [查看](/components/rnd-drag)             |
 | ScrollNumber       | 数字滚动组件     | [查看](/components/scroll-number)        |
+| SignaturePad       | 电子签名组件     | [查看](/components/signature-pad)        |
 | WordCloud          | 词云组件         | [查看](/components/word-cloud)           |

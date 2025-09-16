@@ -92,3 +92,6 @@ export type { IconFontProps } from './IconFont';
 
 export { default as AspectRatio } from './AspectRatio';
 export type { AspectRatioProps } from './AspectRatio';
+
+export { default as SignaturePad } from './SignaturePad';
+export type { SignaturePadProps } from './SignaturePad';
