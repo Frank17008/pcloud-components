@@ -1,3 +1,9 @@
+## [0.1.27](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.26...v0.1.27) (2025-09-18)
+
+### 🐛 修复 bug
+
+- **styles:** 更新 ContextMenu 样式动画名称 ([7c58e1b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/7c58e1bce901d31d30c3e7e36a6d6b6f44144d45))
+
 ## [0.1.26](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.25...v0.1.26) (2025-09-18)
 
 ### ✨ 新功能
