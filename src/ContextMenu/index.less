@@ -1,0 +1,73 @@
+@import '../commonStyle/index.less';
+
+@context-menu-bg: #ffffff;
+@context-menu-border-color: #f0f0f0;
+@context-menu-shadow: 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+@border-radius-base: 1px;
+
+@keyframes contextmenu-show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.@{prefix}-context-menu {
+  background: @context-menu-bg;
+  border-radius: @border-radius-base;
+  border: 1px solid @context-menu-border-color;
+  box-shadow: @context-menu-shadow;
+  padding: 4px 0;
+  min-width: 120px;
+  opacity: 0;
+  transform: scale(0.8);
+  transform-origin: top left;
+  animation: contextMenuShow 0.2s ease-out forwards;
+
+  &-item {
+    padding: 5px 12px;
+    cursor: pointer;
+    user-select: none;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: rgba(0, 0, 0, 88%);
+
+    &:hover {
+      background: rgba(0, 0, 0, 4%);
+    }
+
+    &-disabled {
+      color: rgba(0, 0, 0, 25%);
+      cursor: not-allowed;
+
+      &:hover {
+        background: none;
+      }
+    }
+
+    &-divider {
+      height: 1px;
+      margin: 4px 0;
+      background: #f0f0f0;
+    }
+  }
+}
+
+@keyframes contextmenu-show {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

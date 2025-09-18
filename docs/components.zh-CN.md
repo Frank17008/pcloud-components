@@ -18,6 +18,7 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | AuthComponent      | 权限组件         | [查看](/components/auth-component)       |
 | ConfigProvider     | 全局注册组件     | [查看](/components/config-provider)      |
 | ColorPicker        | 颜色选择器       | [查看](/components/color-picker)         |
+| ContextMenu        | 右键组件         | [查看](/components/context-menu)         |
 | DCascader          | 级联选择组件     | [查看](/components/d-cascader)           |
 | DForm              | 表单组件         | [查看](/components/d-form)               |
 | DInput             | 输入组件         | [查看](/components/d-input)              |

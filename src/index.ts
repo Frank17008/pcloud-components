@@ -95,3 +95,6 @@ export type { AspectRatioProps } from './AspectRatio';
 
 export { default as SignaturePad } from './SignaturePad';
 export type { SignaturePadProps } from './SignaturePad';
+
+export { default as ContextMenu } from './ContextMenu';
+export type { ContextMenuProps } from './ContextMenu';
