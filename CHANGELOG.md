@@ -1,3 +1,13 @@
+## [0.1.26](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.25...v0.1.26) (2025-09-18)
+
+### ✨ 新功能
+
+- **components:** 新增 ContextMenu 右键菜单组件 ([8478f77](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/8478f773f266c420f2017b23bcefeee759c3e947))
+
+### 📚 文档变更
+
+- **README:** 更新组件库版本号和组件数量 ([8ac7e6b](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/8ac7e6bbfd2fe23387d4d27938a101f0f95dad09))
+
 ## [0.1.25](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.24...v0.1.25) (2025-09-16)
 
 ### ✨ 新功能
