@@ -19,13 +19,14 @@
   "scripts": {
     "build": "father build",
     "build:watch": "father dev",
-    "clean": "node scripts/clean-tmp.js",
+    "clean:docs": "node scripts/clean-dir.js docs-dist",
+    "clean:tmp": "node scripts/clean-dir.js tmp",
     "dev": "dumi dev",
     "docker:build": "docker build -f Dockerfile -t Harbor地址/仓库名称/镜像名称:latest ./",
     "docker:build:arm64": "docker buildx build --platform=linux/arm64 -f Dockerfile -t Harbor地址/仓库名称/镜像名称:latest ./",
     "docker:delete": "docker rmi Harbor地址/仓库名称/镜像名称:latest",
     "docker:push": "npm run docs:build && npm run docker:build && docker push Harbor地址/仓库名称/镜像名称:latest && npm run docker:delete",
-    "docs:build": "dumi build",
+    "docs:build": "npm run clean:docs && dumi build",
     "doctor": "father doctor",
     "lint": "npm run lint:es && npm run lint:css",
     "lint:css": "stylelint \"{src,config,docs,scripts,.dumi/theme}/**/*.{css,less}\"",
@@ -34,7 +35,7 @@
     "prepublishOnly": "father doctor && npm run lint && npm run build",
     "prettier": "prettier -c --write \"{src,config,docs,scripts,.dumi/theme}/**\"",
     "release": "release-it --ci",
-    "start": "npm run clean && npm run dev"
+    "start": "npm run clean:tmp && npm run dev"
   },
   "commitlint": {
     "extends": [
