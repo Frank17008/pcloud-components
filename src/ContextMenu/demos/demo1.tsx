@@ -11,8 +11,8 @@ export default () => {
       <div
         className="ant-context-menu-item"
         onClick={() => {
-          navigator.clipboard.writeText('复制内容');
           alert('已复制到剪贴板');
+          navigator?.clipboard?.writeText('复制内容');
         }}
       >
         <CopyOutlined /> 复制

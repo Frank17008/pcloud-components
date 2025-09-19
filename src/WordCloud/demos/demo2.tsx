@@ -37,7 +37,8 @@ export default () => {
   ];
 
   const onClick = (item, diemension, event) => {
-    console.info('点击事件触发了==>', item, diemension, event);
+    console.info(item, diemension, event);
+    alert('点击了');
   };
 
   return <WordCloud list={words} tooltip={false} onClick={onClick} />;

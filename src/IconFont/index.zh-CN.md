@@ -7,57 +7,47 @@ group:
   title: 业务组件
 ---
 
+# IconFont 字体图标组件
+
+IconFont 是一个基于 @ant-design/icons 封装的字体图标组件，摒弃了内置图标集合，支持从 iconfont.cn 平台加载自定义图标，提供全局和局部两种注册方式，适用于需要使用个性化图标集合的项目。
+
 ## 组件特性
 
-- 基于`@ant-design/icons`, 摒弃内置图标
-- 支持全局注册和局部注册
-- 支持全局设置图标样式
-- 支持自定义图标样式
-- 无内置图标,可由用户自主选择
-- 支持离线图标和在线 CDN
+- 🎨 自定义图标支持，基于 @ant-design/icons 封装
+- 🌐 灵活加载方式，支持离线图标和在线 CDN 加载
+- 🔧 双模式注册，支持全局注册和局部注册
+- 🎯 样式可定制，支持全局设置和自定义图标样式
+- 🧹 无内置图标，避免无用图标增加包体积
+- 🔗 平台集成，无缝对接 iconfont.cn 图标平台
 
 ## 基础使用
 
 <code title="全局注册" src="./demos/demo1.tsx" description="需要在项目入口处注册iconfont的脚本地址,其他组件即可引用使用; iconfont脚本地址需要在[iconfont.cn](https://www.iconfont.cn/)上生成"></code>
 
-## 局部覆盖
+## 局部使用
 
-<code title="局部注册" src="./demos/demo2.tsx" description="通过scriptUrl可临时局部覆盖字体图标配置"></code>
+<code title="局部使用" src="./demos/demo2.tsx" description="在组件内部通过scriptUrl属性指定图标脚本地址"></code>
 
-## 样式设置
+## 自定义样式
 
-<code title="样式设置" src="./demos/demo3.tsx" description="支持style设置字体大小,颜色等;或者通过自定义样式类名覆盖"></code>
+<code title="自定义样式" src="./demos/demo3.tsx" description="通过className和style属性自定义图标样式"></code>
 
 ## API
 
-| 参数名称  | 说明                 | 类型                      | 默认值 |
-| --------- | -------------------- | ------------------------- | ------ |
-| type      | 图标 class 名称      | `string`                  | -      |
-| scriptUrl | 自定义图标库脚本地址 | `string \| string[]` -    | -      |
-| className | 自定义样式类名       | `string`                  | -      |
-| style     | 自定义样式           | `React.CSSProperties`     | -      |
-| onClick   | 点击事件回调         | `React.MouseEventHandler` | -      |
+### IconFontProps
 
-## 静态方法
+| 参数      | 说明         | 类型                             | 默认值 |
+| --------- | ------------ | -------------------------------- | ------ |
+| type      | 图标类型     | `string`                         | -      |
+| scriptUrl | 图标脚本地址 | `string` \| `string[]`           | -      |
+| className | 图标类名     | `string`                         | -      |
+| style     | 图标样式     | `CSSProperties`                  | -      |
+| onClick   | 点击事件     | `MouseEventHandler<HTMLElement>` | -      |
 
-| 函数名称             | 说明               | 参数                 | 示例                                              |
-| -------------------- | ------------------ | -------------------- | ------------------------------------------------- |
-| setIconfontScriptUrl | 设置图标库脚本地址 | `string \| string[]` | `IconFont.setIconfontScriptUrl(['url1', 'url2'])` |
+### Methods
 
-## 双色图标主色
-
-对于双色图标，可以通过使用 `getTwoToneColor()` 和 `setTwoToneColor(colorString)` 来全局设置图标主色。
-
-```
-import { getTwoToneColor, setTwoToneColor } from '@ant-design/icons';
-
-setTwoToneColor('#eb2f96');
-getTwoToneColor(); // #eb2f96
-```
-
-## 注意事项
-
-- 离线环境或者局域网的环境下,建议直接在`iconfont.cn`上传自定义的图标,并生成对应的图标库脚本,将脚本文件引入项目`public`文件夹下, 然后在项目主入口处调用`IconFont.setIconfontScriptUrl(url)`方法进行图标库脚本的引入;如果是互联网环境,直接使用在线的 cdn 地址即可;
-- antd 的图标在 4.0 版本时已经被分离为独立的包,如果没有用到 antd 内置的图标,完全可以不用安装`@ant-design/icons`;
-- antd Icon API:[antd design icon](https://4x-ant-design.antgroup.com/components/icon-cn/#components-icon-demo-iconfont)
-- iconfont.cn: [iconfont.cn](https://www.iconfont.cn/)
+| 方法名               | 说明                 | 参数类型                  |
+| -------------------- | -------------------- | ------------------------- | ------------------ |
+| setIconfontScriptUrl | 设置全局图标脚本地址 | `(urls: string            | string[]) => void` |
+| getTwoToneColor      | 获取双色图标颜色     | `() => string`            |
+| setTwoToneColor      | 设置双色图标颜色     | `(color: string) => void` |
