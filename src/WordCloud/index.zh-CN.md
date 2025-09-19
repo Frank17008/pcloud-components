@@ -10,7 +10,6 @@ nav:
   path: /components
 group:
   title: 数据展示
-  order: 4
 ---
 
 # WordCloud 词云

@@ -1,7 +1,7 @@
 ---
 title: ScrollNumber
 description: 数字滚动组件
-keywords: ['数字', '滚动', 'number']
+keywords: ['数字', '滚动', 'number', 'scroll']
 demo:
   cols: 2
 tocDepth: 2
@@ -9,7 +9,7 @@ nav:
   title: 组件
   path: /components
 group:
-  title: 业务组件
+  title: 数据展示
 ---
 
 # ScrollNumber 数字滚动组件
