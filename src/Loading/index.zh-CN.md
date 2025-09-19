@@ -27,6 +27,14 @@ Loading 是一个用于展示加载状态的组件，采用单例模式设计，
 
 <code src="./demos/demo2.tsx" ></code>
 
+## 指定挂载位置
+
+<code src="./demos/demo3.tsx" ></code>
+
+## hooks 用法
+
+<code src="./demos/demo4.tsx" ></code>
+
 ## API
 
 ### LoadingInstanceProps
