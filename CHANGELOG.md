@@ -1,3 +1,16 @@
+## [0.1.28](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.27...v0.1.28) (2025-09-19)
+
+### ✨ 新功能
+
+- **components:** 新增 LoginForm 组件 ([eac1a90](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/eac1a90c8df6d9f75fc6a6ef43edefeeff2082f7))
+
+### 📚 文档变更
+
+- 优化组件文档结构和内容 ([2c9f378](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/2c9f37828df34f7972c67f59e32156ba1e97558c))
+- **Loding:** 更新文档并添加新功能示例 ([798f84c](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/798f84c096820a0d2c7b13849a084eb73094ec7a))
+- **README:** 更新组件数量并调整部分组件分类 ([b5975a2](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/b5975a23452bd6fb8a91424b933b7c4c7b75db99))
+- **README:** 更新组件数量并调整部分组件分类 ([6e4ffa5](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/6e4ffa57467f9f380d455e595b8e676baaf867a5))
+
 ## [0.1.27](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.26...v0.1.27) (2025-09-18)
 
 ### 🐛 修复 bug
