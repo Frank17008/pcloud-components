@@ -10,6 +10,7 @@ nav:
   path: /components
 group:
   title: 数据展示
+  order: 4
 ---
 
 # ScrollNumber 数字滚动组件
