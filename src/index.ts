@@ -46,6 +46,9 @@ export type { DModalProps } from './DModal/interface';
 export { default as ModalForm } from './ModalForm';
 export type { ModalFormProps } from './ModalForm';
 
+export { default as LoginForm } from './LoginForm';
+export type { LoginFormProps } from './LoginForm';
+
 export { default as ColorPicker } from './ColorPicker';
 export type {
   ColorPickerType,
