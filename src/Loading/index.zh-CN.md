@@ -51,8 +51,8 @@ Loading 是一个用于展示加载状态的组件，采用单例模式设计，
 ### Methods
 
 | 方法名      | 说明                                     | 参数类型                                                               |
-| ----------- | ---------------------------------------- | ---------------------------------------------------------------------- | ----- |
+| ----------- | ---------------------------------------- | ---------------------------------------------------------------------- |
 | open        | 打开加载框                               | `(params?: LoadingInstanceProps) => ILoadingInstance`                  |
 | close       | 关闭加载框                               | `() => void`                                                           |
-| getInstance | 获取加载框实例                           | `() => ILoadingInstance                                                | null` |
+| getInstance | 获取加载框实例                           | `() => ILoadingInstance \| null`                                       |
 | useLoading  | React Hook，用于在函数组件中使用加载状态 | `(initialState?: boolean) => { isLoading, openLoading, closeLoading }` |

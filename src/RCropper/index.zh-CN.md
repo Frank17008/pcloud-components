@@ -44,23 +44,23 @@ RCropper 是一个基于 Cropper.js 封装的现代化图片裁剪组件，提�
 
 ### RCropperProps
 
-| 参数         | 说明           | 类型                                                                               | 默认值                             |
-| ------------ | -------------- | ---------------------------------------------------------------------------------- | ---------------------------------- | --- |
-| src          | 图片的源地址   | `string`                                                                           | -                                  |
-| alt          | 图片的替代文本 | `string`                                                                           | `'image'`                          |
-| className    | 容器类名       | `string`                                                                           | -                                  |
-| style        | 容器样式       | `CSSProperties`                                                                    | -                                  |
-| dragMode     | 拖拽模式       | `crop` \| `move` \| `none`                                                         | `'crop'`                           |
-| grid         | 网格线配置     | `RCropperGrid`                                                                     | -                                  |
-| selection    | 裁剪区域配置   | `RCropperSelection`                                                                | -                                  |
-| image        | 图片配置       | `RCropperImage`                                                                    | -                                  |
-| canvas       | 画布配置       | `RCropperCanvas`                                                                   | -                                  |
-| onCrop       | 裁剪完成回调   | `(\_src: string                                                                    | undefined, \_file?: File) => void` | -   |
-| onZoom       | 缩放回调       | `(imgData: number[]                                                                | undefined) => void`                | -   |
-| onRotate     | 旋转回调       | `(imgData: number[]                                                                | undefined) => void`                | -   |
-| onFlip       | 翻转回调       | `(imgData: number[]                                                                | undefined) => void`                | -   |
-| onReset      | 重置回调       | `(imgData: number[]                                                                | undefined) => void`                | -   |
-| onCancelCrop | 取消裁剪回调   | `(selectionData: { x: number; y: number; width: number; height: number }) => void` | -                                  |
+| 参数         | 说明           | 类型                                                                               | 默认值    |
+| ------------ | -------------- | ---------------------------------------------------------------------------------- | --------- |
+| src          | 图片的源地址   | `string`                                                                           | -         |
+| alt          | 图片的替代文本 | `string`                                                                           | `'image'` |
+| className    | 容器类名       | `string`                                                                           | -         |
+| style        | 容器样式       | `CSSProperties`                                                                    | -         |
+| dragMode     | 拖拽模式       | `crop` \| `move` \| `none`                                                         | `'crop'`  |
+| grid         | 网格线配置     | `RCropperGrid`                                                                     | -         |
+| selection    | 裁剪区域配置   | `RCropperSelection`                                                                | -         |
+| image        | 图片配置       | `RCropperImage`                                                                    | -         |
+| canvas       | 画布配置       | `RCropperCanvas`                                                                   | -         |
+| onCrop       | 裁剪完成回调   | `(\_src: string \| undefined, \_file?: File) => void`                              |
+| onZoom       | 缩放回调       | `(imgData: number[] \| undefined) => void`                                         | -         |
+| onRotate     | 旋转回调       | `(imgData: number[] \| undefined) => void`                                         | -         |
+| onFlip       | 翻转回调       | `(imgData: number[] \| undefined) => void`                                         | -         |
+| onReset      | 重置回调       | `(imgData: number[] \| undefined) => void`                                         | -         |
+| onCancelCrop | 取消裁剪回调   | `(selectionData: { x: number; y: number; width: number; height: number }) => void` | -         |
 
 ### RCropperGrid
 

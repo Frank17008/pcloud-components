@@ -44,13 +44,13 @@ LabelValue 是一个用于展示标签和对应值的组件，常用于详情页
 
 ### LabelValueProps
 
-| 参数       | 说明                 | 类型                    | 默认值               |
-| ---------- | -------------------- | ----------------------- | -------------------- | ---------- | --- |
-| label      | 文字标签             | `string` \| `ReactNode` | -                    |
-| value      | 文字标签值           | `string` \| `ReactNode` | -                    |
-| formatter  | 格式化 value 值      | `(\_v?: string          | ReactNode) => string | ReactNode` | -   |
-| emptyValue | 文字标签值为空时的值 | `string` \| `ReactNode` | `'-'`                |
-| className  | 类名                 | `string`                | `''`                 |
-| style      | 样式                 | `CSSProperties`         | -                    |
-| noWrap     | 是否不换行           | `boolean`               | `false`              |
-| noColon    | 是否隐藏冒号         | `boolean`               | `false`              |
+| 参数       | 说明                 | 类型                    | 默认值                             |
+| ---------- | -------------------- | ----------------------- | ---------------------------------- |
+| label      | 文字标签             | `string` \| `ReactNode` | -                                  |
+| value      | 文字标签值           | `string` \| `ReactNode` | -                                  |
+| formatter  | 格式化 value 值      | `(\_v?: string          | ReactNode) => string \| ReactNode` |
+| emptyValue | 文字标签值为空时的值 | `string` \| `ReactNode` | `'-'`                              |
+| className  | 类名                 | `string`                | `''`                               |
+| style      | 样式                 | `CSSProperties`         | -                                  |
+| noWrap     | 是否不换行           | `boolean`               | `false`                            |
+| noColon    | 是否隐藏冒号         | `boolean`               | `false`                            |
