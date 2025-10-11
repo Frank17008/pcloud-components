@@ -9,12 +9,14 @@
     "components",
     "ui"
   ],
+  "homepage": "https://frank17008.github.io/pcloud-components/",
   "license": "MIT",
   "author": "frankdong",
   "module": "dist/esm/index.js",
   "typings": "dist/esm/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README_USER.md"
   ],
   "scripts": {
     "build": "father build",

@@ -2,28 +2,17 @@
 
 ![node version](<https://img.shields.io/badge/node-v16.20.0-brightgreen?logo=nodedotjs&color=rgb(0%2C126%2C298)>) ![react version](https://img.shields.io/badge/react-v17.0.2-brightgreen?style=flat&logo=react) ![antd version](<https://img.shields.io/badge/ant%20design-v4.24.16-rgb(144%2C190%2C8)?style=flat&logo=antdesign>) ![docs](https://img.shields.io/badge/docs%20by-dumi-brightgreen?style=flat&color=%230081ff) ![counts](<https://img.shields.io/badge/components%20count-29-rgb(202%2C17%2C5)?style=flat&logo=webcomponentsdotorg>) ![license](<https://img.shields.io/badge/license-MIT-rgb(144%2C190%2C8)?style=flat>)
 
-pcloud-components 是一套基于 Antd v4.24.16+ React v17 开发的业务组件库。
-该项目已经发布到 Npm 仓库，可以直接使用, 点击[pcloud-components 地址](https://www.npmjs.com/package/@pointcloud/pcloud-components)访问。
+pcloud-components 是一套基于 Antd v4.24.16 + React v17 开发的业务组件库。
+该项目已经发布到 [npm](https://www.npmjs.com/package/@pointcloud/pcloud-components)仓库。
 
-## 项目初始化
+## 快速使用
 
 ```
-// 拉取项目代码
-示例:
-git clone ssh://git@192.168.101.96:8092/pointcloud_frontend/basiclibrary/pcloud-components.git
+# 安装依赖
+npm i @pointcloud/pcloud-components or yarn add @pointcloud/pcloud-components
 
-// 安装依赖
-cd pcloud-components
-
-npm install
-  or
-pnpm install
-  or
-yarn install
-
-// 启动项目
-npm start  or npm run dev
-pnpm start or pnpm  dev
+# 引入组件
+import { DCascader } from '@pointcloud/pcloud-components';
 ```
 
 ## 推荐环境
@@ -37,32 +26,33 @@ pnpm >= 8.15.9
 
 ```
 📁pcloud-components
-├─ 📁.dumi						# api站点相关目录，例如全局样式、全局脚本、站点主题、自定义组件等
-│ 	├─ 📁tmp						# dumi运行时目录
-│ 	└─ 📄global.less				# 全局样式
-├─ 📁.husky						# 代码提交相关配置
-├─ 📁docker						# docker部署相关文件
-│ 	└─ 📄nginx.conf					# nginx配置
-├─ 📁scripts					# 全局脚本目录
-│ 	├─ 📄clean-tmp.js				# 清除.dumi目录下自动生成的tmp目录
+├─ 📁.dumi						            # api站点相关目录，例如全局样式、全局脚本、站点主题、自定义组件等
+│ 	├─ 📁tmp						          # dumi运行时目录
+│ 	└─ 📄global.less		          # 全局样式
+├─ 📁.husky						            # 代码提交相关配置
+├─ 📁docker						            # docker部署相关文件
+│ 	└─ 📄nginx.conf			          # nginx配置
+├─ 📁scripts					            # 全局脚本目录
+│ 	├─ 📄clean-tmp.js		          # 清除.dumi目录下自动生成的tmp目录
 │ 	└─ 📄source-replace-loader.js	# 用于解决第三方主题antd版本冲突的webpack loader
-├─ 📁docs						# 文档目录，适用于普通文档生成路由，详见dumi官方介绍
-│ 	├─ 📁components					# 组件库页面的文档
-│ 	├─ 📄guide.zh-CN.md				# 指南页面的文档
-│ 	└─ 📄index.zh-CN.md				# 首页页面的文档
-├─ 📁public						# 站点的静态资源目录
-├─ 📁src						# 组件目录
-│ 	├─ 📁DCascader				# 组件1
-│ 	├─ 📁DForm					# 组件2
-│		......					# 组件n
-│ 	└─ 📄index.ts				# 组件导出配置
-├─ 📄.dumirc.ts					# dumi 的配置文件
-├─ 📄.fatherrc.ts				# father 的配置文件，用于组件库打包
-├─ 📄.eslintrc.js				# eslint插件配置
-├─ 📄.release-it.js     # release-it配置
-├─ 📄.prettierrc.js				# prettier插件配置
-├─ 📄.stylelintrc				# stylelint插件配置
-└─ 📄tsconfig.json				# ts相关配置
+├─ 📁docs						              # 文档目录，适用于普通文档生成路由，详见dumi官方介绍
+│ 	├─ 📁components					      # 组件库页面的文档
+│ 	├─ 📄guide.zh-CN.md				    # 指南页面的文档
+│ 	└─ 📄index.zh-CN.md				    # 首页页面的文档
+├─ 📁docs-dist					          # 组件文档目录
+├─ 📁public						            # 站点的静态资源目录
+├─ 📁src						              # 组件目录
+│ 	├─ 📁DCascader				        # 组件1
+│ 	├─ 📁DForm					          # 组件2
+│		......					              # 组件n
+│ 	└─ 📄index.ts				          # 组件导出配置
+├─ 📄.dumirc.ts					          # dumi 的配置文件
+├─ 📄.fatherrc.ts				          # father 的配置文件，用于组件库打包
+├─ 📄.eslintrc.js				          # eslint插件配置
+├─ 📄.release-it.js               # release-it配置
+├─ 📄.prettierrc.js				        # prettier插件配置
+├─ 📄.stylelintrc				          # stylelint插件配置
+└─ 📄tsconfig.json				        # ts相关配置
 ```
 
 ## 组件开发指南
@@ -335,3 +325,15 @@ git commit -m "fix: 修复bug"	// type后的冒号和空格不可省略，descri
    ```
    npm run release
    ```
+
+## FAQ
+
+1. 安装组件后, 为什么项目中的 antd 组件都是英文的？
+
+
+    - 这是因为antd的默认语言是英文，项目启动时，会自动加载中文语言包，如果项目需要使用英文，请自行在项目入口处导入英文语言包, 并使用ConfigProvider组件注入.
+
+2. 项目安装的是 antd5 的版本, 能使用组件吗？
+
+
+    - 此组件库基于antd 4.24.16开发，antd5的版本暂时不兼容，请使用antd4.x版本, 后续会升级到antd5版本

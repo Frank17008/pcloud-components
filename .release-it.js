@@ -77,4 +77,7 @@ module.exports = {
       },
     },
   },
+  hooks: {
+    'after:bump': "npx gh-pages --dist docs-dist -m 'docs: deploy to gh-pages [skip ci]'",
+  },
 };
