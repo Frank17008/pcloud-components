@@ -1,3 +1,15 @@
+## [0.1.29](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.28...v0.1.29) (2025-10-11)
+
+### 🐛 修复 bug
+
+- **Loading:** 修复重复调用 open 时未关闭已存在的 loading 实例 ([8101711](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/810171154a11c9eb8a8fab055e53c6709d685e53))
+
+### 📚 文档变更
+
+- **.release-it.js:** 更新 gh-pages 部署命令参数 ([22adadb](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/22adadbb712f56498735cb5c8caf6fb5b650697f))
+- **DSelect:** 优化参数表格格式并修正类型显示 ([588525a](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/588525a4eeb6507e0b46de0881115a3e0de0ae5c))
+- **readme:** 更新 README 文档结构与使用说明 ([0a79e5a](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/commit/0a79e5aee310f5d273fa5afdffd624421ebf1c54))
+
 ## [0.1.28](http://192.168.101.96:8090/pointcloud_frontend/basiclibrary/pcloud-components/compare/v0.1.27...v0.1.28) (2025-09-19)
 
 ### ✨ 新功能
