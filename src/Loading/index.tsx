@@ -6,9 +6,10 @@ let loadingInstance: ILoadingInstance | null = null;
 
 export default {
   open(params?: LoadingInstanceProps): ILoadingInstance {
-    if (!loadingInstance) {
-      loadingInstance = Loading.newInstance(params);
+    if (loadingInstance) {
+      this.close();
     }
+    loadingInstance = Loading.newInstance(params);
     return loadingInstance;
   },
   close(): void {
