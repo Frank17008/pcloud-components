@@ -78,7 +78,7 @@ module.exports = {
     },
   },
   hooks: {
-    'before:bump': 'npm run build && npm run docs:build',
-    'after:bump': 'npx gh-pages -d docs-dist',
+    'before:bump': 'npm run build',
+    'after:bump': 'npm run docs:build && npx gh-pages -d docs-dist',
   },
 };
