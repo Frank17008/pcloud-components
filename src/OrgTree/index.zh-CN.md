@@ -23,23 +23,21 @@ OrgTree 是基于 react-org-tree 的组织架构树组件，用于展示组织�
 - 🎯 提供丰富的 API 和事件回调
   点击回调
 
-## 代码演示
+## 基本使用
 
-### 基本使用
+<code src="./demos/basic.tsx" description="最简单的用法，展示基本组织架构树。"></code>
 
-<code src="./demos/basic.tsx" title="基本使用" description="最简单的用法，展示基本组织架构树。"></code>
+## 水平布局
 
-### 水平布局
+<code src="./demos/horizontal.tsx" description="水平方向展示组织架构树。"></code>
 
-<code src="./demos/horizontal.tsx" title="水平布局" description="水平方向展示组织架构树。"></code>
+## 折叠控制
 
-### 折叠控制
+<code src="./demos/collapse.tsx" description="collapse树形可以控制节点的折叠/展开状态。"></code>
 
-<code src="./demos/collapse.tsx" title="折叠控制" description="collapse树形可以控制节点的折叠/展开状态。"></code>
+## 标签样式
 
-### 标签样式
-
-<code src="./demos/label-styles.tsx" title="标签样式" description="自定义节点标签的宽度和样式"></code>
+<code src="./demos/label-styles.tsx" description="自定义节点标签的宽度和样式"></code>
 
 ## API
 
