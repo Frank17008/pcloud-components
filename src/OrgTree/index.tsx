@@ -5,7 +5,7 @@ import type { OrgTreeProps } from './interface';
 import './index.less';
 
 const OrgTree = forwardRef<any, OrgTreeProps>((props, ref): ReactElement | null => {
-  const { data, className, style, ...otherProps } = props;
+  const { data, className, style, collapsable = true, expandAll = false, labelWidth, labelClassName, ...otherProps } = props;
 
   const { getPrefixCls }: any = useContext(ConfigContext);
   const prefixCls = getPrefixCls('org-tree');
@@ -16,24 +16,27 @@ const OrgTree = forwardRef<any, OrgTreeProps>((props, ref): ReactElement | null 
   useImperativeHandle(ref, () => ({
     // 获取组织树实例
     getOrgTreeInstance: () => orgTreeRef.current,
-    // 展开所有节点
-    expandAll: () => {
-      if (orgTreeRef.current && orgTreeRef.current.expandAll) {
-        orgTreeRef.current.expandAll();
-      }
-    },
-    // 折叠所有节点
-    collapseAll: () => {
-      if (orgTreeRef.current && orgTreeRef.current.collapseAll) {
-        orgTreeRef.current.collapseAll();
-      }
-    },
   }));
+
+  // 处理样式相关属性
+  const treeStyle: React.CSSProperties = {};
+  if (labelWidth) {
+    treeStyle['--org-tree-label-width'] = typeof labelWidth === 'number' ? `${labelWidth}px` : labelWidth;
+  }
 
   return (
     <div className={`${prefixCls} ${className || ''}`} style={style}>
       <div className={`${prefixCls}-container`}>
-        <OrgTreeComponent ref={orgTreeRef} data={data} collapsable={true} expandAll={false} {...otherProps} />
+        <OrgTreeComponent
+          ref={orgTreeRef}
+          data={data}
+          collapsable={collapsable}
+          expandAll={expandAll}
+          labelWidth={labelWidth}
+          labelClassName={labelClassName}
+          style={treeStyle}
+          {...otherProps}
+        />
       </div>
     </div>
   );

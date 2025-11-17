@@ -22,14 +22,19 @@ export interface OrgTreeProps {
   data: OrgTreeNode;
   /** 水平方向布局 */
   horizontal?: boolean;
-  /** 节点展开/折叠回调 */
-  // eslint-disable-next-line no-unused-vars
-  onExpand?: (node: OrgTreeNode, expanded: boolean) => void;
+  /** 是否可折叠 */
+  collapsable?: boolean;
+  /** 是否展开所有节点 */
+  expandAll?: boolean;
   /** 自定义节点渲染 */
   /** 自定义类名 */
   className?: string;
   /** 自定义样式 */
   style?: React.CSSProperties;
+  /** 标签宽度 */
+  labelWidth?: string | number;
+  /** 标签自定义类名 */
+  labelClassName?: string;
   // eslint-disable-next-line no-unused-vars
   onClick?: (event: React.MouseEvent, node: OrgTreeNode) => void;
 }
