@@ -42,3 +42,4 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | SignaturePad       | 电子签名组件     | [查看](/components/signature-pad)        |
 | WordCloud          | 词云组件         | [查看](/components/word-cloud)           |
 | LoginForm          | 登录表单组件     | [查看](/components/login-form)           |
+| OrgTree            | 组织树组件       | [查看](/components/org-tree)             |
