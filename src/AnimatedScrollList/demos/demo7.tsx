@@ -1,4 +1,3 @@
-import React from 'react';
 import { AnimatedScrollList } from '@pointcloud/pcloud-components';
 
 export default () => {
@@ -9,6 +8,10 @@ export default () => {
     { id: 4, text: '标签 4' },
     { id: 5, text: '标签 5' },
     { id: 6, text: '标签 6' },
+    { id: 7, text: '标签 7' },
+    { id: 8, text: '标签 8' },
+    { id: 9, text: '标签 9' },
+    { id: 10, text: '标签 10' },
   ];
 
   return (
@@ -67,4 +70,3 @@ export default () => {
     </div>
   );
 };
-

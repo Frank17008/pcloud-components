@@ -24,35 +24,35 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 
 ## 基础用法
 
-<code src="./demos/demo1.tsx" title="向上滚动" description="最基本的用法，向上自动滚动"></code>
+<!-- <code src="./demos/demo1.tsx" title="向上滚动" description="最基本的用法，向上自动滚动"></code> -->
 
 ## 不同方向
 
-<code src="./demos/demo2.tsx" title="四个方向" description="展示四个方向的滚动效果"></code>
+<!-- <code src="./demos/demo2.tsx" title="四个方向" description="展示四个方向的滚动效果"></code> -->
 
 ## 固定高度列表项
 
-<code src="./demos/demo3.tsx" title="固定高度" description="列表项具有固定高度时的滚动效果"></code>
+<!-- <code src="./demos/demo3.tsx" title="固定高度" description="列表项具有固定高度时的滚动效果"></code> -->
 
 ## 不固定高度列表项
 
-<!-- <code src="./demos/demo4.tsx" title="不固定高度" description="列表项高度不固定时的滚动效果"></code> -->
+<code src="./demos/demo4.tsx" title="不固定高度" description="列表项高度不固定时的滚动效果"></code>
 
 ## 自定义速度
 
-<code src="./demos/demo5.tsx" title="自定义速度" description="通过 speed 属性自定义滚动速度"></code>
+<!-- <code src="./demos/demo5.tsx" title="自定义速度" description="通过 speed 属性自定义滚动速度, `speed` 表示每秒移动的像素值"></code> -->
 
 ## 悬停暂停
 
-<code src="./demos/demo6.tsx" title="悬停暂停" description="鼠标悬停时暂停滚动，离开时恢复"></code>
+<!-- <code src="./demos/demo6.tsx" title="悬停暂停" description="鼠标悬停时暂停滚动，离开时恢复"></code> -->
 
 ## 水平滚动
 
-<code src="./demos/demo7.tsx" title="水平滚动" description="水平方向的滚动效果"></code>
+<!-- <code src="./demos/demo7.tsx" title="水平滚动" description="水平方向的滚动效果"></code> -->
 
 ## 数据不够一屏
 
-<code src="./demos/demo8.tsx" title="数据不够一屏" description="5条数据总高度为`150px`, 父容器高度为`200px`, 数据不够一屏时，默认不会自动启动动画, 输入移入后开启动画,或者设置`scrollWhenInsufficient`为`true`"></code>
+<!-- <code src="./demos/demo8.tsx" title="数据不够一屏" description="5条数据总高度为`150px`, 父容器高度为`200px`, 数据不够一屏时，默认不会自动启动动画, 输入移入后开启动画,或者设置`scrollWhenInsufficient`为`true`"></code> -->
 
 ## API
 

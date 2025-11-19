@@ -86,7 +86,7 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
   // 初始化尺寸计算
   useEffect(() => {
     if (data.length > 0) {
-      // 延迟计算，确保 DOM 已渲染
+      // 延迟计算，确保 DOM 已渲染  TODO  待优化 如果图片异步加载可能影响计算结果
       const timer = setTimeout(() => {
         calculateItemDimensions();
         // 计算完成后，根据滚动方向设置初始偏移量
@@ -135,7 +135,6 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
       }
 
       // 无缝循环：当滚动超过一个完整列表的高度/宽度时，重置位置
-      // 由于我们复制了两组列表，当滚动完第一组时，第二组正好接上，此时重置到0位置
       if (isReverse) {
         // 反向滚动：从 totalSize 开始向 0 滚动
         if (newOffset <= 0) {
