@@ -65,6 +65,10 @@ export interface IAnimatedScrollListProps {
    * @default false
    */
   scrollWhenInsufficient?: boolean;
+  /**
+   * @description 表头内容，传入后表头固定，内容区域自动滚动
+   */
+  header?: React.ReactNode;
 }
 
 export type AnimatedScrollListProps = IAnimatedScrollListProps;

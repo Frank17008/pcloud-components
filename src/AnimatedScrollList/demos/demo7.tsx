@@ -17,7 +17,7 @@ export default () => {
   return (
     <div>
       <h4>水平向左滚动</h4>
-      <div style={{ height: 100, border: '1px solid #d9d9d9', borderRadius: 4, padding: 16, marginBottom: 24 }}>
+      <div style={{ border: '1px solid #d9d9d9', borderRadius: 4, padding: 16, marginBottom: 24 }}>
         <AnimatedScrollList
           direction="left"
           speed={80}
@@ -43,7 +43,7 @@ export default () => {
       </div>
 
       <h4>水平向右滚动</h4>
-      <div style={{ height: 100, border: '1px solid #d9d9d9', borderRadius: 4, padding: 16 }}>
+      <div style={{ border: '1px solid #d9d9d9', borderRadius: 4, padding: 16 }}>
         <AnimatedScrollList
           direction="right"
           speed={80}

@@ -1,8 +1,18 @@
-@prefix-cls: ~'pcloud-animated-scroll-list';
+@import '../../commonStyle/index.less';
 
-.@{prefix-cls} {
+.@{prefix}-animated-scroll-list {
   position: relative;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  &-header {
+    flex-shrink: 0;
+  }
+
+  &-body {
+    position: relative;
+    overflow: hidden;
+  }
 
   &-content {
     position: relative;

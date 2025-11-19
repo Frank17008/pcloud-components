@@ -19,6 +19,7 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
     style = {},
     showScrollbar = false,
     scrollWhenInsufficient = false,
+    header,
   } = props;
 
   const { prefixCls, getPrefixCls }: any = useContext(ConfigContext);
@@ -280,9 +281,12 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
   };
 
   return (
-    <div ref={containerRef} className={wrapperClass} style={containerStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-      <div ref={contentRef} className={`${classname}-content`} style={contentStyle}>
-        {renderItems()}
+    <div className={wrapperClass}>
+      {header && <div className={`${classname}-header`}>{header}</div>}
+      <div ref={containerRef} className={`${classname}-body`} style={containerStyle} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+        <div ref={contentRef} className={`${classname}-content`} style={contentStyle}>
+          {renderItems()}
+        </div>
       </div>
     </div>
   );

@@ -38,6 +38,10 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 
 <code src="./demos/demo4.tsx" title="不固定高度" description="列表项高度不固定时的滚动效果"></code>
 
+## 固定表头
+
+<code src="./demos/demo9.tsx" title="表头固定" description="通过 `header` 属性传入表头结构，表头固定展示，内容区域自动滚动"></code>
+
 ## 自定义速度
 
 <!-- <code src="./demos/demo5.tsx" title="自定义速度" description="通过 speed 属性自定义滚动速度, `speed` 表示每秒移动的像素值"></code> -->
@@ -48,7 +52,7 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 
 ## 水平滚动
 
-<!-- <code src="./demos/demo7.tsx" title="水平滚动" description="水平方向的滚动效果"></code> -->
+<code src="./demos/demo7.tsx" title="水平滚动" description="水平方向的滚动效果"></code>
 
 ## 数据不够一屏
 
@@ -73,3 +77,4 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 | style                  | 自定义样式                                 | `CSSProperties`                                              | -       |
 | showScrollbar          | 是否显示滚动条                             | `boolean`                                                    | `false` |
 | scrollWhenInsufficient | 当列表项数量不足一屏时是否仍然滚动         | `boolean`                                                    | `false` |
+| header                 | 表头内容，传入后表头固定展示               | `ReactNode`                                                  | -       |
