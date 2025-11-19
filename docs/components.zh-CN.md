@@ -43,3 +43,4 @@ pcloud-components 中提供了许多基于 antd 的二次封装组件，这些�
 | WordCloud          | 词云组件         | [查看](/components/word-cloud)           |
 | LoginForm          | 登录表单组件     | [查看](/components/login-form)           |
 | OrgTree            | 组织树组件       | [查看](/components/org-tree)             |
+| AnimatedScrollList | 动画滚动列表组件 | [查看](/components/animated-scroll-list) |

@@ -104,3 +104,6 @@ export type { ContextMenuProps } from './ContextMenu';
 
 export { default as OrgTree } from './OrgTree';
 export type { OrgTreeProps, OrgTreeNode } from './OrgTree/interface';
+
+export { default as AnimatedScrollList } from './AnimatedScrollList';
+export type { AnimatedScrollListProps } from './AnimatedScrollList/interface';
