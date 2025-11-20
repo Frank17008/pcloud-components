@@ -62,7 +62,6 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
       totalSizeRef.current = 0;
       return;
     }
-
     const items = contentRef.current.children;
     const firstGroupItems = Array.from(items).slice(0, data.length) as HTMLElement[];
 
@@ -80,6 +79,7 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
       const size = isVertical ? rect.height : rect.width;
       return sum + size + axisMargin;
     }, 0);
+    console.info('calculateItemDimensions', totalSize);
 
     totalSizeRef.current = totalSize;
   }, [data, isVertical, parsePixelValue]);

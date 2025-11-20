@@ -36,7 +36,7 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 
 ## 不固定高度列表项
 
-<code src="./demos/demo4.tsx" title="不固定高度" description="列表项高度不固定时的滚动效果"></code>
+<code src="./demos/demo4.tsx" title="不固定高度" description="列表项高度不固定时的滚动效果。如果列表项中有图片,要给图片设置高度"></code>
 
 ## 固定表头
 

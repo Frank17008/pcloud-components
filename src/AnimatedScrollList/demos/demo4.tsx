@@ -10,8 +10,8 @@ export default () => {
       title: '较长的标题内容',
       content: (
         <div style={{ display: 'flex', gap: 10 }}>
-          <img src="https://picsum.photos/200/300" alt="随机图片" />
-          <p>这是内容较长的公告，包含非常详细的描述信息，可能会占据更多的空间，高度不固定</p>
+          <img height={200} src="https://picsum.photos/200/300" alt="随机图片" />
+          <p>这是含有图片的列表项, 图片要设置固定高度, 容器可以不用设置定高, 组件内会自动计算`</p>
         </div>
       ),
     },
