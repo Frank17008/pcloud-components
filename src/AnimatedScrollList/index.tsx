@@ -60,14 +60,14 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
   const calculateItemDimensions = useCallback(() => {
     if (!contentRef.current || data.length === 0) {
       totalSizeRef.current = 0;
-      return;
+      return 0;
     }
     const items = contentRef.current.children;
     const firstGroupItems = Array.from(items).slice(0, data.length) as HTMLElement[];
 
     if (firstGroupItems.length === 0) {
       totalSizeRef.current = 0;
-      return;
+      return 0;
     }
 
     const totalSize = firstGroupItems.reduce((sum, item) => {
@@ -79,34 +79,19 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
       const size = isVertical ? rect.height : rect.width;
       return sum + size + axisMargin;
     }, 0);
-    console.info('calculateItemDimensions', totalSize);
 
     totalSizeRef.current = totalSize;
+    return totalSize;
   }, [data, isVertical, parsePixelValue]);
 
-  // 初始化尺寸计算
-  useEffect(() => {
-    if (data.length > 0) {
-      // 延迟计算，确保 DOM 已渲染  TODO  待优化 如果图片异步加载可能影响计算结果
-      const timer = setTimeout(() => {
-        calculateItemDimensions();
-        // 计算完成后，根据滚动方向设置初始偏移量
-        if (contentRef.current && totalSizeRef.current > 0) {
-          const initialOffset = isReverse ? totalSizeRef.current : 0;
-          currentOffsetRef.current = initialOffset;
-          if (isVertical) {
-            contentRef.current.style.transform = `translateY(${-initialOffset}px)`;
-          } else {
-            contentRef.current.style.transform = `translateX(${-initialOffset}px)`;
-          }
-        }
-      }, 100);
-      return () => clearTimeout(timer);
-    } else {
-      totalSizeRef.current = 0;
-      currentOffsetRef.current = 0;
-    }
-  }, [data, calculateItemDimensions, isVertical, isReverse]);
+  const applyTransform = useCallback(
+    (offset: number) => {
+      if (!contentRef.current) return;
+      const value = isVertical ? `translateY(${-offset}px)` : `translateX(${-offset}px)`;
+      contentRef.current.style.transform = value;
+    },
+    [isVertical],
+  );
 
   // 动画循环
   const animate = useCallback(
@@ -151,15 +136,11 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
       currentOffsetRef.current = newOffset;
 
       // 应用 transform
-      if (isVertical) {
-        contentRef.current.style.transform = `translateY(${-newOffset}px)`;
-      } else {
-        contentRef.current.style.transform = `translateX(${-newOffset}px)`;
-      }
+      applyTransform(newOffset);
 
       animationFrameRef.current = requestAnimationFrame(animate);
     },
-    [speed, isReverse, isVertical, data.length],
+    [speed, isReverse, data.length, applyTransform],
   );
 
   // 启动动画
@@ -177,6 +158,68 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
     }
     lastTimestampRef.current = 0;
   }, []);
+
+  // 数据动态更新时保持动画平滑
+  useEffect(() => {
+    if (data.length === 0) {
+      stopAnimation();
+      totalSizeRef.current = 0;
+      currentOffsetRef.current = 0;
+      applyTransform(0);
+      return;
+    }
+
+    let rafId: number | null = null;
+    let timerId: number | null = null;
+
+    const measure = () => {
+      const previousTotal = totalSizeRef.current;
+      const newTotal = calculateItemDimensions();
+
+      if (newTotal === 0) {
+        rafId = window.requestAnimationFrame(measure);
+        return;
+      }
+
+      const containerSize = isVertical ? containerRef.current?.clientHeight ?? 0 : containerRef.current?.clientWidth ?? 0;
+      const shouldScroll = scrollWhenInsufficient || newTotal > containerSize;
+
+      let normalizedOffset = previousTotal > 0 ? currentOffsetRef.current % previousTotal : 0;
+      if (normalizedOffset < 0) {
+        normalizedOffset += previousTotal;
+      }
+
+      const progress = previousTotal > 0 ? normalizedOffset / previousTotal : isReverse ? 1 : 0;
+      let nextOffset = shouldScroll ? progress * newTotal : 0;
+
+      if (isReverse && shouldScroll && nextOffset === 0) {
+        nextOffset = newTotal;
+      }
+
+      currentOffsetRef.current = nextOffset;
+      applyTransform(nextOffset);
+
+      if (shouldScroll && autoStart && !isHoveringRef.current && !isPausedRef.current) {
+        startAnimation();
+      } else {
+        stopAnimation();
+      }
+    };
+
+    stopAnimation();
+    timerId = window.setTimeout(() => {
+      rafId = window.requestAnimationFrame(measure);
+    }, 80);
+
+    return () => {
+      if (timerId) {
+        window.clearTimeout(timerId);
+      }
+      if (rafId) {
+        window.cancelAnimationFrame(rafId);
+      }
+    };
+  }, [data, calculateItemDimensions, applyTransform, isVertical, isReverse, scrollWhenInsufficient, autoStart, startAnimation, stopAnimation]);
 
   // 处理鼠标进入
   const handleMouseEnter = useCallback(() => {
@@ -237,7 +280,7 @@ function AnimatedScrollList(props: IAnimatedScrollListProps) {
     return () => {
       stopAnimation();
     };
-  }, [autoStart, data.length, startAnimation, stopAnimation, scrollWhenInsufficient, isVertical]);
+  }, [autoStart, data, startAnimation, stopAnimation, scrollWhenInsufficient, isVertical]);
 
   // 渲染列表项（复制一份用于无缝循环）
   const renderItems = useCallback(() => {

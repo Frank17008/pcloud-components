@@ -56,7 +56,11 @@ AnimatedScrollList 是一个支持自动无缝循环滚动的列表组件，通�
 
 ## 数据不够一屏
 
-<code src="./demos/demo8.tsx" title="数据不够一屏" description="5条数据总高度为`150px`, 父容器高度为`200px`, 数据不够一屏时，默认不会自动启动动画, 输入移入后开启动画,或者设置`scrollWhenInsufficient`为`true`"></code>
+<code src="./demos/demo8.tsx" title="数据不够一屏" description="5条数据总高度为`150px`, 父容器高度为`200px`, 数据不够一屏时，默认不会自动启动动画, 鼠标悬停时开启动画,或者设置`scrollWhenInsufficient`为`true`"></code>
+
+## 动态更新数据
+
+<code src="./demos/demo10.tsx" title="动态更新数据" description="动态更新数据，列表项数量变化时，滚动效果会自动更新"></code>
 
 ## API
 
