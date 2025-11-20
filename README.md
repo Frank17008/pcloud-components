@@ -1,339 +1,135 @@
-# pcloud-components
+# @pointcloud/pcloud-components
 
-![node version](<https://img.shields.io/badge/node-v16.20.0-brightgreen?logo=nodedotjs&color=rgb(0%2C126%2C298)>) ![react version](https://img.shields.io/badge/react-v17.0.2-brightgreen?style=flat&logo=react) ![antd version](<https://img.shields.io/badge/ant%20design-v4.24.16-rgb(144%2C190%2C8)?style=flat&logo=antdesign>) ![docs](https://img.shields.io/badge/docs%20by-dumi-brightgreen?style=flat&color=%230081ff) ![counts](<https://img.shields.io/badge/components%20count-29-rgb(202%2C17%2C5)?style=flat&logo=webcomponentsdotorg>) ![license](<https://img.shields.io/badge/license-MIT-rgb(144%2C190%2C8)?style=flat>)
+[![NPM version](https://img.shields.io/npm/v/@pointcloud/pcloud-components.svg?style=flat)](https://npmjs.org/package/@pointcloud/pcloud-components)
+[![NPM downloads](https://img.shields.io/npm/dm/@pointcloud/pcloud-components.svg?style=flat)](https://npmjs.org/package/@pointcloud/pcloud-components)
+[![License](https://img.shields.io/npm/l/@pointcloud/pcloud-components.svg?style=flat)](https://npmjs.org/package/@pointcloud/pcloud-components)
 
-pcloud-components 是一套基于 Antd v4.24.16 + React v17 开发的业务组件库。
-该项目已经发布到 [npm](https://www.npmjs.com/package/@pointcloud/pcloud-components)仓库。
+一套基于 Ant Design v4.24.16 和 React v17.0.2 开发的业务组件库，包含 30+ 个高质量组件，可帮助您快速构建企业级中后台产品原型。
 
-## 快速使用
+## 🎁 组件列表
 
-```
-# 安装依赖
-npm i @pointcloud/pcloud-components or yarn add @pointcloud/pcloud-components
+### 表单组件
 
-# 引入组件
-import { DCascader } from '@pointcloud/pcloud-components';
-```
+| 组件名称    | 描述                                |
+| ----------- | ----------------------------------- |
+| DForm       | 基于 Ant Design Form 的增强表单组件 |
+| DInput      | 增强版输入框组件                    |
+| DSelect     | 支持异步加载的下拉选择组件          |
+| DCascader   | 支持异步加载的级联选择组件          |
+| DTreeSelect | 支持异步加载的树选择组件            |
+| DUpload     | 文件上传组件                        |
+| ColorPicker | 颜色选择器组件                      |
 
-## 推荐环境
+### 数据展示组件
 
-```
-node >= 16.20.0
-pnpm >= 8.15.9
-```
+| 组件名称           | 描述             |
+| ------------------ | ---------------- |
+| DTable             | 增强版表格组件   |
+| LabelValue         | 标签值展示组件   |
+| WordCloud          | 词云组件         |
+| ScrollNumber       | 数字滚动动画组件 |
+| AspectRatio        | 宽高比容器组件   |
+| NoData             | 无数据展示组件   |
+| IPAddress          | IP 地址输入组件  |
+| AnimatedScrollList | 动画滚动列表组件 |
+| OrgTree            | 组织树组件       |
 
-## 项目结构
+### 模态框组件
 
-```
-📁pcloud-components
-├─ 📁.dumi						            # api站点相关目录，例如全局样式、全局脚本、站点主题、自定义组件等
-│ 	├─ 📁tmp						          # dumi运行时目录
-│ 	└─ 📄global.less		          # 全局样式
-├─ 📁.husky						            # 代码提交相关配置
-├─ 📁docker						            # docker部署相关文件
-│ 	└─ 📄nginx.conf			          # nginx配置
-├─ 📁scripts					            # 全局脚本目录
-│ 	├─ 📄clean-tmp.js		          # 清除.dumi目录下自动生成的tmp目录
-│ 	└─ 📄source-replace-loader.js	# 用于解决第三方主题antd版本冲突的webpack loader
-├─ 📁docs						              # 文档目录，适用于普通文档生成路由，详见dumi官方介绍
-│ 	├─ 📁components					      # 组件库页面的文档
-│ 	├─ 📄guide.zh-CN.md				    # 指南页面的文档
-│ 	└─ 📄index.zh-CN.md				    # 首页页面的文档
-├─ 📁docs-dist					          # 组件文档目录
-├─ 📁public						            # 站点的静态资源目录
-├─ 📁src						              # 组件目录
-│ 	├─ 📁DCascader				        # 组件1
-│ 	├─ 📁DForm					          # 组件2
-│		......					              # 组件n
-│ 	└─ 📄index.ts				          # 组件导出配置
-├─ 📄.dumirc.ts					          # dumi 的配置文件
-├─ 📄.fatherrc.ts				          # father 的配置文件，用于组件库打包
-├─ 📄.eslintrc.js				          # eslint插件配置
-├─ 📄.release-it.js               # release-it配置
-├─ 📄.prettierrc.js				        # prettier插件配置
-├─ 📄.stylelintrc				          # stylelint插件配置
-└─ 📄tsconfig.json				        # ts相关配置
-```
+| 组件名称  | 描述             |
+| --------- | ---------------- |
+| DModal    | 增强版模态框组件 |
+| ModalForm | 表单模态框组件   |
+| LoginForm | 登录表单组件     |
 
-## 组件开发指南
+### 其他业务组件
 
-##### 组件的基本结构
+| 组件名称           | 描述               |
+| ------------------ | ------------------ |
+| Loading            | 全局加载组件       |
+| ContextMenu        | 右键菜单组件       |
+| AdvancedFilter     | 高级筛选组件       |
+| InfiniteScrollList | 无限滚动列表组件   |
+| PictureCard        | 图片卡片组件       |
+| SignaturePad       | 签名板组件         |
+| RndDrag            | 可拖拽调整大小组件 |
+| RCropper           | 图片裁剪组件       |
 
-```
-📁src	# 组件目录
-├─ 📁DCascader		# 组件根目录
-│  ├─ 📄index.less 		# 组件样式文件
-│  ├─ 📄index.tsx		# 组件入口文件
-│  ├─ 📄index.zh-CN.md	# 组件文档
-│  └─ 📁demos			# 组件示例目录
-│     ├─ 📄basicDemo.tsx
-│     ├─ 📄loadChildrenDemo.tsx
-│     └─ 📄loadingDemo.tsx
+## 🚀 安装
+
+```bash
+# 使用 npm
+npm install @pointcloud/pcloud-components
+
+# 使用 yarn
+yarn add @pointcloud/pcloud-components
+
+# 使用 pnpm
+pnpm add @pointcloud/pcloud-components
 ```
 
-一个组件的基本结构如上图所示，为保持组件风格一致，开发时应当尽量遵循以下规则:
+## 🔨 快速开始
 
-- 组件根目录以驼峰命名
-- 编写组件时应尽可能提供相应的 ts 类型定义
-- 组件样式如果较为复杂，应当进行合理拆分，并添加一个 styles 目录对其进行统一管理
-- 组件样式请尽量不要使用`模块化`引入方式，否则使用者很难进行样式覆盖
-- 组件示例应当统一放置在 demos 目录下，示例中尽量不要存放体积过大的静态文件，如果有，应当在 public/mock 目录下新建相应的文件进行存放
+### 1. 基础使用
 
-##### 组件的编写
-
-```
+```jsx
 import React from 'react';
-import { Cascader } from 'antd';
+import { DCascader } from '@pointcloud/pcloud-components';
 
-import './index.less'; // 引入样式
-// import styles from './index.modules.less'; // 不推荐的形式，会导致使用者难以覆盖样式
+const App = () => {
+  const handleChange = (value, selectedOptions) => {
+    console.log(value, selectedOptions);
+  };
 
-export type DCascaderProps = any // ts类型定义
-
-// 组件主体结构
-function InternalCascader(props: DCascaderProps, ref: React.Ref<CascaderRef>) {
-	return <div>DCascader组件</div>
-}
-
-// 组件导出
-const DCascader = forwardRef(InternalCascader);
-export default DCascader;
-```
-
-##### 组件的导出
-
-所有组件都需要在 src/index.tsx 下进行导出，导出时应当导出组件必要的入口文件及相关的 ts 类型定义
-
-```javascriptj
-export type { DCascaderProps } from './DCascader';
-export { default as DCascader } from './DCascader';
-```
-
-##### 组件示例的编写
-
-```javascripta
-import { useEffect, useState } from 'react';
-// 使用当前组件库的别名路径而不是相对路径
-import { DCascader } from '@pointcloud/pcloud-components'; // 正确示例
-// import DCascader from '../index'; // 错误示例
-const getRegionData = () => {
-  return new Promise<{ provinceList: any[]; cityList: any[]; countyList: any[] }>((resolve) => {
-    async function exec() {
-      // 体积较大的静态资源文件从public/mock下引入
-      const bodyProvince = await fetch('/mock/dcascader/china_region_province.json');
-      const provinceList = await bodyProvince.json();
-      const bodyCity = await fetch('/mock/dcascader/china_region_city.json');
-      const cityList = await bodyCity.json();
-      const bodyCounty = await fetch('/mock/dcascader/china_region_county.json');
-      const countyList = await bodyCounty.json();
-      resolve({ provinceList, cityList, countyList });
-    }
-    exec();
-  });
+  return <DCascader showSearch placeholder="请选择" onChange={handleChange} />;
 };
 
-export default function BasicDemo() {
-  const [regionData, setRegionData] = useState<{
-    provinceList: any[];
-    cityList: any[];
-    countyList: any[];
-  }>({ provinceList: [], cityList: [], countyList: [] });
+export default App;
+```
 
-  const getOptionsAsync = (value, option): Promise<Array<{ value: string; label: string }>> => {
-    return new Promise((resolve) => {
-      const { provinceList, cityList, countyList } = regionData;
-      let options;
-      if (option) {
-        const listMap = { province: cityList, city: countyList };
-        const codeMap = { province: 'provinceCode', city: 'cityCode' };
-        const { level, code } = option;
-        const list = listMap[level]?.filter((item) => item[codeMap[level]] === code);
-        options = list?.map((item) => ({
-          ...item,
-          value: item.code,
-          label: item.name,
-          isLeaf: item.level === 'county',
-        }));
-      } else {
-        options = provinceList.map((item) => ({
-          ...item,
-          label: item.name,
-          value: item.code,
-          isLeaf: false,
-        }));
-      }
+### 2. 使用表单组件
 
-      resolve(options);
-    });
+```jsx
+import React from 'react';
+import { DForm, DInput, DSelect } from '@pointcloud/pcloud-components';
+
+const App = () => {
+  const onFinish = (values) => {
+    console.log('表单值:', values);
   };
 
-  const onChange = (values, options) => {
-    console.log(values, options);
-  };
+  return (
+    <DForm onFinish={onFinish}>
+      <DForm.Item label="用户名" name="username">
+        <DInput placeholder="请输入用户名" />
+      </DForm.Item>
 
-  useEffect(() => {
-    getRegionData().then((res) => setRegionData(res));
-  }, []);
+      <DForm.Item label="状态" name="status">
+        <DSelect
+          options={[
+            { label: '启用', value: 1 },
+            { label: '禁用', value: 0 },
+          ]}
+        />
+      </DForm.Item>
 
-  return <DCascader options={getOptionsAsync} showSearch onChange={onChange} />;
-}
+      <DForm.Item>
+        <button type="submit">提交</button>
+      </DForm.Item>
+    </DForm>
+  );
+};
+
+export default App;
 ```
 
-##### 组件文档的编写
+## 📖 详细文档
 
-组件文档使用 markdown 格式编写， 所有 Markdown 配置均以 FrontMatter 的形式配置在 Markdown 文件顶端，具体用法请参照 dumi 官方介绍， 对于开发的组件，应至少包含以下结构：
+访问我们的[在线文档](https://frank17008.github.io/pcloud-components)查看完整的组件列表和使用示例。
 
-- 组件介绍（一个二级标题,包含组件的基本说明）
-- 组件示例（若干二级标题，每个标题代表一个示例）
-- API 文档（一个二级标题，命名为 API，以表格形式列出所有可用的 api）
+## ⚙️ 环境支持
 
-```
----
-title: DCascader
-description: 基于 antd 4.24.10 Cascader 的二次封装组件
-tocDepth: 2
-nav:
-  title: 组件
-  path: /components
-group:
-  title: 表单
----
-
-## 组件特性
-
-- options、loadData 均支持传入异步函数，在 From 表单组件中使用更方便
-- 加载选项列表时可以显示加载中效果
-- 本地搜索时默认匹配 label 字段
-- 文本框与下拉面板同宽
-
-## 基础用法
-
-<code src="./demos/basicDemo.tsx"  title="示例标题" description="示例说明"></code>
-
-## 动态加载子级列表
-
-<code src="./demos/loadChildrenDemo.tsx" title="示例标题" description="示例说明"></code>
-
-## 显示加载中
-
-<code src="./demos/loadingDemo.tsx" title="示例标题" description="示例说明"></code>
-
-## API
-
-| 参数  | 说明    | 类型     | 默认值     | 版本     |
-|  :-- | :--     | :--     | :----     | :---    |
-| api1 | api1说明 | api1类型 | api1默认值 | api1版本 |
-| api2 | api2说明 | api2类型 | api2默认值 | api2版本 |
-| api3 | api3说明 | api3类型 | api3默认值 | api3版本 |
-```
-
-## 代码风格及提交规范
-
-##### vscode 插件
-
-为保证团队风格的一致，推荐在编辑器中安装以下插件，项目中已包含相应插件的配置，如无必要，请勿修改配置
-
-| 插件名称  | 插件说明         |
-| --------- | ---------------- |
-| ESLint    | js 代码检查工具  |
-| Stylelint | css 样式检查工具 |
-| Prettier  | 代码格式化工具   |
-| GitLens   | 代码提交插件     |
-
-##### 代码检查与格式化
-
-由于项目已经包含 husky，每次提交前都会自动进行 lint 检查及代码格式化，如果检查不通过则会拒绝提交。代码提交时应当确保已经消除了所有 lint 错误，并尽量处理 lint 警告。lint 检查也可以手动执行，命令如下：
-
-```
-npm run lint		// 同时检查js与css
-
-npm run lint:es		// 只检查js
-
-npm run lint:css	// 只检查css
-
-npm run prettier	// 执行代码格式化
-
-npm run doctor		// 执行依赖检查
-
-```
-
-##### git 提交
-
-本项目使用 husky 方案来规范 代码的提交,提交代码时请尽量遵循以下约定
-
-| 提交类型 | 类型说明                                                                     |
-| -------- | ---------------------------------------------------------------------------- |
-| feat     | 新增功能                                                                     |
-| fix      | bug 修复                                                                     |
-| docs     | 文档更新                                                                     |
-| style    | 不影响程序逻辑的代码修改(修改空白字符，补全缺失的分号等)                     |
-| refactor | 重构代码(既没有新增功能，也没有修复 bug)                                     |
-| perf     | 性能优化                                                                     |
-| test     | 新增测试用例或是更新现有测试                                                 |
-| build    | 主要目的是修改项目构建系统(例如 glup，webpack，rollup 的配置等)的提交        |
-| ci       | 主要目的是修改项目集成流程(例如 Travis，Jenkins，GitLab CI，Circle 等)的提交 |
-| chore    | 不属于以上类型的其他类型(日常事务)                                           |
-| revert   | 回滚某个更早之前的提交                                                       |
-
-```
-git commit -m <type>[optional scope]: <description>	// 提交格式
-
-git commit -m "fix: 修复bug"	// type后的冒号和空格不可省略，description不能以大写字母开头
-```
-
-详细规则请前往[commitlint](https://github.com/conventional-changelog/commitlint/blob/master/docs/reference-rules.md)官方文档查看
-
-## 调试与发布
-
-##### 在测试项目中调试
-
-1. 在当前项目中通过 link 命令将当前包链接到全局
-
-   ```
-   cd pui-components
-   npm link		// 将当前包链接到全局
-   // npm unlink	// 调试完成后解除链接
-   ```
-
-2. 在测试项目中链接当前包
-
-   ```
-   cd test-project
-   npm link @pointcloud/pcloud-components
-   // npm unlink --no-save package && npm install	// 调试完成后解除链接
-   ```
-
-3. docker 推送镜像
-
-   ```
-   // 推送镜像之前需要先登录,并修改package.json-->scripts中对应docker的配置
-   npm run push
-   ```
-
-##### 发布项目
-
-1. 前置工作
-
-   - 执行 `npm whoami` 查看当前用户是否已经登录，如果未登录则执行 `npm login`
-
-   - 检查 `package.json` 中的 NPM 包名及 `publishConfig` 是否符合预期
-
-2. release 发布
-
-   使用 release-it 可以根据 [release-it 配置](https://github.com/release-it/release-it/blob/main/config/release-it.json) 自动完成发布前的准备工作，包括：更新版本号、生成 tag 、更新 changelog、git 提交及推送远程仓库、npm 发布等
-
-   ```
-   npm run release
-   ```
-
-## FAQ
-
-1. 安装组件后, 为什么项目中的 antd 组件都是英文的？
-
-
-    - 这是因为antd的默认语言是英文，项目启动时，会自动加载中文语言包，如果项目需要使用英文，请自行在项目入口处导入英文语言包, 并使用ConfigProvider组件注入.
-
-2. 项目安装的是 antd5 的版本, 能使用组件吗？
-
-
-    - 此组件库基于antd 4.24.16开发，antd5的版本暂时不兼容，请使用antd4.x版本, 后续会升级到antd5版本
+- React >= 17.0.2
+- Ant Design <= 4.24.16
+- Node >= 16.20.0
+- Modern browsers
