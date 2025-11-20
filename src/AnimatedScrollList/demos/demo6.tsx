@@ -5,8 +5,8 @@ export default () => {
   const data = [
     { id: 1, text: '鼠标悬停时暂停滚动' },
     { id: 2, text: '鼠标离开时恢复滚动' },
-    { id: 3, text: '这是第三条内容' },
-    { id: 4, text: '这是第四条内容' },
+    { id: 3, text: '这是第3条内容' },
+    { id: 4, text: '这是第4条内容' },
   ];
 
   return (
@@ -14,7 +14,7 @@ export default () => {
       <Col span={12}>
         <div style={{ marginBottom: 16 }}>
           <h4>悬停暂停 (hoverStop=true)</h4>
-          <div style={{ height: 150, border: '1px solid #d9d9d9', borderRadius: 4, padding: 16 }}>
+          <div style={{ height: 150, border: '1px solid #d9d9d9', overflow: 'hidden', borderRadius: 4, padding: 16 }}>
             <AnimatedScrollList
               direction="up"
               speed={50}
@@ -30,7 +30,7 @@ export default () => {
       <Col span={12}>
         <div style={{ marginBottom: 16 }}>
           <h4>不暂停 (hoverStop=false)</h4>
-          <div style={{ height: 150, border: '1px solid #d9d9d9', borderRadius: 4, padding: 16 }}>
+          <div style={{ height: 150, border: '1px solid #d9d9d9', overflow: 'hidden', borderRadius: 4, padding: 16 }}>
             <AnimatedScrollList
               direction="up"
               speed={50}
