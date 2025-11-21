@@ -23,5 +23,11 @@ export default defineConfig({
       }
       return memo;
     },
+    externals: {
+      antd: 'antd',
+      '@ant-design/icons': '@ant-design/icons',
+      'react-dom': 'react-dom',
+      react: 'react',
+    },
   },
 });
