@@ -70,6 +70,15 @@ pnpm add @pointcloud/pcloud-components
 
 ## 🔨 快速开始
 
+通过 umd 引入时,需要先引入`react`和`react-dom`, 示例:
+
+```html
+<link rel="stylesheet" href="https://unpkg.com/@pointcloud/pcloud-components@0.1.30/dist/umd/pcloud-components.min.css" />
+<script src="https://unpkg.com/react@17.0.2/umd/react.production.min.js"></script>
+<script src="https://unpkg.com/react-dom@17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://unpkg.com/@pointcloud/pcloud-components@0.1.30/dist/umd/pcloud-components.min.js"></script>
+```
+
 ### 1. 基础使用
 
 ```jsx
